@@ -6,7 +6,7 @@
 "colorscheme default        " tema preterminado default
 "set background=light
 set background=dark
-"set textwidth=80            " delimitar texto
+"set textwidth=80           " delimitar texto
 set number                  " numeros
 set numberwidth=1           " grosor de numeros
 set mouse=a                 " usar raton
@@ -26,47 +26,48 @@ set fileencodings=utf-8
 set fileformats=unix,dos,mac
 set incsearch               " aumenta matches en busqueda
 set ignorecase              " busqueda mayusculas y minusculas
-"set hlsearch		    " resaltar matches siempre
-set nohlsearch		    " quitar resaltado
+" set hlsearch		            " resaltar matches siempre
+set nohlsearch		          " quitar resaltado
 set undofile                " reahcer despues de cerrado
 set noemoji                 " marcar emojis
 set dictionary+=/usr/share/dict/words | " diccionario
-set rtp+=/usr/local/opt/fzf
-"set guifont=Consolas:h12    " tamano de letra
+"set rtp+=/usr/local/opt/fzf          | " si usas fzf
+" set guifont=Consolas:h12  " tamano de letra
 set t_Co=256
-" ARCHIVOS TEMPORALES
-" opcion 1:
-" Algunos servidores tienen problemas respaldo, consulte # 649
-"set nobackup
+" PROBLEMAS CON ARCHIVOS TEMPORALES?
+" solucion 1
+" set nobackup              " eliminar los backup
+" set nowritebackup
 set noswapfile              " no archivos swap
-"set nowritebackup
-" opcion 2:
-" mejor solucion para archivos temporales
+" solucion 2
 " doble barra para evitar conflictos con archivos del mismo nombre
 " ,. ocupar directorio actual si el primero no existe
-" crear en home la carpeta nvimtmp
-if !isdirectory($HOME."/nvimtmp")
-    call mkdir($HOME."/nvimtmp", "p", 0770)
+" crear en home la carpeta vimtmp
+if !isdirectory($HOME."/vimtmp")
+    call mkdir($HOME."/vimtmp", "p", 0770)
 endif
-set directory=~/nvimtmp//,.   " intercambio
-set backupdir=~/nvimtmp//,.   " respaldo
+set directory=~/vimtmp//,.  " intercambio
+set backupdir=~/vimtmp//,.  " respaldo
 set backup
-" https://vi.stackexchange.com/questions/6/how-can-i-use-the-undofile
+" usa este comando para eliminar archivos viejos
+" de mas de 90 dias
 " find ~/nvimtmp/undo-dir -type f -mtime +90 -delete
-if !isdirectory($HOME."/nvimtmp/undo-dir")
-    call mkdir($HOME."/nvimtmp/undo-dir", "p", 0700)
+if !isdirectory($HOME."/vimtmp/undo-dir")
+    call mkdir($HOME."/vimtmp/undo-dir", "p", 0700)
 endif
-set undodir=~/nvimtmp/undo-dir
+set undodir=~/vimtmp/undo-dir
 set undofile
 
 """ NMAP SIN PLUGINS
 
 let mapleader=" "  " mapa tecla ESPACIO
-                   " <CR> ENTER
+let CONFIG_HOME = $PATH
+let CONFIG_VIM = $PATH
+let $CONFIG_HOME='$HOME/.config'
+let $CONFIG_VIM='$HOME/.vimrc'
+
 """ espacio+d reemplazar
 nmap <Leader>r :%s/xx/xx/gc
-nmap <Leader>e :%s/TODO//gc
-nmap <Leader>ee :%s/‚’‘/'/gc
 
 """ seleccionar todo, reemplaza a ctrl+a
 nnoremap <C-A> ggVG
@@ -103,12 +104,12 @@ nmap <Leader>ll :colorscheme torte<CR>
 nmap <Leader>lll :colorscheme slate<CR>
 
 """ abrir archivos | xdg-open para linux
-"map <Leader>op :!open -a Adobe\ Acrobat\ Reader\ DC <C-R> & disown<CR><C-R>
+"map <Leader>op :!open -a Adobe\ Acrobat\ Reader\ DC <C-R> && disown<CR><C-R>
 
 """ tamaño por defecto del terminal
 " set termwinsize=20x0
-" map <Leader>x :belowright terminal<CR>
-" nnoremap <Silent> <Leader>sh :terminal<CR>
+map <Leader>x :belowright terminal<CR>
+nnoremap <Silent> <Leader>sh :terminal<CR>
 
 """ mover bloques de codigo en Visual Mode
 vnoremap J :m '>+1<CR>gv=gv
@@ -152,24 +153,16 @@ autocmd BufRead,BufNewFile *.txt set syntax=conf
 set gcr=a:blinkon0
 
 """ Bibliotecas y rutas
-map <Leader>ß :vsp<Space>$MC_TECHNOLOGY<CR>
-map <Leader>ü :vsp<Space>$MACCONFIG<CR>
-map <Leader>ä :vsp<Space>$BIOINFORMATIK2<CR>
-map <Leader>ö :vsp<Space>$NVIM<CR>
-map <Leader>ä1 :vsp<Space>$GIK<CR>
-map <Leader>ä2 :vsp<Space>$PFN2<CR>
-map <Leader>ä3 :vsp<Space>$CIW<CR>
-map <Leader>ä4 :vsp<Space>$SUS<CR>
+map <Leader>ü :vsp<Space>$CONFIG_HOME<CR>
+map <Leader>ä :vsp<Space>$CONFIG_VIM<CR>
 
 """ split navegacion
-"map <C-h> <C-w>h
-"map <C-j> <C-w>j
-"map <C-k> <C-w>k
-"map <C-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 """ autoeliminar espacios al final de cada linea
 autocmd BufWritePre * %s/\s\+$//e
-"autocmd BufWritePre * %s/\n\+\%$//e
-"autocmd BufWritePre *.[ch] %s/\%$/\r/e
-
-""" map COMMAND <D-v>
+autocmd BufWritePre * %s/\n\+\%$//e
+autocmd BufWritePre *.[ch] %s/\%$/\r/e
