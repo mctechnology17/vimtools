@@ -3,55 +3,14 @@
 " Author: MC Technology <mctechnology170318@gmail.com>
 " GitHub: https://github.com/mctechnology17
 " ====================================================
-"colorscheme default        " tema preterminado default
-"set background=light
-set background=dark
-"set textwidth=80           " delimitar texto
-set number                  " numeros
-set numberwidth=1           " grosor de numeros
-set mouse=a                 " usar raton
-set clipboard=unnamed       " copiar a portapapeles
-set cursorline              " mostrar linea cursor
-set cursorcolumn            " mostrar columna cursor
-syntax on                   " Wikivim prerequisitos
-filetype plugin on          " Wikivim prerequisitos
-set nocompatible            " Wikivim prerequisitos
-set showcmd                 " ver comandos
-set ruler                   " mostrar siempre regla
-set showmatch               " ver match
-set laststatus=2            " ultimo estatus
-set encoding=utf-8          " codificacion compatibilidad
-set fileencoding=utf-8
-set fileencodings=utf-8
-set fileformats=unix,dos,mac
-set incsearch               " aumenta matches en busqueda
-set ignorecase              " busqueda mayusculas y minusculas
-" set hlsearch		            " resaltar matches siempre
-set nohlsearch		          " quitar resaltado
-set undofile                " reahcer despues de cerrado
-set noemoji                 " marcar emojis
-set dictionary+=/usr/share/dict/words | " diccionario
-"set rtp+=/usr/local/opt/fzf          | " si usas fzf
-" set guifont=Consolas:h12  " tamano de letra
-set t_Co=256
 " PROBLEMAS CON ARCHIVOS TEMPORALES?
-" solucion 1
-" set nobackup              " eliminar los backup
-" set nowritebackup
 set noswapfile              " no archivos swap
-" solucion 2
-" doble barra para evitar conflictos con archivos del mismo nombre
-" ,. ocupar directorio actual si el primero no existe
-" crear en home la carpeta vimtmp
 if !isdirectory($HOME."/vimtmp")
     call mkdir($HOME."/vimtmp", "p", 0770)
 endif
 set directory=~/vimtmp//,.  " intercambio
 set backupdir=~/vimtmp//,.  " respaldo
 set backup
-" usa este comando para eliminar archivos viejos
-" de mas de 90 dias
-" find ~/nvimtmp/undo-dir -type f -mtime +90 -delete
 if !isdirectory($HOME."/vimtmp/undo-dir")
     call mkdir($HOME."/vimtmp/undo-dir", "p", 0700)
 endif
@@ -59,14 +18,12 @@ set undodir=~/vimtmp/undo-dir
 set undofile
 
 """ NMAP SIN PLUGINS
-
-let mapleader=" "  " mapa tecla ESPACIO
 let CONFIG_HOME = $PATH
 let CONFIG_VIM = $PATH
 let $CONFIG_HOME='$HOME/.config'
 let $CONFIG_VIM='$HOME/.vimrc'
 
-""" espacio+d reemplazar
+""" xx->palabra a reemplazar xx->palabra nueva
 nmap <Leader>r :%s/xx/xx/gc
 
 """ seleccionar todo, reemplaza a ctrl+a
