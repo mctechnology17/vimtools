@@ -1,4 +1,4 @@
-[![MC Technology](doc/mctechnology_extendido.GIF)](https://www.youtube.com/watch?v=gKkFuM8Ky1I&t=88s)
+[![MC Technology](doc/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
 # vim-tools
 - [Introducción](#Introducción)
 - [Fotos](#Fotos)
