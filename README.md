@@ -228,4 +228,4 @@ autocmd BufWritePre *.[ch] %s/\%$/\r/e
 ![Terminal](doc/2_Terminal.png)
 
 ## Licencia
-
+[Licencia](./LICENSE)
