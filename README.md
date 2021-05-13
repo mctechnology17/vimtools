@@ -1,9 +1,4 @@
-![vim-tools: A nice tools for VIM](doc/1_Plugs.png)
-" ====================================================
-" FileName: vim-tools.vim
-" Author: MC Technology <mctechnology170318@gmail.com>
-" GitHub: https://github.com/mctechnology17
-" ====================================================
+![vim-tools: A nice tools for VIM](doc/animation.mp4)
 - [Introducción](#Introducción)
 - [Fotos](#Fotos)
 - [Instalación](#Instalación)
