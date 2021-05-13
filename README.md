@@ -52,7 +52,6 @@ call plug#end()
 :so %
 :PlugInstall
 ```
-<img src="https://raw.githubusercontent.com/junegunn/i/master/vim-plug/installer.gif" height="450">
 <img src="https://github.com/mctechnology17/vim-tools/blob/main/doc/PlugInstall.gif" height="450">
 ## Descripción
 " Función para problemas con archivos temporales,los archivos duplicados tambien se tomaron en cuenta.
