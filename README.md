@@ -1,4 +1,4 @@
-![vim-tools: A nice tools for VIM](doc/animation.mp4)
+![vim-tools: A nice tools for VIM](doc/mctechnology_extendido.GIF)
 - [Introducción](#Introducción)
 - [Fotos](#Fotos)
 - [Instalación](#Instalación)
@@ -224,5 +224,8 @@ autocmd BufWritePre *.[ch] %s/\%$/\r/e
 ```
 
 ## Fotos
-![Compatibilidad con Minimap](doc/1_Plugs.png)
-![Terminal](doc/1_Terminal.png)
+![Compatibilidad](doc/1_Plugs.png)
+![Terminal](doc/2_Terminal.png)
+
+## Licencia
+
