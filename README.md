@@ -43,13 +43,13 @@ Otros beneficios:
 ## Instalación
 1. Instalar Plug si no lo tienes instalado -> [aquí](https://github.com/junegunn/vim-plug)
 2. Agregar a tu .vimrc
-```
+```vim
 call plug#begin('~/.vim/plugged')
 Plug 'mctechnology17/vim-tools'
 call plug#end()
 ```
 3. Actualizar fuentes e installar
-```
+```vim
 :so %
 :PlugInstall
 ```
@@ -57,7 +57,7 @@ call plug#end()
 
 ## Descripción
 " Función para problemas con archivos temporales,los archivos duplicados tambien se tomaron en cuenta.
-```
+```vim
 set noswapfile
 if !isdirectory($HOME."/vimtmp")
     call mkdir($HOME."/vimtmp", "p", 0770)
@@ -73,7 +73,7 @@ set undofile
 ```
 
 ### Variables de entorno
-```
+```vim
 let CONFIG_HOME = $PATH
 let CONFIG_VIM = $PATH
 let $CONFIG_HOME='$HOME/.config'
@@ -81,17 +81,17 @@ let $CONFIG_VIM='$HOME/.vimrc'
 ```
 
 ### Manera nativa, rapida y facil de reemplazar primeras xx->palabra a reemplazar y luego xx->palabra nueva
-```
+```vim
 nmap <Leader>r :%s/xx/xx/gc
 ```
 
 ### Cansado de no poder seleccionar todo con Contro+a? Aquí lo tienes en VIM
-```
+```vim
 nnoremap <C-A> ggVG
 ```
 
 ### Simbolos especiales reemplazados, para teclados ISO alemanes por ejemplo
-```
+```vim
 " ß = final de linea
 nnoremap ß $
 vnoremap ß $
@@ -107,7 +107,7 @@ vnoremap ä G
 ```
 
 ### Guardar y salir nunca fue tan facil
-```
+```vim
 " guardar
 nmap <Leader>w :w<CR>
 " salir
@@ -115,7 +115,7 @@ nmap <Leader>q :q<CR>
 ```
 
 ### Comentar por bloques, solo reemplaza las xx
-```
+```vim
 " desde hasta (al comienzo de la linea)
 nmap <Leader>c :xx,xxs/^/#
 " desde hasta (al final de la linea)
@@ -123,27 +123,27 @@ nmap <Leader>cc :xx,xxs/^#/
 ```
 
 ### Siguiente, anterior pestana o Buffer
-```
+```vim
 nmap <Leader>b :bnext<CR>
 nmap <Leader>bb :bprev<CR>
 ```
 
 ### Cambiar temas
-```
+```vim
 nmap <Leader>l :colorscheme default<CR>
 nmap <Leader>ll :colorscheme torte<CR>
 nmap <Leader>lll :colorscheme slate<CR>
 ```
 
 ### Usa la terminal sin salirte de tu archivo
-```
+```vim
 " set termwinsize=20x0
 map <Leader>x :belowright terminal<CR>
 nnoremap <Silent> <Leader>sh :terminal<CR>
 ```
 
 ### Mover bloques de codigo en Visual Mode
-```
+```vim
 " De arriba hacia abajo y viceversa
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -153,24 +153,24 @@ vnoremap > >gv
 ```
 
 ### Establecer directorio de trabajo en automático
-```
+```vim
 autocmd BufEnter * lcd %:p:h
 " cambiar directorio actual manual
 nnoremap <leader>cd :lcd %:p:h<CR>
 ```
 
 ### Crea un nuevo archivo con un comando de edición con la ruta actual
-```
+```vim
 noremap <Leader>nf :e <C-R>=expand("%:p:h") . "/" <CR>
 ```
 
 ### Abre un existente en una pestańa
-```
+```vim
 noremap <Leader>op :tabe <C-R>=expand("%:p:h") . "/" <CR>
 ```
 
 ### Recordar posicion del cursor
-```
+```vim
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
@@ -178,7 +178,7 @@ autocmd BufReadPost *
 ```
 
 ### Sangria automatica
-```
+```vim
 augroup mysettings
   au FileType xslt,xml,css,html,xhtml,javascript,sh,config,c,cpp,docbook set smartindent shiftwidth=2 softtabstop=2 expandtab
   au FileType tex set wrap shiftwidth=2 softtabstop=2 expandtab
@@ -188,17 +188,17 @@ augroup END
 ```
 
 ### Sintaxis en archivos .txt
-```
+```vim
 autocmd BufRead,BufNewFile *.txt set syntax=conf
 ```
 
 ### Deshabilitar el blinqueo del cursor
-```
+```vim
 set gcr=a:blinkon0
 ```
 
 ### Bibliotecas y rutas
-```
+```vim
 " ir a .config en una nueva pestańa
 map <Leader>ü :vsp<Space>$CONFIG_HOME<CR>
 " ir a .vimrc en una nueva pestańa
@@ -206,7 +206,7 @@ map <Leader>ä :vsp<Space>$CONFIG_VIM<CR>
 ```
 
 ### split de navegacion
-```
+```vim
 " Saltar a ventana izquierda
 map <C-h> <C-w>h
 " Saltar a ventana abajo
@@ -218,7 +218,7 @@ map <C-l> <C-w>l
 ```
 
 ### Autoeliminar espacios al final de cada linea
-```
+```vim
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * %s/\n\+\%$//e
 autocmd BufWritePre *.[ch] %s/\%$/\r/e
