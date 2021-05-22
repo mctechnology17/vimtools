@@ -5,6 +5,16 @@
   <br> <h1>⚙️  vim-tools 🛠 </h1>
 </div>
 
+<h4 align="center">
+  <a href="https://www.vim.org/" target="_blank"><code>VIM</code></a> plugin.
+</h4>
+
+<div align="center">
+  <sub>Hecho con amor por
+  <a href="https://twitter.com/mctechnology17">MC Technology</a>
+</div>
+<br>
+
 - [Introducción](#Introducción)
 - [Fotos](#Fotos)
 - [Instalación](#Instalación)
