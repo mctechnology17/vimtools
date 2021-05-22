@@ -1,12 +1,12 @@
 
 [![MC Technology](doc/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
 <div align="center">
-  <p> ⌨️  A powerfull vi/vim/nvim/MacVim plugin </p>
+  <p> ⌨️  Un poderoso y super útil Vi/Vim/NVim/MacVim plugin </p>
   <br> <h1>⚙️  vim-tools 🛠 </h1>
 </div>
 
 <h4 align="center">
-  <a href="https://www.vim.org/" target="_blank"><code>VIM</code></a> plugin.
+  <a href="https://www.vim.org/" target="_blank"><code>VIM</code></a>-Plugin
 </h4>
 
 <div align="center">
