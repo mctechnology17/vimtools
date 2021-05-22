@@ -1,9 +1,10 @@
 
 [![MC Technology](doc/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
 <div align="center">
+  <p> ⌨️  A powerfull vi/vim/nvim/MacVim plugin </p>
   <br> <h1>⚙️  vim-tools 🛠 </h1>
 </div>
-# ⌨️  A powerfull vi/vim/nvim/MacVim plugin
+
 - [Introducción](#Introducción)
 - [Fotos](#Fotos)
 - [Instalación](#Instalación)
