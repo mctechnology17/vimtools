@@ -5,7 +5,7 @@
 </div>
 
 <h4 align="center">
-  <a href="" target="_blank"><code>Compatibilidad 👉 </code></a>
+  <p> Compatibilidad 👉 </p>
   <a href="https://www.vim.org/download.php" target="_blank"><code>Vim</code></a>
   <a href="https://github.com/macvim-dev/macvim" target="_blank"><code>MacVim</code></a>
   <a href="https://github.com/neovim/neovim" target="_blank"><code>NVim</code></a>
