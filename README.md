@@ -5,12 +5,17 @@
   <br> <h1>⚙️  vim-tools 🛠 </h1>
 </div>
 
+<h4 align="left">
+  <p> Compatibilidad 👉 </p>
+</h4>
 <h4 align="center">
-  <a href="https://www.vim.org/" target="_blank"><code>VIM</code></a>-Plugin
+  <a href="https://www.vim.org/download.php" target="_blank"><code>Vim</code></a>
+  <a href="https://github.com/macvim-dev/macvim" target="_blank"><code>MacVim</code></a>
+  <a href="https://github.com/neovim/neovim" target="_blank"><code>NVim</code></a>
 </h4>
 
 <div align="right">
-  <sub>Hecho con amor por
+  <sub>Autor:
   <a href="https://twitter.com/mctechnology17">MC Technology</a>
 </div>
 <br>
