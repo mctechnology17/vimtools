@@ -1,14 +1,11 @@
 
 [![MC Technology](doc/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
 <div align="center">
-  <p> ⌨️  Un poderoso y super útil Vi/Vim/NVim/MacVim plugin </p>
   <br> <h1>⚙️  vim-tools 🛠 </h1>
 </div>
 
-<h4 align="left">
-  <p> Compatibilidad 👉 </p>
-</h4>
 <h4 align="center">
+  <a href="" target="_blank"><code>Compatibilidad 👉 </code></a>
   <a href="https://www.vim.org/download.php" target="_blank"><code>Vim</code></a>
   <a href="https://github.com/macvim-dev/macvim" target="_blank"><code>MacVim</code></a>
   <a href="https://github.com/neovim/neovim" target="_blank"><code>NVim</code></a>
