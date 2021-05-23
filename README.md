@@ -9,7 +9,7 @@
   <a href="https://www.vim.org/" target="_blank"><code>VIM</code></a>-Plugin
 </h4>
 
-<div align="center">
+<div align="right">
   <sub>Hecho con amor por
   <a href="https://twitter.com/mctechnology17">MC Technology</a>
 </div>
