@@ -1,7 +1,8 @@
 " ====================================================
-" FileName: vim-tools.vim
+" FileName: variables.vim
 " Author: MC Technology <mctechnology170318@gmail.com>
 " GitHub: https://github.com/mctechnology17
+" Date: 26.05.2021 15:00
 " ====================================================
 let CONFIG_VIM = $PATH
 let $CONFIG_VIM='$HOME/.vimrc'
@@ -54,6 +55,7 @@ nnoremap ü gg
 vnoremap ü gg
 nnoremap ä G
 vnoremap ä G
+
 inoremap <TAB> <C-N>
 inoremap ß <C-N>
 
@@ -63,10 +65,8 @@ nmap <Leader>q :q<CR>
 nmap <Leader>b :bnext<CR>
 nmap <Leader>bb :bprev<CR>
 
-if !has('nvim')
-	map <Leader>x :belowright terminal<CR>
-	nnoremap <Silent> <Leader>sh :terminal<CR>
-endif
+map <Leader>x :belowright terminal<CR>
+nnoremap <Silent> <Leader>sh :terminal<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -107,7 +107,6 @@ map <S-RIGHT> <C-w>l
 nnoremap + 3<C-w>>
 nnoremap - 3<C-w><
 
-
 if has('macunix')
   vmap <D-c> :!pbcopy<CR>
   nmap <D-c> :!pbcopy<CR>
@@ -119,13 +118,29 @@ if has('macunix')
   vmap <D-v> :w !pbpaste<CR><CR>
 endif
 
-"if !has('nvim')
-"endif
-map <Leader>- :belowright term python %<CR>
-map <Leader>-- :tab belowright term python %<CR>
-map <Leader>+ :!gcc % -g -v -m64 -Wall -Werror -Wunused-parameter -Wunused-variable -O3 -pedantic -o %<.x<CR><CR>
-map <Leader>++ :!g++ % -g -v -m64 -Wall -Werror -Wunused-parameter -Wunused-variable -O3 -pedantic -std=c++11 -o %<.x<CR><CR>
-nnoremap <silent> <TAB>p :!pandoc --verbose % -o %<.pdf && open %<.pdf<CR><CR>
-nnoremap <silent> <TAB>l :!pandoc --verbose % -o %<.pdf && open %<.pdf<CR><CR>
-nnoremap <silent> <TAB>+ :tab term ./%<.x<CR><CR>
-nnoremap <silent> <TAB>l :!rm -r %<.x.dSYM __pycache__ %<.[ox]<CR><CR>
+if has( 'python3' )
+  map <Leader>- :belowright term python %<CR>
+  map <Leader>-- :tab belowright term python %<CR>
+endif
+
+if has('gcc')||has('clang')
+  map <Leader>+ :!gcc % -g -v -m64 -Wall -Werror -Wunused-parameter -Wunused-variable -O3 -pedantic -o %<.x<CR><CR>
+  nnoremap <silent> <TAB>+ :tab term ./%<.x<CR><CR>
+  nnoremap <silent> <TAB>l :!rm -r %<.x.dSYM __pycache__ %<.[ox]<CR><CR>
+endif
+
+if has('g++')||has('clang++')
+  map <Leader>++ :!g++ % -g -v -m64 -Wall -Werror -Wunused-parameter -Wunused-variable -O3 -pedantic -std=c++11 -o %<.x<CR><CR>
+  nnoremap <silent> <TAB>+ :tab term ./%<.x<CR><CR>
+  nnoremap <silent> <TAB>l :!rm -r %<.x.dSYM __pycache__ %<.[ox]<CR><CR>
+endif
+
+if has( 'pandoc' )
+  if has('macunix')
+    nnoremap <silent> <TAB>p :!pandoc --verbose % -o %<.pdf && open %<.pdf<CR><CR>
+    nnoremap <silent> <TAB>l :!pandoc --verbose % -o %<.pdf && open %<.pdf<CR><CR>
+  elseif has('unix')
+    nnoremap <silent> <TAB>p :!pandoc --verbose % -o %<.pdf && xdg-open %<.pdf<CR><CR>
+    nnoremap <silent> <TAB>l :!pandoc --verbose % -o %<.pdf && xdg-open %<.pdf<CR><CR>
+  endif
+endif
