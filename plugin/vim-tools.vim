@@ -5,8 +5,17 @@
 " Date: 26.05.2021 15:00
 " ====================================================
 let CONFIG_VIM = $PATH
-let $CONFIG_VIM='$HOME/.vimrc'
-map <Leader>ä :vsp<Space>$CONFIG_VIM<CR>
+let CONFIG_NVIM = $PATH
+
+if has('win32')&&!has('win64')
+  let $CONFIG_VIM='$HOME/_vimrc'
+  let $CONFIG_NVIM='$HOME/AppData/Local/nvim/init.vim'
+else
+  let $CONFIG_VIM='$HOME/.vimrc'
+  let $CONFIG_NVIM='$HOME/.config/nvim/init.vim'
+endif
+map <F1> :vsp<Space>$CONFIG_VIM<CR>
+map <F2> :vsp<Space>$CONFIG_NVIM<CR>
 
 if isdirectory('/usr/share/dict/words')
     set dictionary+=/usr/share/dict/words
@@ -135,12 +144,10 @@ if has('g++')||has('clang++')
   nnoremap <silent> <TAB>l :!rm -r %<.x.dSYM __pycache__ %<.[ox]<CR><CR>
 endif
 
-if has( 'pandoc' )
-  if has('macunix')
-    nnoremap <silent> <TAB>p :!pandoc --verbose % -o %<.pdf && open %<.pdf<CR><CR>
-    nnoremap <silent> <TAB>l :!pandoc --verbose % -o %<.pdf && open %<.pdf<CR><CR>
-  elseif has('unix')
-    nnoremap <silent> <TAB>p :!pandoc --verbose % -o %<.pdf && xdg-open %<.pdf<CR><CR>
-    nnoremap <silent> <TAB>l :!pandoc --verbose % -o %<.pdf && xdg-open %<.pdf<CR><CR>
-  endif
+if has('macunix')
+  nnoremap <silent> <TAB>p :!pandoc --verbose % -o %<.pdf && open %<.pdf<CR><CR>
+  nnoremap <silent> <TAB>l :!pandoc --verbose % -o %<.pdf && open %<.pdf<CR><CR>
+elseif has('unix')
+  nnoremap <silent> <TAB>p :!pandoc --verbose % -o %<.pdf && xdg-open %<.pdf<CR><CR>
+  nnoremap <silent> <TAB>l :!pandoc --verbose % -o %<.pdf && xdg-open %<.pdf<CR><CR>
 endif
