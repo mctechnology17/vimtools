@@ -66,7 +66,6 @@ nnoremap ä G
 vnoremap ä G
 
 inoremap <TAB> <C-N>
-inoremap ß <C-N>
 
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>

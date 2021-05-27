@@ -145,7 +145,6 @@ nnoremap ä G
 vnoremap ä G
 "next word suggestion
 inoremap <TAB> <C-N>
-inoremap ß <C-N>
 
 "save and close the script in a comfortable way
 nmap <Leader>w :w<CR>

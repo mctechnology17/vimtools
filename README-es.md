@@ -143,7 +143,6 @@ nnoremap ä G
 vnoremap ä G
 " siguiente sugerencia de palabras
 inoremap <TAB> <C-N>
-inoremap ß <C-N>
 
 " guarda y cierra el script de una manera confortable
 nmap <Leader>w :w<CR>
