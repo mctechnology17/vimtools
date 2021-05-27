@@ -17,7 +17,7 @@
 </div>
 <br>
 
-- [spanish](README-es.md)
+- [Spanish](README-es.md)
 - [Intro](#Intro)
 - [Fotos](#Fotos)
 - [Installation](#Installation)
