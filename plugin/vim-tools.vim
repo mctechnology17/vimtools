@@ -4,6 +4,7 @@
 " GitHub: https://github.com/mctechnology17
 " Date: 26.05.2021 15:00
 " ====================================================
+let mapleader=" "
 let CONFIG_VIM = $PATH
 let CONFIG_NVIM = $PATH
 

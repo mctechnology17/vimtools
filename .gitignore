@@ -5,6 +5,8 @@ vim-tools_notiz.vim
 .vscode
 .vimspector.json
 push.sh
+/test
+test/
 
 # c, cpp
 *.x

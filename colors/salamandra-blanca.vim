@@ -1,6 +1,6 @@
 hi clear
 syntax reset
-let g:colors_name = "salamandra-negra"
+let g:colors_name = "salamandra-blanca"
 set background=light
 set t_Co=256
 hi Normal guifg=#1f1f28 ctermbg=NONE guibg=#ffffff gui=NONE
