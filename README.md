@@ -38,7 +38,7 @@ created for VIM, Vi, GVIm, MacVim and the all-powerful NVIM editor.
 
 ## Installation
 
-# Using [Vundle][https://github.com/gmarik/vundle]:
+# Using [Vundle](https://github.com/gmarik/vundle):
 
 Just add this line to your `~/.vimrc`:
 
