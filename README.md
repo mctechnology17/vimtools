@@ -44,7 +44,6 @@ Just add this line to your `~/.vimrc`:
 ```vim
 Plugin 'mctechnology17/vim-tools'
 ```
-
 And run `:PluginInstall` inside Vim.
 
 ### Using [pathogen.vim](https://github.com/tpope/vim-pathogen):
