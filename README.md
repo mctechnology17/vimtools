@@ -289,4 +289,4 @@ endif
 ![Terminal](doc/2_Terminal.png)
 
 ## LICENSE
-[Licencia](./LICENSE)
+[License](./LICENSE)
