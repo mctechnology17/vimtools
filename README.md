@@ -80,7 +80,8 @@ And run `:PlugInstall` inside Vim or `vim +PlugInstall +qa` from shell.
 ```vim
 " access your .vimrc or init.vim immediately with
 " F1 keys for .vimrc or _vimrc if you are on Windows
-F2 para init.vim let CONFIG_VIM = $PATH
+" F2 para init.vim
+let CONFIG_VIM = $PATH
 let CONFIG_NVIM = $PATH
 
 if has('win32')&&!has('win64')
