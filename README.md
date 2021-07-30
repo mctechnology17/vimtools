@@ -17,7 +17,6 @@
 </div>
 <br>
 
-- [Spanish](README-es.md)
 - [Intro](#Intro)
 - [Fotos](#Fotos)
 - [Installation](#Installation)
@@ -289,4 +288,3 @@ endif
 ![Terminal](doc/2_Terminal.png)
 
 ## LICENSE
-[License](./LICENSE)
