@@ -38,7 +38,7 @@ created for VIM, Vi, GVIm, MacVim and the all-powerful NVIM editor.
 
 ## Installation
 
-# Using [Vundle](https://github.com/gmarik/vundle):
+### Using [Vundle](https://github.com/gmarik/vundle):
 
 Just add this line to your `~/.vimrc`:
 
@@ -48,7 +48,7 @@ Plugin 'mctechnology17/vim-tools'
 
 And run `:PluginInstall` inside Vim.
 
-# Using [pathogen.vim][https://github.com/tpope/vim-pathogen]:
+### Using [pathogen.vim](https://github.com/tpope/vim-pathogen):
 
 Copy and paste in your shell:
 
@@ -57,7 +57,7 @@ cd ~/.vim/bundle
 git clone https://github.com/mctechnology17/vim-tools
 ```
 
-# Using [vpm][https://github.com/KevinSjoberg/vpm]:
+### Using [vpm](https://github.com/KevinSjoberg/vpm):
 
 Run this command in your shell:
 
@@ -65,7 +65,7 @@ Run this command in your shell:
 vpm insert mctechnology17/vim-tools
 ```
 
-# Using [Plug][https://github.com/junegunn/vim-plug]:
+### Using [Plug](https://github.com/junegunn/vim-plug):
 
 Just add this line to your `~/.vimrc` inside plug call:
 
