@@ -37,18 +37,44 @@ With this Plug you can forget about temporary files
 created for VIM, Vi, GVIm, MacVim and the all-powerful NVIM editor.
 
 ## Installation
-1. Install Vim-Plug in case you don't have it -> [hier](https://github.com/junegunn/vim-plug)
-2. Add to your .vimrc
+
+# Using [Vundle][https://github.com/gmarik/vundle]:
+
+Just add this line to your `~/.vimrc`:
+
 ```vim
-call plug#begin('~/.vim/plugged')
+Plugin 'mctechnology17/vim-tools'
+```
+
+And run `:PluginInstall` inside Vim.
+
+# Using [pathogen.vim][https://github.com/tpope/vim-pathogen]:
+
+Copy and paste in your shell:
+
+```bash
+cd ~/.vim/bundle
+git clone https://github.com/mctechnology17/vim-tools
+```
+
+# Using [vpm][https://github.com/KevinSjoberg/vpm]:
+
+Run this command in your shell:
+
+```bash
+vpm insert mctechnology17/vim-tools
+```
+
+# Using [Plug][https://github.com/junegunn/vim-plug]:
+
+Just add this line to your `~/.vimrc` inside plug call:
+
+```vim
 Plug 'mctechnology17/vim-tools'
-call plug#end()
 ```
-3. Update source and install
-```vim
-:so %
-:PlugInstall
-```
+
+And run `:PlugInstall` inside Vim or `vim +PlugInstall +qa` from shell.
+
 <img src="https://github.com/mctechnology17/vim-tools/blob/main/doc/PlugInstall.gif" height="450">
 
 ## Description

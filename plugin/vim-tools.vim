@@ -25,6 +25,8 @@
 " OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 " SOFTWARE.
 
+scriptencoding utf-8
+
 let CONFIG_VIM = $PATH
 let CONFIG_NVIM = $PATH
 
@@ -152,13 +154,13 @@ if has( 'python3' )
   map <Leader>-- :tab belowright term python %<CR>
 endif
 
-if has('gcc')||has('clang')
+if has('gcc') || has('clang')
   map <Leader>+ :!gcc % -g -v -m64 -Wall -Werror -Wunused-parameter -Wunused-variable -O3 -pedantic -o %<.x<CR><CR>
   nnoremap <silent> <TAB>+ :tab term ./%<.x<CR><CR>
   nnoremap <silent> <TAB>l :!rm -r %<.x.dSYM __pycache__ %<.[ox]<CR><CR>
 endif
 
-if has('g++')||has('clang++')
+if has('g++') || has('clang++')
   map <Leader>++ :!g++ % -g -v -m64 -Wall -Werror -Wunused-parameter -Wunused-variable -O3 -pedantic -std=c++11 -o %<.x<CR><CR>
   nnoremap <silent> <TAB>+ :tab term ./%<.x<CR><CR>
   nnoremap <silent> <TAB>l :!rm -r %<.x.dSYM __pycache__ %<.[ox]<CR><CR>

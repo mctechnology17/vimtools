@@ -9,6 +9,7 @@ push.sh
 test/
 /vim_installer
 vim_installer/
+doc/vim-tools.txt
 
 # c, cpp
 *.x
