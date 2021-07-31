@@ -257,7 +257,7 @@ endif
 
 "compile your code in c with gcc or clang
 "NOTE: it only works if you don't have to give it any arguments
-if has('gcc')||has('clang')
+if has('gcc')
   map <Leader>+ :!gcc % -g -v -m64 -Wall -Werror -Wunused-parameter -Wunused-variable -O3 -pedantic -o %<.x<CR><CR>
   nnoremap <silent> <TAB>+ :tab term ./%<.x<CR><CR>
   nnoremap <silent> <TAB>l :!rm -r %<.x.dSYM __pycache__ %<.[ox]<CR><CR>
@@ -267,7 +267,7 @@ endif
 "<TAB> + executes compiled code
 "<TAB> l clean compiled code and temporary files
 "NOTE: it only works if you don't have to give it any arguments
-if has('g++')||has('clang++')
+if has('g++')
   map <Leader>++ :!g++ % -g -v -m64 -Wall -Werror -Wunused-parameter -Wunused-variable -O3 -pedantic -std=c++11 -o %<.x<CR><CR>
   nnoremap <silent> <TAB>+ :tab term ./%<.x<CR><CR>
   nnoremap <silent> <TAB>l :!rm -r %<.x.dSYM __pycache__ %<.[ox]<CR><CR>
