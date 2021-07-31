@@ -261,6 +261,8 @@ if has('gcc')
   map <Leader>+ :!gcc % -g -v -m64 -Wall -Werror -Wunused-parameter -Wunused-variable -O3 -pedantic -o %<.x<CR><CR>
   nnoremap <silent> <TAB>+ :tab term ./%<.x<CR><CR>
   nnoremap <silent> <TAB>l :!rm -r %<.x.dSYM __pycache__ %<.[ox]<CR><CR>
+else
+	echoerr "gcc does not exist"
 endif
 
 "compile your code in cpp with g ++ or clang ++
