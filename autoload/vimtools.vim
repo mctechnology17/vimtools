@@ -58,6 +58,7 @@ fun! s:MakeDir()
         call mkdir($HOME."/vim-tools_tmp/vim_tmp/vim_viewdir", "p", 0770)
         echomsg 'vim-tools: vim_viewdir was created'
     endif
+    echomsg 'vim-tools: Directories created with success'
 endfun
 
 function! vimtools#execute()
