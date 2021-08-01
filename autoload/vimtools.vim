@@ -35,27 +35,29 @@ fun! s:MakeDir()
     endif
     if !isdirectory($HOME."/vim-tools_tmp/nvim_tmp")
         call mkdir($HOME."/vim-tools_tmp/nvim_tmp", "p", 0770)
+        echomsg 'vim-tools: nvim_tmp was created'
     endif
     if !isdirectory($HOME."/vim-tools_tmp/nvim_tmp/undo_dir")
         call mkdir($HOME."/vim-tools_tmp/nvim_tmp/undo_dir", "p", 0700)
+        echomsg 'vim-tools: undo_dir was created'
     endif
     if !isdirectory($HOME."/vim-tools_tmp/nvim_tmp/nvim_viewdir")
         call mkdir($HOME."/vim-tools_tmp/nvim_tmp/nvim_viewdir", "p", 0770)
+        echomsg 'vim-tools: nvim_viewdir was created'
     endif
-    echomsg 'vim-tools: undo_dir, nvim_tmp and nvim_viewdir folders were created'
-    sleep 1
 
     if !isdirectory($HOME."/vim-tools_tmp/vim_tmp")
         call mkdir($HOME."/vim-tools_tmp/vim_tmp", "p", 0770)
+        echomsg 'vim-tools: vim_tmp was created'
     endif
     if !isdirectory($HOME."/vim-tools_tmp/vim_tmp/undo_dir")
         call mkdir($HOME."/vim-tools_tmp/vim_tmp/undo_dir", "p", 0700)
+        echomsg 'vim-tools: undo_dir was created'
     endif
     if !isdirectory($HOME."/vim-tools_tmp/vim_tmp/vim_viewdir")
         call mkdir($HOME."/vim-tools_tmp/vim_tmp/vim_viewdir", "p", 0770)
+        echomsg 'vim-tools: vim_viewdir was created'
     endif
-    echomsg 'vim-tools: undo_dir, vim_tmp and vim_viewdir folders were created'
-    sleep 1
 endfun
 
 function! vimtools#execute()
