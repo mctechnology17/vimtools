@@ -1,5 +1,5 @@
 " ====================================================
-" FileName: vim-tools.vim
+" FileName: vimtools.vim
 " Author: MC Technology <mctechnology170318@gmail.com>
 " GitHub: https://github.com/mctechnology17
 " Date: 26.05.2021 15:00
@@ -27,11 +27,7 @@
 
 scriptencoding utf-8
 
-if !exists('g:vimtools_loaded')
-    let g:vimtools_loaded = 0
-endif
-
-if g:vimtools_loaded == 0
+function! vimtools#execute()
     let CONFIG_NVIM = $PATH
     let CONFIG_VIM = $PATH
     if has('win32')&&!has('win64')
@@ -178,4 +174,4 @@ if g:vimtools_loaded == 0
       vmap <D-v> :w !pbpaste<CR><CR>
       vmap <D-v> :w !pbpaste<CR><CR>
     endif
-endif
+endfunction
