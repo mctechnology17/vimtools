@@ -6,7 +6,37 @@
 " ====================================================
 scriptencoding utf-8
 
-fun! s:MakeDir()
+fun! s:SetVSP() "{{{
+    let CONFIG_NVIM = $PATH
+    let CONFIG_VIM = $PATH
+    if has('win32')&&!has('win64')
+        if filereadable(expand('$HOME/_vimrc'))
+            let $CONFIG_VIM='$HOME/_vimrc'
+        endif
+        if filereadable(expand('$HOME/AppData/Local/nvim/init.vim'))
+            let $CONFIG_NVIM='$HOME/AppData/Local/nvim/init.vim'
+        endif
+        if has('nvim')
+            map <F2> :vsp<Space>$CONFIG_NVIM<CR>
+        else
+            map <F2> :vsp<Space>$CONFIG_VIM<CR>
+        endif
+    else
+        if filereadable(expand('$HOME/.vimrc'))
+            let $CONFIG_VIM='$HOME/.vimrc'
+        endif
+        if filereadable(expand('$HOME/.config/nvim/init.vim'))
+            let $CONFIG_NVIM='$HOME/.config/nvim/init.vim'
+        endif
+        if has('nvim')
+            map <F2> :vsp<Space>$CONFIG_NVIM<CR>
+        else
+            map <F2> :vsp<Space>$CONFIG_VIM<CR>
+        endif
+    endif
+endfun "}}}
+
+fun! s:MakeDir() "{{{
     if !isdirectory($HOME."/vimtools_tmp")
         call mkdir($HOME."/vimtools_tmp", "p", 0770)
         echomsg 'vimtools: $HOME/vimtools_tmp folder was created'
@@ -38,9 +68,9 @@ fun! s:MakeDir()
         echomsg 'vimtools: vim_viewdir was created'
     endif
     echomsg 'vimtools: Directories created with success'
-endfun
+endfun "}}}
 
-fun! s:SetBackUpDir()
+fun! s:SetBackUpDir() "{{{
     if has('nvim')
         set viewdir=~/vimtools_tmp/nvim_tmp/nvim_viewdir   " backup for folding
         set directory=~/vimtools_tmp/nvim_tmp//,.   " backup for swap
@@ -59,39 +89,18 @@ fun! s:SetBackUpDir()
     set backup                  " set nobackup nowritebackup
     set undofile                " set noundofile
     set noswapfile              " set swapfile
-endfun
+endfun "}}}
 
-fun! s:SetVSP()
-    let CONFIG_NVIM = $PATH
-    let CONFIG_VIM = $PATH
-    if has('win32')&&!has('win64')
-        if filereadable(expand('$HOME/_vimrc'))
-            let $CONFIG_VIM='$HOME/_vimrc'
-        endif
-        if filereadable(expand('$HOME/AppData/Local/nvim/init.vim'))
-            let $CONFIG_NVIM='$HOME/AppData/Local/nvim/init.vim'
-        endif
-        if has('nvim')
-            map <F2> :vsp<Space>$CONFIG_NVIM<CR>
-        else
-            map <F2> :vsp<Space>$CONFIG_VIM<CR>
-        endif
-    else
-        if filereadable(expand('$HOME/.vimrc'))
-            let $CONFIG_VIM='$HOME/.vimrc'
-        endif
-        if filereadable(expand('$HOME/.config/nvim/init.vim'))
-            let $CONFIG_NVIM='$HOME/.config/nvim/init.vim'
-        endif
-        if has('nvim')
-            map <F2> :vsp<Space>$CONFIG_NVIM<CR>
-        else
-            map <F2> :vsp<Space>$CONFIG_VIM<CR>
-        endif
+fun! s:CleanUndoDir() "{{{
+    if isdirectory($HOME."/vimtools_tmp/nvim_tmp/undo_dir")||
+                \ isdirectory($HOME."/vimtools_tmp/vim_tmp/undo_dir")
+        autocmd BufWritePost !find $HOME/vimtools_tmp/nvim_tmp/undo_dir -type f -mtime +90 -delete
+        autocmd BufWritePost !find $HOME/vimtools_tmp/vim_tmp/undo_dir -type f -mtime +90 -delete
+        echomsg 'vimtools: UNDO_DIR was cleaned with success'
     endif
-endfun
+endfun "}}}
 
-function! vimtools#execute()
+function! vimtools#execute() "{{{
     if g:vimtools_setvsp_loaded
         call s:SetVSP()
     endif
@@ -104,16 +113,7 @@ function! vimtools#execute()
     else
         call s:SetBackUpDir()
     endif
-endfunction
-
-fun! s:CleanUndoDir()
-    if isdirectory($HOME."/vimtools_tmp/nvim_tmp/undo_dir")||
-                \ isdirectory($HOME."/vimtools_tmp/vim_tmp/undo_dir")
-        autocmd BufWritePost !find $HOME/vimtools_tmp/nvim_tmp/undo_dir -type f -mtime +90 -delete
-        autocmd BufWritePost !find $HOME/vimtools_tmp/vim_tmp/undo_dir -type f -mtime +90 -delete
-        echomsg 'vimtools: UNDO_DIR was cleaned with success'
-    endif
-endfun
+endfunction "}}}
 
 command! -nargs=0 VimToolsCleanUndoDir call s:CleanUndoDir()
 command! -nargs=0 VimToolsMakeDir call s:MakeDir()

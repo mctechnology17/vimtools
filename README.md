@@ -236,3 +236,7 @@ endif
 ![Terminal](doc/2_Terminal.png)
 
 ## [LICENSE](LICENSE)
+
+Released under the GNU General Public License v3.0.
+
+Copyright (c) 2021 MC Technology
