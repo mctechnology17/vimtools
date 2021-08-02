@@ -1,0 +1,106 @@
+*vimtools.txt*                         The swiss army knife plugin for (Neo)vim
+
+
+                               ╔═╦═╦═╗
+                        ╔════╗ ║║║║║╔╝
+                        ║╔╗╔╗║ ║║║║║╚╗
+                        ╚╝║║╚╝ ║╠═╩╩═╝
+                          ║╠═╦═╣╚╦═╦╦═╦╗╔═╦═╦╦╗
+                          ║║╩╣═╣║║║║║╬║╚╣╬║╬║║║
+                          ╚╩═╩═╩╩╩╩═╩═╩═╩═╬╗╠╗║
+                                          ╚═╩═╝
+
+==============================================================================
+CONTENTS                                                      *vimtoolsContents*
+
+    1. Intro ...................... |vimtoolsIntro|
+    2.1 Commands .................. |vimtoolsCommands|
+        2.1 :vimtools[!] .............. |:vimtools|
+        2.2 :vimtoolsKeywords[!] ...... |:vimtoolsKeywords|
+    3. Mappings ................... |vimtoolsMappings|
+        3.1 Key bindings .......... |vimtoolsKeyBindings|
+    4. Configuration .............. |vimtoolsConfig|
+        4.1 vimtools_activate ......... |vimtoolsConfig_activate|
+        4.2 vimtools_map .............. |vimtoolsConfig_map|
+    5. License .................... |vimtoolsLicense|
+    6. Bugs ....................... |vimtoolsBugs|
+    7. Contributing ............... |vimtoolsContributing|
+    8. Changelog .................. |vimtoolsChangelog|
+    9. Credits .................... |vimtoolsCredits|
+
+==============================================================================
+1. Intro                                                           *vimtoolsIntro*
+
+The swiss army knife plugin for (Neo)vim
+TODO
+
+==============================================================================
+2. Commands                                                     *vimtoolsCommands*
+
+------------------------------------------------------------------------------
+2.1 :vimtools[!]                                                           *:vimtools*
+
+TODO
+
+------------------------------------------------------------------------------
+2.2 :vimtoolsKeywords[!]                                           *:vimtoolsKeywords*
+
+TODO
+
+==============================================================================
+3. Mappings                                                     *vimtoolsMappings*
+
+------------------------------------------------------------------------------
+3.1 Key bindings                                             *vimtoolsKeyBindings*
+
+TODO
+
+==============================================================================
+4. Configuration                                                  *vimtoolsConfig*
+
+------------------------------------------------------------------------------
+4.1 g:vimtools_activate                                      *vimtoolsConfig_activate*
+TODO
+
+4.2 g:vimtools_map                                                *vimtoolsConfig_map*
+TODO
+
+==============================================================================
+5. License                                                       *vimtoolsLicense*
+
+Released under the GNU General Public License v3.0.
+
+==============================================================================
+6. Bugs                                                             *vimtoolsBugs*
+
+Before submitting a bug report, try upgrading to the latest version of the
+plugin. The bug could have been fixed already.
+
+If the problem persists, go to:
+
+    https://github.com/mctechnology17/vimtools
+
+Check the list of open issues and see if the problem you are facing has not
+been reported already. You can add more information to the issue in case it
+has. Otherwise, submit a new issue.
+
+==============================================================================
+7. Contributing                                             *vimtoolsContributing*
+
+Contributions are welcomed and appreciated. Just follow the normal Github
+procedure. Go to:
+
+    https://github.com/mctechnology17/vimtools
+
+Fork the project. Work on what you think would make it better. Send a pull
+request.
+
+==============================================================================
+7. Changelog                                                   *vimtoolsChangelog*
+
+Refer to CHANGELOG.txt
+
+==============================================================================
+9. Credits                                                       *vimtoolsCredits*
+
+TODO

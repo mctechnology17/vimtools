@@ -1,0 +1,16 @@
+:vimtools	vimtools.txt	/*:vimtools*
+:vimtoolsKeywords	vimtools.txt	/*:vimtoolsKeywords*
+vimtoolsBugs	vimtools.txt	/*vimtoolsBugs*
+vimtoolsChangelog	vimtools.txt	/*vimtoolsChangelog*
+vimtoolsCommands	vimtools.txt	/*vimtoolsCommands*
+vimtoolsConfig	vimtools.txt	/*vimtoolsConfig*
+vimtoolsConfig_activate	vimtools.txt	/*vimtoolsConfig_activate*
+vimtoolsConfig_map	vimtools.txt	/*vimtoolsConfig_map*
+vimtoolsContents	vimtools.txt	/*vimtoolsContents*
+vimtoolsContributing	vimtools.txt	/*vimtoolsContributing*
+vimtoolsCredits	vimtools.txt	/*vimtoolsCredits*
+vimtoolsIntro	vimtools.txt	/*vimtoolsIntro*
+vimtoolsKeyBindings	vimtools.txt	/*vimtoolsKeyBindings*
+vimtoolsLicense	vimtools.txt	/*vimtoolsLicense*
+vimtoolsMappings	vimtools.txt	/*vimtoolsMappings*
+vimtools.txt	vimtools.txt	/*vimtools.txt*
