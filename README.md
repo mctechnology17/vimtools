@@ -1,7 +1,7 @@
 
 [![MC Technology](doc/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
 <div align="center">
-  <br> <h1>⚙️  vim-tools 🛠 </h1>
+  <br> <h1>⚙️  vimtools 🛠 </h1>
 </div>
 
 <h4 align="center">
@@ -42,7 +42,7 @@ created for VIM, Vi, GVIm, MacVim and the all-powerful NVIM editor.
 Just add this line to your `~/.vimrc`:
 
 ```vim
-Plugin 'mctechnology17/vim-tools'
+Plugin 'mctechnology17/vimtools'
 ```
 And run `:PluginInstall` inside Vim.
 
@@ -52,7 +52,7 @@ Copy and paste in your shell:
 
 ```bash
 cd ~/.vim/bundle
-git clone https://github.com/mctechnology17/vim-tools
+git clone https://github.com/mctechnology17/vimtools
 ```
 
 ### Using [vpm](https://github.com/KevinSjoberg/vpm):
@@ -60,7 +60,7 @@ git clone https://github.com/mctechnology17/vim-tools
 Run this command in your shell:
 
 ```bash
-vpm insert mctechnology17/vim-tools
+vpm insert mctechnology17/vimtools
 ```
 
 ### Using [Plug](https://github.com/junegunn/vim-plug):
@@ -68,12 +68,12 @@ vpm insert mctechnology17/vim-tools
 Just add this line to your `~/.vimrc` inside plug call:
 
 ```vim
-Plug 'mctechnology17/vim-tools'
+Plug 'mctechnology17/vimtools'
 ```
 
 And run `:PlugInstall` inside Vim or `vim +PlugInstall +qa` from shell.
 
-<img src="https://github.com/mctechnology17/vim-tools/blob/main/doc/PlugInstall.gif" height="450">
+<img src="https://github.com/mctechnology17/vimtools/blob/main/doc/PlugInstall.gif" height="450">
 
 ## Description
 ```vim
@@ -118,51 +118,51 @@ if g:vimtools_loaded == 0
         set guifont=Consolas:h12
     endif
 
-    if !isdirectory($HOME."/vim-tools_tmp")
-        call mkdir($HOME."/vim-tools_tmp", "p", 0770)
-        echomsg 'vim-tools: $HOME/vim-tools_tmp folder was created'
+    if !isdirectory($HOME."/vimtools_tmp")
+        call mkdir($HOME."/vimtools_tmp", "p", 0770)
+        echomsg 'vimtools: $HOME/vimtools_tmp folder was created'
         sleep 2
 
-        if !isdirectory($HOME."/vim-tools_tmp/nvim_tmp")
-            call mkdir($HOME."/vim-tools_tmp/nvim_tmp", "p", 0770)
+        if !isdirectory($HOME."/vimtools_tmp/nvim_tmp")
+            call mkdir($HOME."/vimtools_tmp/nvim_tmp", "p", 0770)
         endif
-        if !isdirectory($HOME."/vim-tools_tmp/nvim_tmp/undo_dir")
-            call mkdir($HOME."/vim-tools_tmp/nvim_tmp/undo_dir", "p", 0700)
+        if !isdirectory($HOME."/vimtools_tmp/nvim_tmp/undo_dir")
+            call mkdir($HOME."/vimtools_tmp/nvim_tmp/undo_dir", "p", 0700)
         endif
-        if !isdirectory($HOME."/vim-tools_tmp/nvim_tmp/nvim_viewdir")
-            call mkdir($HOME."/vim-tools_tmp/nvim_tmp/nvim_viewdir", "p", 0770)
+        if !isdirectory($HOME."/vimtools_tmp/nvim_tmp/nvim_viewdir")
+            call mkdir($HOME."/vimtools_tmp/nvim_tmp/nvim_viewdir", "p", 0770)
         endif
-        echomsg 'vim-tools: undo_dir, nvim_tmp and nvim_viewdir folders were created'
+        echomsg 'vimtools: undo_dir, nvim_tmp and nvim_viewdir folders were created'
         sleep 2
 
-        if !isdirectory($HOME."/vim-tools_tmp/vim_tmp")
-            call mkdir($HOME."/vim-tools_tmp/vim_tmp", "p", 0770)
+        if !isdirectory($HOME."/vimtools_tmp/vim_tmp")
+            call mkdir($HOME."/vimtools_tmp/vim_tmp", "p", 0770)
         endif
-        if !isdirectory($HOME."/vim-tools_tmp/vim_tmp/undo_dir")
-            call mkdir($HOME."/vim-tools_tmp/vim_tmp/undo_dir", "p", 0700)
+        if !isdirectory($HOME."/vimtools_tmp/vim_tmp/undo_dir")
+            call mkdir($HOME."/vimtools_tmp/vim_tmp/undo_dir", "p", 0700)
         endif
-        if !isdirectory($HOME."/vim-tools_tmp/vim_tmp/vim_viewdir")
-            call mkdir($HOME."/vim-tools_tmp/vim_tmp/vim_viewdir", "p", 0770)
+        if !isdirectory($HOME."/vimtools_tmp/vim_tmp/vim_viewdir")
+            call mkdir($HOME."/vimtools_tmp/vim_tmp/vim_viewdir", "p", 0770)
         endif
-        echomsg 'vim-tools: undo_dir, vim_tmp and vim_viewdir folders were created'
+        echomsg 'vimtools: undo_dir, vim_tmp and vim_viewdir folders were created'
         sleep 2
     else
         if has('nvim')
-            set viewdir=~/vim-tools_tmp/nvim_tmp/nvim_viewdir
-            set directory=~/vim-tools_tmp/nvim_tmp//,.
-            set backupdir=~/vim-tools_tmp/nvim_tmp//,.
-            set undodir=~/vim-tools_tmp/nvim_tmp/undo_dir
+            set viewdir=~/vimtools_tmp/nvim_tmp/nvim_viewdir
+            set directory=~/vimtools_tmp/nvim_tmp//,.
+            set backupdir=~/vimtools_tmp/nvim_tmp//,.
+            set undodir=~/vimtools_tmp/nvim_tmp/undo_dir
             autocmd BufWinLeave *.* mkview
             autocmd BufWinEnter *.* silent! loadview
-            autocmd BufWritePost !find $HOME/vim-tools_tmp/nvim_tmp/undo_dir -type f -mtime +90 -delete
+            autocmd BufWritePost !find $HOME/vimtools_tmp/nvim_tmp/undo_dir -type f -mtime +90 -delete
         else
-            set viewdir=~/vim-tools_tmp/vim_tmp/vim_viewdir
-            set directory=~/vim-tools_tmp/vim_tmp//,.
-            set backupdir=~/vim-tools_tmp/vim_tmp//,.
-            set undodir=~/vim-tools_tmp/vim_tmp/undo_dir
+            set viewdir=~/vimtools_tmp/vim_tmp/vim_viewdir
+            set directory=~/vimtools_tmp/vim_tmp//,.
+            set backupdir=~/vimtools_tmp/vim_tmp//,.
+            set undodir=~/vimtools_tmp/vim_tmp/undo_dir
             autocmd BufWinLeave *.* mkview
             autocmd BufWinEnter *.* silent! loadview
-            autocmd BufWritePost !find $HOME/vim-tools_tmp/vim_tmp/undo_dir -type f -mtime +90 -delete
+            autocmd BufWritePost !find $HOME/vimtools_tmp/vim_tmp/undo_dir -type f -mtime +90 -delete
         endif
         set backup                  " set nobackup nowritebackup
         set undofile                " set noundofile
@@ -235,4 +235,4 @@ endif
 ![Compatibility](doc/1_Plugs.png)
 ![Terminal](doc/2_Terminal.png)
 
-## LICENSE
+## [LICENSE](LICENSE)

@@ -4,61 +4,61 @@
 " GitHub: https://github.com/mctechnology17
 " Date: 26.05.2021 15:00
 " ====================================================
-
-" Copyright (c) 2021 MC Technology
-"
-" Permission is hereby granted, free of charge, to any person obtaining a copy
-" of this software and associated documentation files (the 'Software'), to deal
-" in the Software without restriction, including without limitation the rights
-" to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-" copies of the Software, and to permit persons to whom the Software is
-" furnished to do so, subject to the following conditions:
-"
-" The above copyright notice and this permission notice shall be included in all
-" copies or substantial portions of the Software.
-"
-" THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-" FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-" OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-" SOFTWARE.
-
 scriptencoding utf-8
 
 fun! s:MakeDir()
-    if !isdirectory($HOME."/vim-tools_tmp")
-        call mkdir($HOME."/vim-tools_tmp", "p", 0770)
-        echomsg 'vim-tools: $HOME/vim-tools_tmp folder was created'
+    if !isdirectory($HOME."/vimtools_tmp")
+        call mkdir($HOME."/vimtools_tmp", "p", 0770)
+        echomsg 'vimtools: $HOME/vimtools_tmp folder was created'
         sleep 1
     endif
-    if !isdirectory($HOME."/vim-tools_tmp/nvim_tmp")
-        call mkdir($HOME."/vim-tools_tmp/nvim_tmp", "p", 0770)
-        echomsg 'vim-tools: nvim_tmp was created'
+    if !isdirectory($HOME."/vimtools_tmp/nvim_tmp")
+        call mkdir($HOME."/vimtools_tmp/nvim_tmp", "p", 0770)
+        echomsg 'vimtools: nvim_tmp was created'
     endif
-    if !isdirectory($HOME."/vim-tools_tmp/nvim_tmp/undo_dir")
-        call mkdir($HOME."/vim-tools_tmp/nvim_tmp/undo_dir", "p", 0700)
-        echomsg 'vim-tools: undo_dir was created'
+    if !isdirectory($HOME."/vimtools_tmp/nvim_tmp/undo_dir")
+        call mkdir($HOME."/vimtools_tmp/nvim_tmp/undo_dir", "p", 0700)
+        echomsg 'vimtools: undo_dir was created'
     endif
-    if !isdirectory($HOME."/vim-tools_tmp/nvim_tmp/nvim_viewdir")
-        call mkdir($HOME."/vim-tools_tmp/nvim_tmp/nvim_viewdir", "p", 0770)
-        echomsg 'vim-tools: nvim_viewdir was created'
+    if !isdirectory($HOME."/vimtools_tmp/nvim_tmp/nvim_viewdir")
+        call mkdir($HOME."/vimtools_tmp/nvim_tmp/nvim_viewdir", "p", 0770)
+        echomsg 'vimtools: nvim_viewdir was created'
     endif
 
-    if !isdirectory($HOME."/vim-tools_tmp/vim_tmp")
-        call mkdir($HOME."/vim-tools_tmp/vim_tmp", "p", 0770)
-        echomsg 'vim-tools: vim_tmp was created'
+    if !isdirectory($HOME."/vimtools_tmp/vim_tmp")
+        call mkdir($HOME."/vimtools_tmp/vim_tmp", "p", 0770)
+        echomsg 'vimtools: vim_tmp was created'
     endif
-    if !isdirectory($HOME."/vim-tools_tmp/vim_tmp/undo_dir")
-        call mkdir($HOME."/vim-tools_tmp/vim_tmp/undo_dir", "p", 0700)
-        echomsg 'vim-tools: undo_dir was created'
+    if !isdirectory($HOME."/vimtools_tmp/vim_tmp/undo_dir")
+        call mkdir($HOME."/vimtools_tmp/vim_tmp/undo_dir", "p", 0700)
+        echomsg 'vimtools: undo_dir was created'
     endif
-    if !isdirectory($HOME."/vim-tools_tmp/vim_tmp/vim_viewdir")
-        call mkdir($HOME."/vim-tools_tmp/vim_tmp/vim_viewdir", "p", 0770)
-        echomsg 'vim-tools: vim_viewdir was created'
+    if !isdirectory($HOME."/vimtools_tmp/vim_tmp/vim_viewdir")
+        call mkdir($HOME."/vimtools_tmp/vim_tmp/vim_viewdir", "p", 0770)
+        echomsg 'vimtools: vim_viewdir was created'
     endif
-    echomsg 'vim-tools: Directories created with success'
+    echomsg 'vimtools: Directories created with success'
+endfun
+
+fun! s:SetBackUpDir()
+    if has('nvim')
+        set viewdir=~/vimtools_tmp/nvim_tmp/nvim_viewdir   " backup for folding
+        set directory=~/vimtools_tmp/nvim_tmp//,.   " backup for swap
+        set backupdir=~/vimtools_tmp/nvim_tmp//,.   " respaldos
+        set undodir=~/vimtools_tmp/nvim_tmp/undo_dir  " deshacer
+        autocmd BufWinLeave *.* mkview
+        autocmd BufWinEnter *.* silent! loadview
+    else
+        set viewdir=~/vimtools_tmp/vim_tmp/vim_viewdir   " backup for folding
+        set directory=~/vimtools_tmp/vim_tmp//,.   " backup for swap
+        set backupdir=~/vimtools_tmp/vim_tmp//,.   " respaldos
+        set undodir=~/vimtools_tmp/vim_tmp/undo_dir  " deshacer
+        autocmd BufWinLeave *.* mkview
+        autocmd BufWinEnter *.* silent! loadview
+    endif
+    set backup                  " set nobackup nowritebackup
+    set undofile                " set noundofile
+    set noswapfile              " set swapfile
 endfun
 
 function! vimtools#execute()
@@ -98,33 +98,13 @@ function! vimtools#execute()
         set guifont=Consolas:h12
     endif
 
-    if !isdirectory($HOME."/vim-tools_tmp")
+    if !isdirectory($HOME."/vimtools_tmp")
         call s:MakeDir()
-        echohl MoreMsg
-        echon 'vim-tools: Directories created with success, '
-        echon 'this message only appears once, '
-        echon 'enjoy this plug made with love!'
-        echohl None
+        echomsg 'vimtools: Plug made with love!'
         sleep 2
+        call s:SetBackUpDir()
     else
-        if has('nvim')
-            set viewdir=~/vim-tools_tmp/nvim_tmp/nvim_viewdir   " backup for folding
-            set directory=~/vim-tools_tmp/nvim_tmp//,.   " backup for swap
-            set backupdir=~/vim-tools_tmp/nvim_tmp//,.   " respaldos
-            set undodir=~/vim-tools_tmp/nvim_tmp/undo_dir  " deshacer
-            autocmd BufWinLeave *.* mkview
-            autocmd BufWinEnter *.* silent! loadview
-        else
-            set viewdir=~/vim-tools_tmp/vim_tmp/vim_viewdir   " backup for folding
-            set directory=~/vim-tools_tmp/vim_tmp//,.   " backup for swap
-            set backupdir=~/vim-tools_tmp/vim_tmp//,.   " respaldos
-            set undodir=~/vim-tools_tmp/vim_tmp/undo_dir  " deshacer
-            autocmd BufWinLeave *.* mkview
-            autocmd BufWinEnter *.* silent! loadview
-        endif
-        set backup                  " set nobackup nowritebackup
-        set undofile                " set noundofile
-        set noswapfile              " set swapfile
+        call s:SetBackUpDir()
     endif
 
     nnoremap <C-A> ggVG
@@ -189,11 +169,11 @@ function! vimtools#execute()
 endfunction
 
 fun! s:CleanUndoDir()
-    if isdirectory($HOME."/vim-tools_tmp/nvim_tmp/undo_dir")||
-                \ isdirectory($HOME."/vim-tools_tmp/vim_tmp/undo_dir")
-        autocmd BufWritePost !find $HOME/vim-tools_tmp/nvim_tmp/undo_dir -type f -mtime +90 -delete
-        autocmd BufWritePost !find $HOME/vim-tools_tmp/vim_tmp/undo_dir -type f -mtime +90 -delete
-        echomsg 'vim-tools: UNDO_DIR was cleaned with success'
+    if isdirectory($HOME."/vimtools_tmp/nvim_tmp/undo_dir")||
+                \ isdirectory($HOME."/vimtools_tmp/vim_tmp/undo_dir")
+        autocmd BufWritePost !find $HOME/vimtools_tmp/nvim_tmp/undo_dir -type f -mtime +90 -delete
+        autocmd BufWritePost !find $HOME/vimtools_tmp/vim_tmp/undo_dir -type f -mtime +90 -delete
+        echomsg 'vimtools: UNDO_DIR was cleaned with success'
     endif
 endfun
 
