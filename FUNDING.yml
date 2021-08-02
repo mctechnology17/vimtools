@@ -2,4 +2,6 @@
 : [
     "https://www.paypal.me/mctechnology17",
   ]
+community_bridge: vim-tools
+tidelift: mctechnology17/vim-tools
 github: mctechnology17
