@@ -61,7 +61,7 @@ fun! s:SetBackUpDir()
     set noswapfile              " set swapfile
 endfun
 
-function! vimtools#execute()
+fun! s:SetVSP()
     let CONFIG_NVIM = $PATH
     let CONFIG_VIM = $PATH
     if has('win32')&&!has('win64')
@@ -89,13 +89,11 @@ function! vimtools#execute()
             map <F2> :vsp<Space>$CONFIG_VIM<CR>
         endif
     endif
+endfun
 
-    if isdirectory('/usr/share/dict/words')
-        set dictionary+=/usr/share/dict/words
-    endif
-
-    if has('win32')&&!has('win64')
-        set guifont=Consolas:h12
+function! vimtools#execute()
+    if g:vimtools_setvsp_loaded
+        call s:SetVSP()
     endif
 
     if !isdirectory($HOME."/vimtools_tmp")
@@ -105,66 +103,6 @@ function! vimtools#execute()
         call s:SetBackUpDir()
     else
         call s:SetBackUpDir()
-    endif
-
-    nnoremap <C-A> ggVG
-    nnoremap ß $
-    vnoremap ß $
-    nnoremap ö %
-    vnoremap ö %
-    nnoremap ü gg
-    vnoremap ü gg
-    nnoremap ä G
-    vnoremap ä G
-    inoremap <TAB> <C-N>
-    vnoremap J :m '>+1<CR>gv=gv
-    vnoremap K :m '<-2<CR>gv=gv
-    vnoremap < <gv
-    vnoremap > >gv
-    nnoremap + 3<C-w>>
-    nnoremap - 3<C-w><
-
-    augroup mysettings
-      au FileType xslt,xml,css,html,xhtml,javascript,sh,config,c,cpp,docbook set smartindent shiftwidth=2 softtabstop=2 expandtab
-      au FileType tex set wrap shiftwidth=2 softtabstop=2 expandtab
-      au FileType python set tabstop=4 softtabstop=4 expandtab shiftwidth=4 cinwords=if,elif,else,for,while,try,except,finally,def,class
-      au BufRead,BufNewFile *.txt set syntax=conf
-      au BufWritePre * %s/\s\+$//e
-      au BufWritePre * %s/\n\+\%$//e
-      au BufWritePre *.[ch] %s/\%$/\r/e
-      au BufReadPost *
-            \ if line("'\"") > 0 && line("'\"") <= line("$") |
-            \   exe "normal! g`\"" |
-            \ endif
-      au BufEnter * lcd %:p:h
-    augroup END
-
-    map <C-h> <C-w>h
-    map <C-j> <C-w>j
-    map <C-k> <C-w>k
-    map <C-l> <C-w>l
-    function MoveWithArrows()
-      map <S-LEFT> <C-w>h
-      map <S-DOWN> <C-w>j
-      map <S-UP> <C-w>k
-      map <S-RIGHT> <C-w>l
-    endfunction
-
-    if has('nvim') || has("gui_macvim")
-          \ || has("gui_gtk2") || has("gui_gtk3")
-          \ || has("gui_win32")
-      call MoveWithArrows()
-    endif
-
-    if has('macunix')
-      vmap <D-c> :!pbcopy<CR>
-      nmap <D-c> :!pbcopy<CR>
-      vmap <D-c> :w !pbcopy<CR><CR>
-      vmap <D-c> :w !pbcopy<CR><CR>
-      vmap <D-v> :!pbpaste<CR>
-      nmap <D-v> :!pbpaste<CR>
-      vmap <D-v> :w !pbpaste<CR><CR>
-      vmap <D-v> :w !pbpaste<CR><CR>
     endif
 endfunction
 
