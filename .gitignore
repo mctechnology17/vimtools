@@ -27,19 +27,19 @@ Thumbs.db
 Desktop.ini
 
 # Tags
-#TAGS
-#!TAGS/
-#tags
-#tags-cn
-#!tags/
-#.tags
-#.tags1
-#tags.lock
-#tags.temp
-#gtags.files
-#GTAGS
-#GRTAGS
-#GPATH
+TAGS
+!TAGS/
+tags
+tags-cn
+!tags/
+.tags
+.tags1
+tags.lock
+tags.temp
+gtags.files
+GTAGS
+GRTAGS
+GPATH
 cscope.files
 cscope.out
 cscope.in.out
