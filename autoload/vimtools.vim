@@ -36,7 +36,7 @@ fun! s:SetVSP() "{{{
     endif
 endfun "}}}
 
-fun! s:MakeDir() "{{{
+fun! s:MakeUndoDir() "{{{
     if !isdirectory($HOME."/vimtools_tmp")
         call mkdir($HOME."/vimtools_tmp", "p", 0770)
         echomsg 'vimtools: $HOME/vimtools_tmp folder was created'
@@ -100,20 +100,67 @@ fun! s:CleanUndoDir() "{{{
     endif
 endfun "}}}
 
+function! vimtools#MapsFolding() "{{{
+    nnoremap a za
+    vnoremap a za
+    nnoremap s zn
+    nnoremap S zN
+    vnoremap s zf
+    vnoremap D zd
+endfunction "}}}
+
+function! vimtools#SelfClosingBracke() "{{{
+    inoremap ( ()<Esc>i
+    inoremap [ []<Esc>i
+    inoremap { {}<Esc>i
+    inoremap < <><Esc>i
+    inoremap ¿ ¿?<Esc>i
+    inoremap ¡ ¡!<Esc>i
+    inoremap ' ''<Esc>i
+    inoremap " ""<Esc>i
+    inoremap ` ``<Esc>i
+endfunction "}}}
+
 function! vimtools#execute() "{{{
-    if g:vimtools_setvsp_loaded
+    if g:vimtools_vimrc_init
         call s:SetVSP()
     endif
 
-    if !isdirectory($HOME."/vimtools_tmp")
-        call s:MakeDir()
-        echomsg 'vimtools: Plug made with love!'
-        sleep 2
-        call s:SetBackUpDir()
-    else
-        call s:SetBackUpDir()
+    if g:vimtools_viewdir_backupdir_undodir
+        if !isdirectory($HOME."/vimtools_tmp")
+            call s:MakeUndoDir()
+            echomsg 'vimtools: Plug made with love!'
+            sleep 2
+            call s:SetBackUpDir()
+        else
+            call s:SetBackUpDir()
+        endif
+        if g:vimtools_mapsfolding
+            call vimtools#MapsFolding()
+        endif
+    endif
+    if g:vimtools_selfclosingbracke
+        call vimtools#SelfClosingBracke()
     endif
 endfunction "}}}
 
-command! -nargs=0 VimToolsCleanUndoDir call s:CleanUndoDir()
-command! -nargs=0 VimToolsMakeDir call s:MakeDir()
+function! vimtools#ToggleMaxWindows(maxwindows) "{{{
+    if exists("t:restore_maxwindows") && (a:maxwindows == v:true || t:restore_maxwindows.win != winnr())
+        exec t:restore_maxwindows.cmd
+        unlet t:restore_maxwindows
+        echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows restored' | echohl None
+    elseif a:maxwindows
+        let t:restore_maxwindows = { 'win': winnr(), 'cmd': winrestcmd() }
+        exec "normal \<C-W>\|\<C-W>_"
+        echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows' | echohl None
+    endif
+endfunction
+
+augroup RestoreMaxWindows
+    au WinEnter * silent! :call vimtools#ToggleMaxWindows(v:false)
+augroup END "}}}
+
+command! -nargs=0 VimToolsCleanUndoDir          call s:CleanUndoDir()
+command! -nargs=0 VimToolsMakeUndoDir           call s:MakeUndoDir()
+command! -nargs=0 VimToolsMaxWindows            call vimtools#ToggleMaxWindows(v:true)
+command! -nargs=0 VimToolsSelfClosingBracke     call vimtools#SelfClosingBracke()
