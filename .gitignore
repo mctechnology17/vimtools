@@ -27,9 +27,9 @@ Thumbs.db
 Desktop.ini
 
 # Tags
-TAGS
-!TAGS/
-tags
+#TAGS
+#!TAGS/
+#tags
 tags-cn
 !tags/
 .tags
