@@ -24,7 +24,15 @@ if !exists('g:vimtools_viewdir_backupdir_undodir')
 endif
 if !exists('g:vimtools_selfclosingbracke')
     let g:vimtools_selfclosingbracke =
-                \ get(g:, 'vimtools_selfclosingbracke', 1)
+                \ get(g:, 'vimtools_selfclosingbracke', 0)
+endif
+if !exists('g:vimtools_mathemodus')
+    let g:vimtools_mathemodus =
+                \ get(g:, 'vimtools_mathemodus', 1)
+endif
+if !exists('g:vimtools_spell')
+    let g:vimtools_spell =
+                \ get(g:, 'vimtools_spell', 1)
 endif
 if g:vimtools_loaded
     call vimtools#execute()

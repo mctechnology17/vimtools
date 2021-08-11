@@ -1,6 +1,7 @@
+vimtools.txt	vimtools.txt	/*vimtools.txt*
+VimTools vimtools.txt /*VimTools*
 :vimtools	vimtools.txt	/*:vimtools*
 :vimtoolsKeywords	vimtools.txt	/*:vimtoolsKeywords*
-vimtools.txt	vimtools.txt	/*vimtools.txt*
 vimtoolsBugs	vimtools.txt	/*vimtoolsBugs*
 vimtoolsChangelog	vimtools.txt	/*vimtoolsChangelog*
 vimtoolsCommands	vimtools.txt	/*vimtoolsCommands*
@@ -14,3 +15,16 @@ vimtoolsIntro	vimtools.txt	/*vimtoolsIntro*
 vimtoolsKeyBindings	vimtools.txt	/*vimtoolsKeyBindings*
 vimtoolsLicense	vimtools.txt	/*vimtoolsLicense*
 vimtoolsMappings	vimtools.txt	/*vimtoolsMappings*
+g:vimtools_loaded vimtools.txt /*g:vimtools_loaded*
+g:vimtools_vimrc_init vimtools.txt /*g:vimtools_vimrc_init*
+g:vimtools_viewdir_backupdir_undodir vimtools.txt /*g:vimtools_viewdir_backupdir_undodir*
+g:vimtools_mapsfolding vimtools.txt /*g:vimtools_mapsfolding*
+g:vimtools_selfclosingbracke vimtools.txt /*g:vimtools_selfclosingbracke*
+g:vimtools_mathemodus vimtools.txt /*g:vimtools_mathemodus*
+g:vimtools_spell vimtools.txt /*g:vimtools_spell*
+VimToolsSpellMorseMaps vimtools.txt /*VimToolsSpellMorseMaps*
+VimToolsSpellMorse vimtools.txt /*VimToolsSpellMorse*
+VimToolsMatheModus vimtools.txt /*VimToolsMatheModus*
+VimToolsMaxWindows vimtools.txt /*VimToolsMaxWindows*
+VimToolsCleanUndoDir vimtools.txt /*VimToolsCleanUndoDir*
+VimToolsMakeDirectories vimtools.txt /*VimToolsMakeDirectories*

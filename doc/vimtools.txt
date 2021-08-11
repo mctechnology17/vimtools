@@ -1,4 +1,4 @@
-*vimtools.txt*                         The swiss army knife plugin for (Neo)vim
+*vimtools.txt*                         swiss army knife plugin for (Neo)vim
 
 
                                ╔═╦═╦═╗
