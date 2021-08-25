@@ -1,4 +1,4 @@
-[![MC Technology](https://github.com/mctechnology17/mctechnology17/blob/main/src/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
+[![MC Technology](https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
 
 <h1 align="center"><img src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vim.png" width="50px">Tools</h1>
 
@@ -82,7 +82,7 @@ Plug 'mctechnology17/vimtools'
 
 And run `:PlugInstall` inside Vim or `vim +PlugInstall +qa` from shell.
 
-<img src="https://github.com/mctechnology17/vimtools/blob/main/src/PlugInstall.gif" height="450">
+<img src="https://github.com/mctechnology17/mctechnology17/blob/main/src/PlugInstall.gif" height="450">
 
 ## Description
 
@@ -118,8 +118,7 @@ nn <silent> <TAB>, :VimToolsSpellMorse<CR>
 ```
 
 ## Fotos
-![Compatibility](src/1_Plugs.png)
-![Terminal](src/2_Terminal.png)
+- TODO :D
 
 ## [LICENSE](LICENSE)
 
