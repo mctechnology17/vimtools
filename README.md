@@ -12,10 +12,21 @@
 </h4>
 
 <div align="right">
-  <sub>Author:
-  <a href="https://twitter.com/mctechnology17">MC Technology</a>
+  <sub>Contact me:
+
+  [<img align="left" alt="mctechnology17.com" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/web.png" />][website]
+  [<img align="left" alt="MC Technology | YouTube" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/youtube.png" />][youtube]
+  [<img align="left" alt="@mctechnology17 | Twitter" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/twitter.png" />][twitter]
+  [<img align="left" alt="@mctechnology17 | Instagram" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/instagram.png" />][instagram]
+  [<img align="left" alt="MC Technology17 | Facebook" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/facebook.png" />][facebook]
+  [<img align="left" alt="@mctechnology17 | Tiktok" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/tiktok.png" />][tiktok]
+  [<img align="left" alt="@mctechnology17 | Twicht" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/twitch.png" />][twitch]
+  [<img align="left" alt="@mctechnology17 | Telegram" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/telegram.png" />][telegram]
+  [<img align="left" alt="@mctechnology17 | Reddit" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/reddit.png" />][reddit]
+
 </div>
 <br>
+
 
 - [Intro](#Intro)
 - [Fotos](#Fotos)
