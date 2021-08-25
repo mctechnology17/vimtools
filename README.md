@@ -1,8 +1,6 @@
+[![MC Technology](https://github.com/mctechnology17/mctechnology17/blob/main/src/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
 
-[![MC Technology](src/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
-<div align="center">
-  <br> <h1>⚙️  vimtools 🛠 </h1>
-</div>
+<h1 align="center"><img src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vim.png" width="50px">Tools</h1>
 
 <h4 align="center">
   <a> Compatibility 👉 </a>
@@ -12,7 +10,6 @@
 </h4>
 
 <div align="right">
-  <sub>Contact me:
 
   [<img align="right" alt="mctechnology17.com" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/web.png" />][website]
   [<img align="right" alt="MC Technology | YouTube" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/youtube.png" />][youtube]
