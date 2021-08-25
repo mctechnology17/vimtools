@@ -1,4 +1,4 @@
-[![MC Technology](https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
+[<img align="center" alt="mctechnology17.com" width="950px" height="100px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools.GIF" />][youtube]
 
 <div align="right">
 
