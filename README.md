@@ -1,7 +1,5 @@
 [![MC Technology](https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
 
-<h1 align="center"><img src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vim.png" width="50px">Tools</h1>
-
 <div align="right">
 
   [<img align="right" alt="mctechnology17.com" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/web.png" />][website]
