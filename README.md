@@ -1,6 +1,6 @@
 <div align="center">
 
-  [<img align="center" alt="mctechnology17.com" width="220px" height="220px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools2.GIF" />][youtube]
+  [<img align="center" alt="mctechnology17.com" width="100px" height="100px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools2.GIF" />][youtube]
 
 </div>
 
