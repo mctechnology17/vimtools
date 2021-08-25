@@ -1,4 +1,4 @@
-[<img align="center" alt="mctechnology17.com" width="950px" height="100px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools.GIF" />][youtube]
+[<img align="center" alt="mctechnology17.com" width="950px" height="200px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools.GIF" />][youtube]
 
 <div align="right">
 
