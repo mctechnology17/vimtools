@@ -113,6 +113,7 @@ let g:vimtools_selfclosingbracke = 1
 ```vim
 " on/off MaxWindows
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
+nn <silent> <TAB>, :VimToolsSpellMorse<CR>
 ```
 
 ## Fotos
