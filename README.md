@@ -1,5 +1,4 @@
-[][youtube]
-<h3 align="center"><img alt="mctechnology17.com" width="220px" height="220px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools2.GIF" /></h3>
+<img align="center" alt="mctechnology17.com" width="220px" height="220px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vimtools2.GIF" href="https://github.com/mctechnology17/youtube_repo_mc_technology" />
 
 <div align="right">
 
