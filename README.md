@@ -1,13 +1,6 @@
 [![MC Technology](https://github.com/mctechnology17/mctechnology17/blob/main/src/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
 
-<h1 align="center"><img src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vim.png" width="50px">Tools</h1>
-
-<h4 align="center">
-  <a> Compatibility 👉 </a>
-  <a href="https://www.vim.org/download.php" target="_blank"><code>Vim</code></a>
-  <a href="https://github.com/macvim-dev/macvim" target="_blank"><code>MacVim</code></a>
-  <a href="https://github.com/neovim/neovim" target="_blank"><code>NVim</code></a>
-</h4>
+<h1 align="center"><img src="https://github.com/mctechnology17/mctechnology17/blob/main/src/vim.png" width="50px">T⚙️⚙️ls</h1>
 
 <div align="right">
 
