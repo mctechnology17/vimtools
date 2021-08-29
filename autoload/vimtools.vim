@@ -6,8 +6,8 @@
 " ====================================================
 scriptencoding utf-8
 
-""" g:vimtools_vimrc_init "{{{
-fun! s:SetVSP()
+""" g:vimtools_assistant "{{{
+fun! s:Assistant()
     let CONFIG_NVIM = $PATH
     let CONFIG_VIM = $PATH
     if has('win32')&&!has('win64')
@@ -29,10 +29,15 @@ fun! s:SetVSP()
             map <F2> :vsp<Space>$CONFIG_NVIM<CR>
         endif
     endif
+    autocmd FileType vim map <F1> <Nop>
+    autocmd FileType vim
+          \ map <F1> :vert help <C-R>=expand("<cword>")<CR><CR>
+    map <S-F1> <Nop>
+    map <S-F1> :vert help<Space>
 endfun
 "}}}
 
-""" VimToolsCleanUndoDir {{{
+""" VimToolsMakeDirectories {{{
 fun! s:MakeDirectories()
     if !isdirectory($HOME."/vimtools_tmp")
         call mkdir($HOME."/vimtools_tmp", "p", 0770)
@@ -119,7 +124,7 @@ function! vimtools#SelfClosingBracke()
     inoremap ( ()<Esc>i
     inoremap [ []<Esc>i
     inoremap { {}<Esc>i
-    inoremap < <><Esc>i
+    " inoremap < <><Esc>i
     inoremap ¿ ¿?<Esc>i
     inoremap ¡ ¡!<Esc>i
     inoremap ' ''<Esc>i
@@ -129,8 +134,8 @@ endfunction "}}}
 
 """ g:vimtools_loaded {{{
 function! vimtools#execute()
-    if g:vimtools_vimrc_init
-        call s:SetVSP()
+    if g:vimtools_assistant
+        call s:Assistant()
     endif
     if !isdirectory($HOME."/vimtools_tmp")
         call s:MakeDirectories()
@@ -160,11 +165,11 @@ function! vimtools#ToggleMaxWindows(maxwindows)
     if exists("t:restore_maxwindows") && (a:maxwindows == v:true || t:restore_maxwindows.win != winnr())
         exec t:restore_maxwindows.cmd
         unlet t:restore_maxwindows
-        echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows restored' | echohl None
+        echohl MoreMsg | echon 'vimtools: MaxWindows restored' | echohl None
     elseif a:maxwindows
         let t:restore_maxwindows = { 'win': winnr(), 'cmd': winrestcmd() }
         exec "normal \<C-W>\|\<C-W>_"
-        echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows' | echohl None
+        echohl MoreMsg | echon 'vimtools: MaxWindows' | echohl None
     endif
 endfunction
 
@@ -174,7 +179,7 @@ augroup END "}}}
 
 """ VimToolsMatheModus {{{
 function! s:MatheModusOn()
-  echohl MoreMsg | echon 'vimtools: VimTosumatheModus has initialized' | echohl None
+  echohl MoreMsg | echon 'vimtools: MatheModus has initialized' | echohl None
   let g:vimtools_mathemodus = 0
   imap eps ε
   imap theta θ
@@ -198,7 +203,7 @@ function! s:MatheModusOn()
 endfunction
 
 function! s:MatheModusOff()
-  echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has ended' | echohl None
+  echohl MoreMsg | echon 'vimtools: MatheModus has ended' | echohl None
   let g:vimtools_mathemodus = 1
   iunmap eps
   iunmap theta
@@ -233,7 +238,7 @@ endfunction
 
 """ VimToolsSpellMorse {{{
 fu! s:SpellMorseMapsOn()
-  echoh MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has initialized' | echoh None
+  echoh MoreMsg | echon 'vimtools: SpellMorseMaps has initialized' | echoh None
   let s:vimtools_spell_maps = 0
   map mm z=
   map e ]s
@@ -249,7 +254,7 @@ fu! s:SpellMorseMapsOn()
   map - 3z=
 endf
 fu! s:SpellMorseMapsOff()
-  echoh MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has finished' | echoh None
+  echoh MoreMsg | echon 'vimtools: SpellMorseMaps has finished' | echoh None
   let s:vimtools_spell_maps = 1
   unm mm
   unm e
@@ -275,23 +280,69 @@ fun! s:ToggleSpellMorseMaps()
 endfun
 fu! s:ToggleSpell()
   if s:vimtools_spell_maps_on
-    if g:vimtools_spell == 1
-      let g:vimtools_spell = 0
+    if g:vimtools_spell_morse == 1
+      let g:vimtools_spell_morse = 0
       se spl=es
-      echoh MoreMsg | echon 'vimtools: VimToolsSpellMorse ES' | echoh None
-    elsei g:vimtools_spell == 0
-      let g:vimtools_spell = 2
+      echoh MoreMsg | echon 'vimtools: SpellMorse ES' | echoh None
+    elsei g:vimtools_spell_morse == 0
+      let g:vimtools_spell_morse = 2
       se spl=de
-      echoh MoreMsg | echon 'vimtools: VimToolsSpellMorse DE' | echoh None
-    elsei g:vimtools_spell == 2
-      let g:vimtools_spell = 1
+      echoh MoreMsg | echon 'vimtools: SpellMorse DE' | echoh None
+    elsei g:vimtools_spell_morse == 2
+      let g:vimtools_spell_morse = 1
       se spl=en
-      echoh MoreMsg | echon 'vimtools: VimToolsSpellMorse EN' | echoh None
+      echoh MoreMsg | echon 'vimtools: SpellMorse EN' | echoh None
     endif
   endif
 endf
 let s:vimtools_spell_maps = 1
 "}}}
+
+if g:vimtools_ruler "{{{
+  function! GitBranch()
+    return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+  endfunction
+
+  function! StatuslineGit()
+    let l:branchname = GitBranch()
+    return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+  endfunction
+
+  set showcmd
+  set ruler
+  set rulerformat=%15(%c%V\ %p%%%)
+
+  set laststatus=2
+  set statusline=
+  set statusline+=%#PmenuSel#
+  set statusline+=%{StatuslineGit()}
+  set statusline+=%#LineNr#
+  set statusline+=\ %f
+  set statusline+=%m\
+  set statusline+=%=
+  set statusline+=%#CursorColumn#
+  set statusline+=\ %y
+  set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+  set statusline+=\[%{&fileformat}\]
+  set statusline+=\ %p%%
+  set statusline+=\ %l:%c
+  set statusline+=\
+endif "}}}
+
+if g:vimtools_easy_comment "{{{
+    augroup EasyCommentAutocmd
+      autocmd FileType vim vnoremap <silent> c :'<, '>norm I"<Space><CR>
+      autocmd FileType cpp,c,go,java,javascript,scala,php,rust,jsonc,json vnoremap <silent> c :'<, '>norm I//<Space><CR>
+      autocmd FileType python,r,ruby,sh,desktop,fstab,profile,text,tmux,make,dockerfile vnoremap <silent> c :'<, '>norm I#<Space><CR>
+      autocmd FileType bashrc,zsh,zshrc,bash_profile,gitignore,,yaml,gdb,gitconfig vnoremap <silent> c :'<, '>norm I#<Space><CR>
+      autocmd FileType html,xml vnoremap <silent> c :'<, '>norm I<!--<Space><CR> \| :'<, '>norm A<Space>--><CR>
+      autocmd FileType tex vnoremap <silent> c :'<, '>norm I%<Space><CR>
+      autocmd FileType mail vnoremap <silent> c :'<, '>norm I><Space><CR>
+      autocmd FileType dosbatch vnoremap <silent> c :'<, '>norm IREM<Space><CR>
+      autocmd FileType autohotkey vnoremap <silent> c :'<, '>norm I;<Space><CR>
+      autocmd FileType lua vnoremap <silent> c :'<, '>norm I--<Space><CR>
+    augroup END
+endif "}}}
 
 command! -nargs=0 VimToolsSpellMorseMaps        call s:ToggleSpellMorseMaps()
 command! -nargs=0 VimToolsSpellMorse            call s:ToggleSpell()

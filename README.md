@@ -128,6 +128,34 @@ Released under the GNU General Public License v3.0.
 
 Copyright (c) 2021 MC Technology
 
+<div id="slider" class="slider-dark slider-colored ">
+      <div class="flexslider slider-wrapper">
+          <ul class="slides">
+              <li>
+                  <div class="slider-background-image">
+                      <div class="layer-stretch">
+                          <div class="slider-info">
+                              <div class="row">
+                                  <div class="col-sm-12 text-center">
+                                      <br>
+                                      <button class="btn btn-outline btn-light btn-pill btn-outline-1x btn-gradient text-dark m-1">
+
+                                          <a href="https://www.paypal.com/paypalme/mctechnology17"
+                                             class="btn btn-lg btn-outline">
+                                              Buy Me A <i class="fa fa-coffee"></i>
+                                          </a>
+                                      </button>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+      </div>
+</div>
+
 [website]: https://mctechnology17.com
 [twitter]: https://twitter.com/mctechnology17
 [youtube]: https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw?view_as=subscriber
