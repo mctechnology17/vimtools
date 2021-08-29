@@ -87,6 +87,7 @@ And run `:PlugInstall` inside Vim or `vim +PlugInstall +qa` from shell.
 
 <img src="https://github.com/mctechnology17/mctechnology17/blob/main/src/PlugInstall.gif" height="450">
 
+
 ## Description
 
 ### Loading or deactivating global settings
@@ -98,6 +99,7 @@ let g:vimtools_loaded = 1
 ```
 ### Loading or deactivating specific settings
 ```vim
+" activated by default
 " 1 = activate 0 = deactivate
 let g:vimtools_assistant = 1
 let g:vimtools_viewdir_backupdir_undodir = 1
@@ -119,6 +121,71 @@ inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
 " on/off MaxWindows
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
 ```
+### VimToolsAssistant
+This add-on will help you with the official documentation of Vimscript.
+When you shut up under a function as a `for, while` or `if` (for example), keyword or something
+you do not know or the definition of vimscript, just press the `<F1>` key and the
+documentation of what is below will be automated of the cursor.
+Usage:
+```vim
+<F1>     " call documentation in VIM if it exists
+<S-F1>   " call HELP
+<F2>     " call .vimrc
+<S-F2>   " call init.vim
+" activated by default
+" 1 = activate 0 = deactivate
+let g:vimtools_assistant = 1
+```
+
+### VimToolsCleanUndoDir
+With this add-on you can clean the "Undo" folder with the files that have more
+than 90 days of existing, if you want them to keep the archives simply do not
+invoke this command.
+
+### VimToolsMakeDirectories
+If for some reason the complementary folders of the plugin were not created
+automatically during installation, you can create them with this command
+
+### VimToolsSpellMorse
+Spell is a complement that is available to VIM, SpellMorse helps you from a very
+easy and intuitive to use it.
+In normal mode, simply press `<TAB> + .` Torque Aactivar the plugin and once
+activated you can change language with `<TAB> + ,`.
+
+You can change to the language of your preference, consultation your language
+in specific [here](http://vimdoc.sourceforge.net/htmldoc/spell.html). Once you know which will be the default language, you can
+switch it by simply by modifying the word "in" by the language of your
+preference. For example:
+
+- en		  all regions
+- en_au		Australia
+- en_ca		Canada
+- en_gb		Great Britain
+- en_nz		New Zealand
+- en_us		USA
+- de		  all German words accepted
+- de_de		old and new spelling
+- de_19		old spelling
+- de_20		new spelling
+- de_at		Austria
+- de_ch		Switzerland
+
+Usage:
+```vim
+" on/off SpellMorse
+nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseMaps<CR>
+" next language
+nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
+```
+
+### VimToolsSpellMorseMaps
+- TODO
+
+### VimToolsMatheModus
+- TODO
+
+### VimToolsMaxWindows
+- TODO
 
 ## Integration
 ```vim

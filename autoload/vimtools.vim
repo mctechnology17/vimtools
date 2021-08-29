@@ -29,9 +29,8 @@ fun! s:Assistant()
             map <F2> :vsp<Space>$CONFIG_NVIM<CR>
         endif
     endif
-    autocmd FileType vim map <F1> <Nop>
-    autocmd FileType vim
-          \ map <F1> :vert help <C-R>=expand("<cword>")<CR><CR>
+    map <F1> <Nop>
+    map <F1> :vert help <C-R>=expand("<cword>")<CR><CR>
     map <S-F1> <Nop>
     map <S-F1> :vert help<Space>
 endfun
@@ -334,7 +333,7 @@ if g:vimtools_easy_comment "{{{
       autocmd FileType vim vnoremap <silent> c :'<, '>norm I"<Space><CR>
       autocmd FileType cpp,c,go,java,javascript,scala,php,rust,jsonc,json vnoremap <silent> c :'<, '>norm I//<Space><CR>
       autocmd FileType python,r,ruby,sh,desktop,fstab,profile,text,tmux,make,dockerfile vnoremap <silent> c :'<, '>norm I#<Space><CR>
-      autocmd FileType bashrc,zsh,zshrc,bash_profile,gitignore,,yaml,gdb,gitconfig vnoremap <silent> c :'<, '>norm I#<Space><CR>
+      autocmd FileType bashrc,zsh,zshrc,bash_profile,gitignore,,yaml,gdb,gitconfig,vimwiki vnoremap <silent> c :'<, '>norm I#<Space><CR>
       autocmd FileType html,xml vnoremap <silent> c :'<, '>norm I<!--<Space><CR> \| :'<, '>norm A<Space>--><CR>
       autocmd FileType tex vnoremap <silent> c :'<, '>norm I%<Space><CR>
       autocmd FileType mail vnoremap <silent> c :'<, '>norm I><Space><CR>
