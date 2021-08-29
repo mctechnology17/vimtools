@@ -24,6 +24,7 @@
 - [Fotos](#Fotos)
 - [Installation](#Installation)
 - [Description](#Description)
+- [Integration with other Plugins](#Integration)
 - [LICENSE](#LICENSE)
 
 ----
@@ -89,6 +90,8 @@ And run `:PlugInstall` inside Vim or `vim +PlugInstall +qa` from shell.
 ## Description
 
 ### Loading or deactivating global settings
+All Tools are activated by default, if some reason you have problems with any,
+or you only need some, you can activate it and deactivate it easily as follows:
 ```vim
 " 1 = activate 0 = deactivate
 let g:vimtools_loaded = 1
@@ -96,27 +99,30 @@ let g:vimtools_loaded = 1
 ### Loading or deactivating specific settings
 ```vim
 " 1 = activate 0 = deactivate
-let g:vimtools_vimrc_init = 1
+let g:vimtools_assistant = 1
 let g:vimtools_viewdir_backupdir_undodir = 1
 let g:vimtools_mapsfolding = 1
 let g:vimtools_selfclosingbracke = 1
-```
-### Loading or deactivating specific settings with command
-```vim
-" clean the undo-directory
-:VimToolsCleanUndoDir
-" make the undo-directory
-:VimToolsMakeUndoDir
-" Toogle for MaxWindows
-:VimToolsMaxWindows
-" Toogle for self closing bracke, example: () [] {}
-:VimToolsSelfClosingBracke
+let g:vimtools_ruler = 1
+let g:vimtools_mathemodus = 1
+let g:vimtools_spell_morse = 1
+let g:vimtools_easy_comment = 1
 ```
 ### Maping recommended
 ```vim
+" on/off SpellMorse
+nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseMaps<CR>
+" next language
+nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
+" on/off MatheModus
+inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
 " on/off MaxWindows
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
-nn <silent> <TAB>, :VimToolsSpellMorse<CR>
+```
+
+## Integration
+```vim
+let g:airline_symbols.spell = 'SpellMorse'
 ```
 
 ## Fotos
