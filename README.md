@@ -284,6 +284,7 @@ nnoremap <silent> <TAB>m :VimToolsMatheModus<CR>
 Enlarge and restore the current window.
 <details>
   <summary>:zap: Usage:</summary>
+
 ```vim
 " on/off MaxWindows
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
