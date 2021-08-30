@@ -31,8 +31,7 @@
 
 ## Intro
 `vimtools` is a tool to complement your editor
-favorite text / code `vim, vi, nvim, Gvim or MacVim`. `vimtools` is done
-with much care and attention that the developer normally needs.
+favorite text / code `vim, vi, nvim, Gvim or MacVim`.
 
 `vimtools` is a set of functions and settings that will make it easy for you
 life. You are the one who decides what function or command is executed
@@ -41,11 +40,15 @@ That is why all the variables are available for you
 set the `vimtools` to your liking.
 
 Among the `vimtools` features are:
-- create automatic directories for backups, for doubles as in
-  `vscode` etc.
 - Maximize the current window to have a more extended view of the
   information
-- Several `cmd` in automatics that will make your life easier among others!
+- Spell administrator
+- Document assistant for Vimscript
+- Rapid access to your VIMRC or to your init.vim
+- State Rule
+- Automatic directories for spell, backup copies, folding and others
+- Mathemodus 🤓
+- Others
 
 ## Installation
 
