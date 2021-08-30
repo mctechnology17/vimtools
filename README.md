@@ -194,10 +194,26 @@ nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
 ```
 
 ### VimToolsSpellMorseMaps
+When SpellMorse is activated, then you can make movements with the following keys.
+Usage:
+- `mm` -> menu (`z=`)
+- `e` ->  next word (`]s`)
+- `n` ->  next word (`]s`)
+- `N` ->  previus word (`[S`)
+- `b` ->  previus word (`[S`)
+- `a` ->  add word (`zg`)
+- `A` ->  quit word (`zug`)
+- `w` ->  quit bad word (`zw`)
+- `W` ->  undo quit bad word (`zuw`)
+- `,` ->  selection first option (`1z=`)
+- `.` ->  selection second option (`2z=`)
+- `-` ->  selection third option (`3z=`)
+
+### VimToolsMapsFolding
 Mappings are enabled by default. You can read the documentation [here](http://vimdoc.sourceforge.net/htmldoc/fold.html).
 Usage:
 ```vim
-" activated by default
+" Mappings are enabled by default
 " 1 = activate 0 = deactivate
 let g:vimtools_mapsfolding = 1
 nnoremap a za
@@ -211,6 +227,29 @@ vnoremap D zd
 ### VimToolsMatheModus
 With this plugin you can acquire mathematical unicode symbols simply by typing
 the abbreviation according to your symbol. These are the keywords added so far.
+<details>
+  <summary>:zap: Usage:</summary>
+- `eps` -> ε
+- `theta` -> θ
+- `kappa` -> κ
+- `pi` -> π
+- `rho` -> ρ
+- `phi` -> φ
+- `sigma` -> σ
+- `beta` -> β
+- `alpha` -> α
+- `delta` -> ∆
+- `sum` -> ∑
+- `ang` -> å
+- `Ang` -> Å
+- `sqr` -> √
+- `int` -> ∫
+- `micra` -> µ
+- `omega` -> Ω
+- `fun` -> ƒ
+- `lam` -> λ
+</details>
+
 ```vim
 " activated by default
 " 1 = activate 0 = deactivate
