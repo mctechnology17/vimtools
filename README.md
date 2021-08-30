@@ -269,8 +269,6 @@ the abbreviation according to your symbol. These are the keywords added so far.
 - `fun` -> ƒ
 - `lam` -> λ
 
-</details>
-
 ```vim
 " activated by default
 " 1 = activate 0 = deactivate
@@ -280,12 +278,18 @@ inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
 nnoremap <silent> <TAB>m :VimToolsMatheModus<CR>
 ```
 
+</details>
+
 ### VimToolsMaxWindows
 Enlarge and restore the current window.
+<details>
+  <summary>:zap: Usage:</summary>
 ```vim
 " on/off MaxWindows
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
 ```
+
+</details>
 
 ## Integration
 Adding this line, you can see when SpellMorse is activated.
