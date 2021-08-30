@@ -39,7 +39,7 @@ either automatically or by calling through the `cmd` of` vim / nvim`.
 That is why all the variables are available for you
 set the `vimtools` to your liking.
 
-Among the `vimtools` features are:
+`vimtools` features:
 - Maximize the current window to have a more extended view of the
   information
 - Spell administrator
