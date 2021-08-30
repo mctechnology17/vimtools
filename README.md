@@ -132,7 +132,9 @@ This add-on will help you with the official documentation of Vimscript.
 When you shut up under a function as a `for, while` or `if` (for example), keyword or something
 you do not know or the definition of vimscript, just press the `<F1>` key and the
 documentation of what is below will be automated of the cursor.
-Usage:
+<details>
+  <summary>:zap: Usage:</summary>
+
 ```vim
 " activated by default
 " 1 = activate 0 = deactivate
@@ -143,16 +145,23 @@ let g:vimtools_assistant = 1
 <S-F2>   " call init.vim
 ```
 
+</details>
+
 ### VimToolsCleanUndoDir
 With this add-on you can clean the "Undo" folder with the files that have more
 than 90 days of existing, if you want them to keep the archives simply do not
 invoke this command.
+<details>
+  <summary>:zap: Usage:</summary>
+
 ```vim
 " clear Undo-Directory
 :VimToolsCleanUndoDir
 " Make directory
 :VimToolsMakeDirectories
 ```
+
+</details>
 
 ### VimToolsSpellMorse
 Spell is a complement that is available to VIM, SpellMorse helps you from a very
@@ -178,13 +187,17 @@ preference. For example:
 - `de_at`	-> Austria
 - `de_ch`	-> Switzerland
 
-Usage:
+<details>
+  <summary>:zap: Usage:</summary>
+
 ```vim
 " on/off SpellMorse
 nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseMaps<CR>
 " next language
 nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
 ```
+
+</details>
 
 ### VimToolsSpellMorseMaps
 When SpellMorse is activated, then you can make movements with the following keys.
