@@ -225,7 +225,9 @@ Mappings are enabled by default. You can read the documentation [here](http://vi
 This mapping is activated by default, if you do not wish you can deactivate it
 by writing 0 instead of 1 in the following global variable.
 
-Usage:
+<details>
+  <summary>:zap: Usage:</summary>
+
 ```vim
 " Mappings are enabled by default
 " 1 = activate 0 = deactivate
@@ -237,6 +239,8 @@ nnoremap S zN
 vnoremap s zf
 vnoremap D zd
 ```
+
+</details>
 
 ### VimToolsMatheModus
 With this plugin you can acquire mathematical unicode symbols simply by typing
