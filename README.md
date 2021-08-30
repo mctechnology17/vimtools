@@ -172,18 +172,18 @@ in specific [here](http://vimdoc.sourceforge.net/htmldoc/spell.html). Once you k
 switch it by simply by modifying the word "in" by the language of your
 preference. For example:
 
-- en		  all regions
-- en_au		Australia
-- en_ca		Canada
-- en_gb		Great Britain
-- en_nz		New Zealand
-- en_us		USA
-- de		  all German words accepted
-- de_de		old and new spelling
-- de_19		old spelling
-- de_20		new spelling
-- de_at		Austria
-- de_ch		Switzerland
+- `en`		-> all regions
+- `en_au`	-> Australia
+- `en_ca`	-> Canada
+- `en_gb`	-> Great Britain
+- `en_nz`	-> New Zealand
+- `en_us`	-> USA
+- `de`		-> all German words accepted
+- `de_de`	-> old and new spelling
+- `de_19`	-> old spelling
+- `de_20`	-> new spelling
+- `de_at`	-> Austria
+- `de_ch`	-> Switzerland
 
 Usage:
 ```vim
