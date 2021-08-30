@@ -127,18 +127,6 @@ inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
 ```
 
-### Default mapping
-```vim
-" on/off MapsFolding
-let g:vimtools_mapsfolding = 1
-nnoremap a za
-vnoremap a za
-nnoremap s zn
-nnoremap S zN
-vnoremap s zf
-vnoremap D zd
-```
-
 ### VimToolsAssistant
 This add-on will help you with the official documentation of Vimscript.
 When you shut up under a function as a `for, while` or `if` (for example), keyword or something
@@ -146,23 +134,25 @@ you do not know or the definition of vimscript, just press the `<F1>` key and th
 documentation of what is below will be automated of the cursor.
 Usage:
 ```vim
+" activated by default
+" 1 = activate 0 = deactivate
+let g:vimtools_assistant = 1
 <F1>     " call documentation in VIM if it exists
 <S-F1>   " call HELP
 <F2>     " call .vimrc
 <S-F2>   " call init.vim
-" activated by default
-" 1 = activate 0 = deactivate
-let g:vimtools_assistant = 1
 ```
 
 ### VimToolsCleanUndoDir
 With this add-on you can clean the "Undo" folder with the files that have more
 than 90 days of existing, if you want them to keep the archives simply do not
 invoke this command.
-
-### VimToolsMakeDirectories
-If for some reason the complementary folders of the plugin were not created
-automatically during installation, you can create them with this command
+```vim
+" clear Undo-Directory
+:VimToolsCleanUndoDir
+" Make directory
+:VimToolsMakeDirectories
+```
 
 ### VimToolsSpellMorse
 Spell is a complement that is available to VIM, SpellMorse helps you from a very
@@ -219,6 +209,9 @@ When SpellMorse is activated, then you can make movements with the following key
 
 ### VimToolsMapsFolding
 Mappings are enabled by default. You can read the documentation [here](http://vimdoc.sourceforge.net/htmldoc/fold.html).
+This mapping is activated by default, if you do not wish you can deactivate it
+by writing 0 instead of 1 in the following global variable.
+
 Usage:
 ```vim
 " Mappings are enabled by default
@@ -278,6 +271,8 @@ nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
 ```
 
 ## Integration
+Adding this line, you can see when SpellMorse is activated.
+Note: You have to have "AIRLINE" installed
 ```vim
 let g:airline_symbols.spell = 'SpellMorse'
 ```
