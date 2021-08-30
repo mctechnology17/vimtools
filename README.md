@@ -229,6 +229,7 @@ With this plugin you can acquire mathematical unicode symbols simply by typing
 the abbreviation according to your symbol. These are the keywords added so far.
 <details>
   <summary>:zap: Usage:</summary>
+
 - `eps` -> ε
 - `theta` -> θ
 - `kappa` -> κ
@@ -248,6 +249,7 @@ the abbreviation according to your symbol. These are the keywords added so far.
 - `omega` -> Ω
 - `fun` -> ƒ
 - `lam` -> λ
+
 </details>
 
 ```vim
