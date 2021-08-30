@@ -195,7 +195,10 @@ nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
 
 ### VimToolsSpellMorseMaps
 When SpellMorse is activated, then you can make movements with the following keys.
-Usage:
+<details>
+  <summary>:zap: Usage:</summary>
+
+#### Input -> Output
 - `mm` -> menu (`z=`)
 - `e` ->  next word (`]s`)
 - `n` ->  next word (`]s`)
@@ -208,6 +211,8 @@ Usage:
 - `,` ->  selection first option (`1z=`)
 - `.` ->  selection second option (`2z=`)
 - `-` ->  selection third option (`3z=`)
+
+</details>
 
 ### VimToolsMapsFolding
 Mappings are enabled by default. You can read the documentation [here](http://vimdoc.sourceforge.net/htmldoc/fold.html).
@@ -230,7 +235,7 @@ the abbreviation according to your symbol. These are the keywords added so far.
 <details>
   <summary>:zap: Usage:</summary>
 
-  #### Input -> Output
+#### Input -> Output
 - `eps` -> ε
 - `theta` -> θ
 - `kappa` -> κ
