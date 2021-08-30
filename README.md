@@ -235,7 +235,7 @@ the abbreviation according to your symbol. These are the keywords added so far.
 <details>
   <summary>:zap: Usage:</summary>
 
-#### Input -> Output
+#### Input -> Output (INSERT MODUS)
 - `eps` -> ε
 - `theta` -> θ
 - `kappa` -> κ
