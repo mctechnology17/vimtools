@@ -97,6 +97,7 @@ or you only need some, you can activate it and deactivate it easily as follows:
 " 1 = activate 0 = deactivate
 let g:vimtools_loaded = 1
 ```
+
 ### Loading or deactivating specific settings
 ```vim
 " activated by default
@@ -110,6 +111,7 @@ let g:vimtools_mathemodus = 1
 let g:vimtools_spell_morse = 1
 let g:vimtools_easy_comment = 1
 ```
+
 ### Maping recommended
 ```vim
 " on/off SpellMorse
@@ -121,6 +123,19 @@ inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
 " on/off MaxWindows
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
 ```
+
+### Default mapping
+```vim
+" on/off MapsFolding
+let g:vimtools_mapsfolding = 1
+nnoremap a za
+vnoremap a za
+nnoremap s zn
+nnoremap S zN
+vnoremap s zf
+vnoremap D zd
+```
+
 ### VimToolsAssistant
 This add-on will help you with the official documentation of Vimscript.
 When you shut up under a function as a `for, while` or `if` (for example), keyword or something
@@ -179,13 +194,38 @@ nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
 ```
 
 ### VimToolsSpellMorseMaps
-- TODO
+Mappings are enabled by default. You can read the documentation [here](http://vimdoc.sourceforge.net/htmldoc/fold.html).
+Usage:
+```vim
+" activated by default
+" 1 = activate 0 = deactivate
+let g:vimtools_mapsfolding = 1
+nnoremap a za
+vnoremap a za
+nnoremap s zn
+nnoremap S zN
+vnoremap s zf
+vnoremap D zd
+```
 
 ### VimToolsMatheModus
-- TODO
+With this plugin you can acquire mathematical unicode symbols simply by typing
+the abbreviation according to your symbol. These are the keywords added so far.
+```vim
+" activated by default
+" 1 = activate 0 = deactivate
+let g:vimtools_mathemodus = 1
+" on/off MatheModus
+inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
+nnoremap <silent> <TAB>m :VimToolsMatheModus<CR>
+```
 
 ### VimToolsMaxWindows
-- TODO
+Enlarge and restore the current window.
+```vim
+" on/off MaxWindows
+nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
+```
 
 ## Integration
 ```vim
