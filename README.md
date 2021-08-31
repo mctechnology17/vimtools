@@ -35,15 +35,15 @@ That is why all the variables are available for you
 set the `vimtools` to your liking.
 
 `vimtools` some features:
-- [VimToolsMaxWindows](###VimToolsMaxWindows) the current window to have a more extended view of the
+- `VimToolsMaxWindows` the current window to have a more extended view of the
   information
-- [VimToolsSpellMorse](###VimToolsSpellMorse) the best Spell administrator for VIM, using a dictionary in Vim was never so easy
-- [VimToolsAssistant](###VimToolsAssistant) the best Asistant for the documentation for Vimscript
+- `VimToolsSpellMorse` the best Spell administrator for VIM, using a dictionary in Vim was never so easy
+- `VimToolsAssistant` the best Asistant for the documentation for Vimscript
 - Rapid access to your VIMRC or to your init.vim
-- [VimToolsState](###imToolsState) a preview to the information of your script
-- [VimToolsMakeDirectories](###VimToolsMakeDirectories) automatic directories for spell, backup copies, folding and others. You no longer have to worry about the annoying temporary files of backup copies, now everything is focused on a single place "$HOME/vimtools_tmp"
-- [VimToolsMatheModus](###VimToolsMatheModus) asistant for Mathematical Symbols
-- [VimToolsEasyComment](###VimToolsEasyComment) an indispensable complement to comment with the proper format
+- `VimToolsState` a preview to the information of your script
+- `VimToolsMakeDirectories` automatic directories for spell, backup copies, folding and others. You no longer have to worry about the annoying temporary files of backup copies, now everything is focused on a single place "$HOME/vimtools_tmp"
+- `VimToolsMatheModus` asistant for Mathematical Symbols
+- `VimToolsEasyComment` an indispensable complement to comment with the proper format
 - Others
 
 ## Installation
@@ -123,7 +123,7 @@ inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
 ```
 
-### VimToolsAssistant
+[###](###) VimToolsAssistant
 This add-on will help you with the official documentation of Vimscript.
 When you shut up under a function as a `for, while` or `if` (for example), keyword or something
 you do not know or the definition of vimscript, just press the `<F1>` key and the
