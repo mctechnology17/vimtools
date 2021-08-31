@@ -30,3 +30,5 @@ VimToolsMatheModus	vimtools.txt	/*VimToolsMatheModus*
 VimToolsMaxWindows	vimtools.txt	/*VimToolsMaxWindows*
 VimToolsCleanUndoDir	vimtools.txt	/*VimToolsCleanUndoDir*
 VimToolsMakeDirectories	vimtools.txt	/*VimToolsMakeDirectories*
+VimToolsEasyComment	vimtools.txt	/*VimToolsEasyComment*
+VimToolsState	vimtools.txt	/*VimToolsState*

@@ -29,47 +29,43 @@ CONTENTS                                                *VimToolsContents*
 ============================================================================
 1. Intro                                                     *VimToolsIntro*
 
-The swiss army knife plugin for (Neo)vim
-vimtools is a tool to complement your editor favorite text / code
-vim, vi, nvim, Gvim or MacVim.
+vimtools is a tool to complement your editor favorite text / code vim, vi, nvim, Gvim or MacVim.
 
-vimtools is a set of functions and settings that will make it easy for you
-life. You are the one who decides what function or command is executed either
-automatically or by calling through the cmd of vim / nvim.
-That is why all the variables are available
-for you set the vimtools to your liking.
+vimtools is a set of functions and settings that will make it easy for you life. You are the one who decides what function or command is executed either automatically or by calling through the cmd of vim / nvim. That is why all the variables are available for you set the vimtools to your liking.
 
-vimtools features:
-
-Maximize the current window to have a more extended view of the information
-Spell administrator
-Document assistant for Vimscript
-Rapid access to your VIMRC or to your init.vim
-State Rule
-Automatic directories for spell, backup copies, folding and others
-Mathemodus
-Others
+vimtools some features:
+    >
+    VimToolsMaxWindows the current window to have a more extended view of the information
+    VimToolsSpellMorse the best Spell administrator for VIM, using a dictionary in Vim was never so easy
+    VimToolsAssistant the best Asistant for the documentation for Vimscript
+    Rapid access to your VIMRC or to your init.vim
+    VimToolsState a preview to the information of your script
+    VimToolsMakeDirectories automatic directories for spell, backup copies, folding and others. You no longer have to worry about the annoying temporary files of backup copies, now everything is focused on a single place "$HOME/vimtools_tmp"
+    VimToolsMatheModus asistant for Mathematical Symbols
+    VimToolsEasyComment an indispensable complement to comment with the proper format
+    Others
+<
 
 ============================================================================
 2. Commands                                               *VimToolsCommands*
                                                     *VimToolsSpellMorseMaps*
 When SpellMorse is activated,
 then you can make movements with the following keys.
-
-Input -> Output
-mm -> menu (z=)
-e -> next word (]s)
-n -> next word (]s)
-N -> previus word ([S)
-b -> previus word ([S)
-a -> add word (zg)
-A -> quit word (zug)
-w -> quit bad word (zw)
-W -> undo quit bad word (zuw)
-, -> selection first option (1z=)
-. -> selection second option (2z=)
-- -> selection third option (3z=)
-
+    >
+    Input -> Output
+    mm -> menu (z=)
+    e -> next word (]s)
+    n -> next word (]s)
+    N -> previus word ([S)
+    b -> previus word ([S)
+    a -> add word (zg)
+    A -> quit word (zug)
+    w -> quit bad word (zw)
+    W -> undo quit bad word (zuw)
+    , -> selection first option (1z=)
+    . -> selection second option (2z=)
+    - -> selection third option (3z=)
+<
                                                         *VimToolsSpellMorse*
 Spell is a complement that is available to VIM, SpellMorse helps you from a
 very easy and intuitive to use it. In normal mode, simply press <TAB> + .
@@ -81,46 +77,46 @@ in specific here -> http://vimdoc.sourceforge.net/htmldoc/spell.html.
 Once you know which will be the default language, you can
 switch it by simply by modifying the word by the language of your
 preference. For example:
-
-en -> all regions
-en_au -> Australia
-en_ca -> Canada
-en_gb -> Great Britain
-en_nz -> New Zealand
-en_us -> USA
-de -> all German words accepted
-de_de -> old and new spelling
-de_19 -> old spelling
-de_20 -> new spelling
-de_at -> Austria
-de_ch -> Switzerland
-
+    >
+    en -> all regions
+    en_au -> Australia
+    en_ca -> Canada
+    en_gb -> Great Britain
+    en_nz -> New Zealand
+    en_us -> USA
+    de -> all German words accepted
+    de_de -> old and new spelling
+    de_19 -> old spelling
+    de_20 -> new spelling
+    de_at -> Austria
+    de_ch -> Switzerland
+<
                                                         *VimToolsMatheModus*
 With this plugin you can acquire mathematical unicode symbols simply
 by typing the abbreviation according to your symbol.
 These are the keywords added so far.
-
-Input -> Output (INSERT MODUS)
-eps -> ε
-theta -> θ
-kappa -> κ
-pi -> π
-rho -> ρ
-phi -> φ
-sigma -> σ
-beta -> β
-alpha -> α
-delta -> ∆
-sum -> ∑
-ang -> å
-Ang -> Å
-sqr -> √
-int -> ∫
-micra -> µ
-omega -> Ω
-fun -> ƒ
-lam -> λ
-
+    >
+    Input -> Output (INSERT MODUS)
+    eps -> ε
+    theta -> θ
+    kappa -> κ
+    pi -> π
+    rho -> ρ
+    phi -> φ
+    sigma -> σ
+    beta -> β
+    alpha -> α
+    delta -> ∆
+    sum -> ∑
+    ang -> å
+    Ang -> Å
+    sqr -> √
+    int -> ∫
+    micra -> µ
+    omega -> Ω
+    fun -> ƒ
+    lam -> λ
+<
 
                                                         *VimToolsMaxWindows*
 Enlarge and restore the current window.
@@ -130,6 +126,11 @@ Enlarge and restore the current window.
 With this add-on you can clean the "Undo" folder with the files
 that have more than 90 days of existing,
 if you want them to keep the archives simply do not invoke this command.
+
+                                                       *VimToolsEasyComment*
+
+                                                             *VimToolsState*
+
 
 ============================================================================
 3. Mappings                                               *VimToolsMappings*
@@ -151,31 +152,80 @@ Maping recommended
 ----------------------------------------------------------------------------
 4.1 g:vimtools_loaded                              *VimToolsConfig_activate*
                                                          *g:vimtools_loaded*
-" 1 = activate 0 = deactivate
-let g:vimtools_loaded = 1
+                                    With this global variable you
+                                    can activate and deactivate
+                                    all VimTools functions.
+    >
+    " 1 = activate 0 = deactivate
+    let g:vimtools_loaded = 1
+<
                                                       *g:vimtools_assistant*
+                                    With this global variable you
+                                    can activate and deactivate
+                                    <F1>     " call documentation
+                                    in VIM if it exists
+                                    <S-F1>   " call HELP
+                                    <F2>     " call .vimrc
+                                    <S-F2>   " call init.vim
 
-let g:vimtools_assistant = 1
+    >
+    let g:vimtools_assistant = 1
+>
                                       *g:vimtools_viewdir_backupdir_undodir*
+                                    With this global variable you
+                                    can activate and deactivate
+                                    Set Backup-Directories
 
-let g:vimtools_viewdir_backupdir_undodir = 1
+    >
+    let g:vimtools_viewdir_backupdir_undodir = 1
+>
                                                     *g:vimtools_mapsfolding*
-let g:vimtools_mapsfolding = 1
+                                    With this global variable you
+                                    can activate and deactivate
+                                    the mapping for Folding.
+    >
+    let g:vimtools_mapsfolding = 1
+>
 
                                               *g:vimtools_selfclosingbracke*
-let g:vimtools_selfclosingbracke = 1
+                                    With this global variable you
+                                    can activate and deactivate
+                                    self closing bracke or parenthesi.
+    >
+    let g:vimtools_selfclosingbracke = 1
+>
 
                                                           *g:vimtools_ruler*
-let g:vimtools_ruler = 1
+                                    With this global variable you
+                                    can activate and deactivate
+                                    the ruler for the information
+    >
+    let g:vimtools_ruler = 1
+>
 
                                                      *g:vimtools_mathemodus*
-let g:vimtools_mathemodus = 1
+                                    With this global variable you
+                                    can activate and deactivate
+                                    the Mathe Modus
+    >
+    let g:vimtools_mathemodus = 1
+>
 
                                                     *g:vimtools_spell_morse*
-let g:vimtools_spell_morse = 1
+                                    With this global variable you
+                                    can activate and deactivate
+                                    the SpellMorse
+    >
+    let g:vimtools_spell_morse = 1
+>
 
                                                    *g:vimtools_easy_comment*
-let g:vimtools_easy_comment = 1
+                                    With this global variable you
+                                    can activate and deactivate
+                                    the EasyComment
+    >
+    let g:vimtools_easy_comment = 1
+>
 
 
 4.2 g:vimtools_map                                      *VimToolsConfig_map*
