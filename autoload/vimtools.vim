@@ -164,11 +164,11 @@ function! vimtools#ToggleMaxWindows(maxwindows)
     if exists("t:restore_maxwindows") && (a:maxwindows == v:true || t:restore_maxwindows.win != winnr())
         exec t:restore_maxwindows.cmd
         unlet t:restore_maxwindows
-        echohl MoreMsg | echon 'vimtools: MaxWindows restored' | echohl None
+        echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows restored' | echohl None
     elseif a:maxwindows
         let t:restore_maxwindows = { 'win': winnr(), 'cmd': winrestcmd() }
         exec "normal \<C-W>\|\<C-W>_"
-        echohl MoreMsg | echon 'vimtools: MaxWindows' | echohl None
+        echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows' | echohl None
     endif
 endfunction
 
@@ -178,7 +178,7 @@ augroup END "}}}
 
 """ VimToolsMatheModus {{{
 function! s:MatheModusOn()
-  echohl MoreMsg | echon 'vimtools: MatheModus has initialized' | echohl None
+  echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has initialized' | echohl None
   let g:vimtools_mathemodus = 0
   imap eps ε
   imap theta θ
@@ -202,7 +202,7 @@ function! s:MatheModusOn()
 endfunction
 
 function! s:MatheModusOff()
-  echohl MoreMsg | echon 'vimtools: MatheModus has ended' | echohl None
+  echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has ended' | echohl None
   let g:vimtools_mathemodus = 1
   iunmap eps
   iunmap theta
@@ -237,7 +237,7 @@ endfunction
 
 """ VimToolsSpellMorse {{{
 fu! s:SpellMorseMapsOn()
-  echoh MoreMsg | echon 'vimtools: SpellMorseMaps has initialized' | echoh None
+  echoh MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has initialized' | echoh None
   let s:vimtools_spell_maps = 0
   map mm z=
   map e ]s
@@ -253,7 +253,7 @@ fu! s:SpellMorseMapsOn()
   map - 3z=
 endf
 fu! s:SpellMorseMapsOff()
-  echoh MoreMsg | echon 'vimtools: SpellMorseMaps has finished' | echoh None
+  echoh MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has finished' | echoh None
   let s:vimtools_spell_maps = 1
   unm mm
   unm e
@@ -282,15 +282,15 @@ fu! s:ToggleSpell()
     if g:vimtools_spell_morse == 1
       let g:vimtools_spell_morse = 0
       se spl=es
-      echoh MoreMsg | echon 'vimtools: SpellMorse ES' | echoh None
+      echoh MoreMsg | echon 'vimtools: VimToolsSpellMorse ES' | echoh None
     elsei g:vimtools_spell_morse == 0
       let g:vimtools_spell_morse = 2
       se spl=de
-      echoh MoreMsg | echon 'vimtools: SpellMorse DE' | echoh None
+      echoh MoreMsg | echon 'vimtools: VimToolsSpellMorse DE' | echoh None
     elsei g:vimtools_spell_morse == 2
       let g:vimtools_spell_morse = 1
       se spl=en
-      echoh MoreMsg | echon 'vimtools: SpellMorse EN' | echoh None
+      echoh MoreMsg | echon 'vimtools: VimToolsSpellMorse EN' | echoh None
     endif
   endif
 endf

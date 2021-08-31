@@ -20,12 +20,7 @@
 <br>
 
 
-- [Intro](#Intro)
-- [Fotos](#Fotos)
-- [Installation](#Installation)
-- [Description](#Description)
-- [Integration with other Plugins](#Integration)
-- [LICENSE](#LICENSE)
+[Intro](#Intro) | [Fotos](#Fotos) | [Installation](#Installation) | [Description](#Description) | [Integration](#Integration) | [LICENSE](#LICENSE)
 
 ----
 
@@ -39,15 +34,16 @@ either automatically or by calling through the `cmd` of` vim / nvim`.
 That is why all the variables are available for you
 set the `vimtools` to your liking.
 
-`vimtools` features:
-- Maximize the current window to have a more extended view of the
+`vimtools` some features:
+- [VimToolsMaxWindows](###VimToolsMaxWindows) the current window to have a more extended view of the
   information
-- Spell administrator
-- Document assistant for Vimscript
+- [VimToolsSpellMorse](###VimToolsSpellMorse) the best Spell administrator for VIM, using a dictionary in Vim was never so easy
+- [VimToolsAssistant](###VimToolsAssistant) the best Asistant for the documentation for Vimscript
 - Rapid access to your VIMRC or to your init.vim
-- State Rule
-- Automatic directories for spell, backup copies, folding and others
-- Mathemodus 🤓
+- [VimToolsState](###imToolsState) a preview to the information of your script
+- [VimToolsMakeDirectories](###VimToolsMakeDirectories) automatic directories for spell, backup copies, folding and others. You no longer have to worry about the annoying temporary files of backup copies, now everything is focused on a single place "$HOME/vimtools_tmp"
+- [VimToolsMatheModus](###VimToolsMatheModus) asistant for Mathematical Symbols
+- [VimToolsEasyComment](###VimToolsEasyComment) an indispensable complement to comment with the proper format
 - Others
 
 ## Installation
