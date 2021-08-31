@@ -123,7 +123,7 @@ inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
 ```
 
-[###](###) VimToolsAssistant
+### VimToolsAssistant
 This add-on will help you with the official documentation of Vimscript.
 When you shut up under a function as a `for, while` or `if` (for example), keyword or something
 you do not know or the definition of vimscript, just press the `<F1>` key and the
