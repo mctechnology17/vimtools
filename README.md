@@ -290,6 +290,30 @@ nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
 
 </details>
 
+### VimToolsEasyComment
+Simply select in visual mode the lines of code you want to comment on and then
+press the `c` key. This is adapted so that it works in an easy, fast and
+practical way in all scripts.
+
+List of Scripts added so far:
+
+```
+vim, cpp, c, go, java, javascript, scala, php, rust, jsonc, json
+python, r, ruby, sh, desktop, fstab, profile, text, tmux, make, dockerfile
+bashrc, zsh, zshrc, bash_profile, gitignore, yaml, gdb, gitconfig, vimwiki
+html, xml, tex, mail, dosbatch, autohotkey, lua
+```
+
+<details>
+  <summary>:zap: Usage:</summary>
+
+#### Input -> Output (VISUAL MODUS)
+Select the block or line you want to comment on in visual mode
+and then press the c key
+- `c` -> comment in the format of ScriptType / FileType
+
+</details>
+
 ## Integration
 Adding this line, you can see when SpellMorse is activated.
 Note: You have to have "AIRLINE" installed

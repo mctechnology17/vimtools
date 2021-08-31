@@ -225,10 +225,29 @@ Maping recommended
                                     With this global variable you
                                     can activate and deactivate
                                     the EasyComment
+                                    Simply select in visual mode the line
+                                    of code you want to comment on
+                                    and then press the `c` key.
+                                    This is adapted so that it works
+                                    in an easy, fast and
+                                    practical way in all scripts.
+
+List of Scripts added so far:
+
+```
+vim, cpp, c, go, java, javascript, scala, php, rust, jsonc, json
+python, r, ruby, sh, desktop, fstab, profile, text, tmux, make, dockerfile
+bashrc, zsh, zshrc, bash_profile, gitignore, yaml, gdb, gitconfig, vimwiki
+html, xml, tex, mail, dosbatch, autohotkey, lua
+```
+
     >
     let g:vimtools_easy_comment = 1
 <
-
+`Input -> Output` (VISUAL MODUS)
+Select the block or line you want to comment on in visual mode
+and then press the c key
+- `c` -> comment in the format of `ScriptType` / `FileType`
 
 4.2 g:vimtools_map                                      *VimToolsConfig_map*
     >
