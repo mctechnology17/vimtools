@@ -27,6 +27,8 @@
 ## Intro
 `vimtools` is a tool to complement your editor
 favorite text / code `vim, vi, nvim, Gvim or MacVim`.
+vimtools is fast and lightweight written in 100% vimscript
+with no outside dependencies.
 
 `vimtools` is a set of functions and settings that will make it easy for you
 life. You are the one who decides what function or command is executed

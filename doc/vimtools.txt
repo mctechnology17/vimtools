@@ -30,6 +30,8 @@ CONTENTS                                                *VimToolsContents*
 1. Intro                                                     *VimToolsIntro*
 
 vimtools is a tool to complement your editor favorite text / code vim, vi, nvim, Gvim or MacVim.
+vimtools is fast and lightweight written in 100% vimscript with no outside dependencies.
+
 
 vimtools is a set of functions and settings that will make it easy for you life. You are the one who decides what function or command is executed either automatically or by calling through the cmd of vim / nvim. That is why all the variables are available for you set the vimtools to your liking.
 
@@ -170,7 +172,7 @@ Maping recommended
 
     >
     let g:vimtools_assistant = 1
->
+<
                                       *g:vimtools_viewdir_backupdir_undodir*
                                     With this global variable you
                                     can activate and deactivate
@@ -178,14 +180,14 @@ Maping recommended
 
     >
     let g:vimtools_viewdir_backupdir_undodir = 1
->
+<
                                                     *g:vimtools_mapsfolding*
                                     With this global variable you
                                     can activate and deactivate
                                     the mapping for Folding.
     >
     let g:vimtools_mapsfolding = 1
->
+<
 
                                               *g:vimtools_selfclosingbracke*
                                     With this global variable you
@@ -193,7 +195,7 @@ Maping recommended
                                     self closing bracke or parenthesi.
     >
     let g:vimtools_selfclosingbracke = 1
->
+<
 
                                                           *g:vimtools_ruler*
                                     With this global variable you
@@ -201,7 +203,7 @@ Maping recommended
                                     the ruler for the information
     >
     let g:vimtools_ruler = 1
->
+<
 
                                                      *g:vimtools_mathemodus*
                                     With this global variable you
@@ -209,7 +211,7 @@ Maping recommended
                                     the Mathe Modus
     >
     let g:vimtools_mathemodus = 1
->
+<
 
                                                     *g:vimtools_spell_morse*
                                     With this global variable you
@@ -217,7 +219,7 @@ Maping recommended
                                     the SpellMorse
     >
     let g:vimtools_spell_morse = 1
->
+<
 
                                                    *g:vimtools_easy_comment*
                                     With this global variable you
@@ -225,7 +227,7 @@ Maping recommended
                                     the EasyComment
     >
     let g:vimtools_easy_comment = 1
->
+<
 
 
 4.2 g:vimtools_map                                      *VimToolsConfig_map*
