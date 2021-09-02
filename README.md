@@ -111,6 +111,7 @@ let g:vimtools_ruler = 1
 let g:vimtools_mathemodus = 1
 let g:vimtools_spell_morse = 1
 let g:vimtools_easy_comment = 1
+let g:vimtools_maxwindows = 1
 ```
 
 ### Maping recommended
@@ -284,6 +285,9 @@ Enlarge and restore the current window.
   <summary>:zap: Usage:</summary>
 
 ```vim
+" activated by default
+" 1 = activate 0 = deactivate
+let g:vimtools_maxwindows = 1
 " on/off MaxWindows
 nnoremap <silent> <Leader>m :VimToolsMaxWindows<CR>
 ```
