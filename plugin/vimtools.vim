@@ -41,7 +41,11 @@ if g:vimtools_loaded
     endif
     if !exists('g:vimtools_easy_comment')
         let g:vimtools_easy_comment =
-                    \ get(g:, 'vimtools_ruler', 1)
+                    \ get(g:, 'vimtools_easy_comment', 1)
+    endif
+    if !exists('g:vimtools_maxwindows')
+        let g:vimtools_maxwindows =
+                    \ get(g:, 'maxwindows', 1)
     endif
     call vimtools#execute()
 endif

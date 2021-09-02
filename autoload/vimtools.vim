@@ -160,21 +160,23 @@ function! vimtools#execute()
 endfunction "}}}
 
 """ VimToolsMaxWindows {{{
-function! vimtools#ToggleMaxWindows(maxwindows)
-    if exists("t:restore_maxwindows") && (a:maxwindows == v:true || t:restore_maxwindows.win != winnr())
-        exec t:restore_maxwindows.cmd
-        unlet t:restore_maxwindows
-        echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows restored' | echohl None
-    elseif a:maxwindows
-        let t:restore_maxwindows = { 'win': winnr(), 'cmd': winrestcmd() }
-        exec "normal \<C-W>\|\<C-W>_"
-        echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows' | echohl None
-    endif
-endfunction
+if g:vimtools_maxwindows
+    function! vimtools#ToggleMaxWindows(maxwindows)
+        if exists("t:restore_maxwindows") && (a:maxwindows == v:true || t:restore_maxwindows.win != winnr())
+            exec t:restore_maxwindows.cmd
+            unlet t:restore_maxwindows
+            echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows restored' | echohl None
+        elseif a:maxwindows
+            let t:restore_maxwindows = { 'win': winnr(), 'cmd': winrestcmd() }
+            exec "normal \<C-W>\|\<C-W>_"
+            echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows' | echohl None
+        endif
+    endfunction
 
-augroup RestoreMaxWindows
-    au WinEnter * silent! :call vimtools#ToggleMaxWindows(v:false)
-augroup END "}}}
+    augroup RestoreMaxWindows
+        au WinEnter * silent! :call vimtools#ToggleMaxWindows(v:false)
+    augroup END
+endif "}}}
 
 """ VimToolsMatheModus {{{
 function! s:MatheModusOn()
