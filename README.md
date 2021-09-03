@@ -208,19 +208,19 @@ nnoremap <silent> <TAB>, :VimToolsSpellMorseIdioms<CR>
 
 ### VimToolsSpellMorseMaps
 When SpellMorse is activated, then you can make movements with the following keys.
+The mappings of these keys are only active during the activation of SpellMourse,
+when the switch is turned off, the mapping of each key returns to its original state.
 <details>
   <summary>:zap: Usage:</summary>
 
 #### Input -> Output
 - `mm` -> menu (`z=`)
-- `e` ->  next word (`]s`)
 - `n` ->  next word (`]s`)
-- `N` ->  previus word (`[S`)
 - `b` ->  previus word (`[S`)
-- `a` ->  add word (`zg`)
-- `A` ->  quit word (`zug`)
-- `w` ->  quit bad word (`zw`)
-- `W` ->  undo quit bad word (`zuw`)
+- `y` ->  add word (`zg`)
+- `Y` ->  quit word (`zug`)
+- `x` ->  quit bad word (`zw`)
+- `X` ->  undo quit bad word (`zuw`)
 - `,` ->  selection first option (`1z=`)
 - `.` ->  selection second option (`2z=`)
 - `-` ->  selection third option (`3z=`)

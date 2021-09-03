@@ -241,31 +241,37 @@ endfunction
 function! s:SpellMorseMapsOn()
   echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdiomsMaps has initialized' | echohl None
   let s:vimtools_spellmaps = 0
+  map mm <Nop>
   map mm z=
-  map e ]s
+  map n <Nop>
   map n ]s
-  map N [S
+  map b <Nop>
   map b [S
-  map a zg
-  map A zug
-  map w zw
-  map W zuw
+  map y <Nop>
+  map y zg
+  map Y <Nop>
+  map Y zug
+  map x <Nop>
+  map x zw
+  map X <Nop>
+  map X zuw
+  map , <Nop>
   map , 1z=
+  map . <Nop>
   map . 2z=
+  map - <Nop>
   map - 3z=
 endfunction
 function! s:SpellMorseMapsOff()
   echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdiomsMaps has finished' | echohl None
   let s:vimtools_spellmaps = 1
   unmap mm
-  unmap e
   unmap n
-  unmap N
   unmap b
-  unmap a
-  unmap A
-  unmap w
-  unmap W
+  unmap y
+  unmap Y
+  unmap x
+  unmap X
   unmap ,
   unmap .
   unmap -
