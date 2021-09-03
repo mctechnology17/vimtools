@@ -114,10 +114,12 @@ let g:vimtools_easycomment = 1
 let g:vimtools_maxwindows = 1
 ```
 
-### Maping recommended
+### Maping recommended (Simple configuration)
+If you want VimTools to work by default without any
+copy modification and paste these lines in your `VIMRC` or `init.vim`
 ```vim
 " on/off SpellMorse
-nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseIdiomsMaps<CR>
+nnoremap <silent> <TAB>. :VimToolsSpellMorse<CR>
 " next language
 nnoremap <silent> <TAB>, :VimToolsSpellMorseIdioms<CR>
 " on/off MatheModus
@@ -162,7 +164,7 @@ invoke this command.
 
 </details>
 
-### VimToolsSpellMorseIdioms
+### VimToolsSpellMorse
 Spell is a complement that is available to VIM, SpellMorse helps you from a very
 easy and intuitive to use it.
 In normal mode, simply press `<TAB> + .` Torque Aactivar the plugin and once
@@ -191,7 +193,7 @@ preference. For example:
 
 ```vim
 " on/off SpellMorse
-nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseIdiomsMaps<CR>
+nnoremap <silent> <TAB>. :VimToolsSpellMorse<CR>
 " next language
 nnoremap <silent> <TAB>, :VimToolsSpellMorseIdioms<CR>
 ```
