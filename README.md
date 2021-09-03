@@ -110,6 +110,7 @@ let g:vimtools_closingbracke = 1
 let g:vimtools_stateruler = 1
 let g:vimtools_mathemodus = 1
 let g:vimtools_spellmorse = 1
+let g:vimtools_spellmorsesuggest = 1
 let g:vimtools_easycomment = 1
 let g:vimtools_maxwindows = 1
 ```
@@ -192,6 +193,11 @@ preference. For example:
   <summary>:zap: Usage:</summary>
 
 ```vim
+" Mappings are enabled by default
+" 1 = activate 0 = deactivate
+let g:vimtools_spellmorse = 1
+" 1 = 10 Best suggestions (default) 2 = 20 Best suggestions (default) 0 = all suggestions
+let g:vimtools_spellmorsesuggest = 1
 " on/off SpellMorse
 nnoremap <silent> <TAB>. :VimToolsSpellMorse<CR>
 " next language
@@ -200,7 +206,7 @@ nnoremap <silent> <TAB>, :VimToolsSpellMorseIdioms<CR>
 
 </details>
 
-### VimToolsSpellMorseIdiomsMaps
+### VimToolsSpellMorseMaps
 When SpellMorse is activated, then you can make movements with the following keys.
 <details>
   <summary>:zap: Usage:</summary>

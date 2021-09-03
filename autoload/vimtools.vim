@@ -237,7 +237,7 @@ function! s:ToggleMatheModus()
 endfunction
 "}}}
 
-""" VimToolsSpellMorseIdioms {{{
+""" VimToolsSpellMorse {{{
 function! s:SpellMorseMapsOn()
   echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdiomsMaps has initialized' | echohl None
   let s:vimtools_spellmaps = 0
