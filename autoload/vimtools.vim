@@ -118,8 +118,8 @@ function! vimtools#MapsFolding()
     vnoremap D zd
 endfunction "}}}
 
-""" g:vimtools_selfclosingbracke {{{
-function! vimtools#SelfClosingBracke()
+""" g:vimtools_closingbracke {{{
+function! vimtools#closingbracke()
     inoremap ( ()<Esc>i
     inoremap [ []<Esc>i
     inoremap { {}<Esc>i
@@ -141,7 +141,7 @@ function! vimtools#execute()
         echomsg 'vimtools: Plug made with love!'
         sleep 2
     endif
-    if g:vimtools_viewdir_backupdir_undodir
+    if g:vimtools_directories
         if !isdirectory($HOME."/vimtools_tmp")
             call s:MakeDirectories()
             echomsg 'vimtools: Plug made with love!'
@@ -154,8 +154,8 @@ function! vimtools#execute()
             call vimtools#MapsFolding()
         endif
     endif
-    if g:vimtools_selfclosingbracke
-        call vimtools#SelfClosingBracke()
+    if g:vimtools_closingbracke
+        call vimtools#closingbracke()
     endif
 endfunction "}}}
 
@@ -238,8 +238,8 @@ endfunction
 "}}}
 
 """ VimToolsSpellMorse {{{
-fu! s:SpellMorseMapsOn()
-  echoh MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has initialized' | echoh None
+function! s:SpellMorseMapsOn()
+  echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has initialized' | echohl None
   let s:vimtools_spell_maps = 0
   map mm z=
   map e ]s
@@ -253,53 +253,58 @@ fu! s:SpellMorseMapsOn()
   map , 1z=
   map . 2z=
   map - 3z=
-endf
-fu! s:SpellMorseMapsOff()
-  echoh MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has finished' | echoh None
+endfunction
+function! s:SpellMorseMapsOff()
+  echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has finished' | echohl None
   let s:vimtools_spell_maps = 1
-  unm mm
-  unm e
-  unm n
-  unm N
-  unm b
-  unm a
-  unm A
-  unm w
-  unm W
-  unm ,
-  unm .
-  unm -
-endf
-fun! s:ToggleSpellMorseMaps()
+  unmap mm
+  unmap e
+  unmap n
+  unmap N
+  unmap b
+  unmap a
+  unmap A
+  unmap w
+  unmap W
+  unmap ,
+  unmap .
+  unmap -
+endfunction
+function! s:ToggleSpellMorseMaps()
 	if s:vimtools_spell_maps
     call s:SpellMorseMapsOn()
     let s:vimtools_spell_maps_on = 1
   else
     call s:SpellMorseMapsOff()
     let s:vimtools_spell_maps_on = 0
+    if g:vimtools_directories
+        if g:vimtools_mapsfolding
+            call vimtools#MapsFolding()
+        endif
+    endif
   endif
-endfun
-fu! s:ToggleSpell()
+endfunction
+function! s:ToggleSpell()
   if s:vimtools_spell_maps_on
-    if g:vimtools_spell_morse == 1
-      let g:vimtools_spell_morse = 0
-      se spl=es
-      echoh MoreMsg | echon 'vimtools: VimToolsSpellMorse ES' | echoh None
-    elsei g:vimtools_spell_morse == 0
-      let g:vimtools_spell_morse = 2
-      se spl=de
-      echoh MoreMsg | echon 'vimtools: VimToolsSpellMorse DE' | echoh None
-    elsei g:vimtools_spell_morse == 2
-      let g:vimtools_spell_morse = 1
-      se spl=en
-      echoh MoreMsg | echon 'vimtools: VimToolsSpellMorse EN' | echoh None
+    if g:vimtools_spellmorse == 1
+      let g:vimtools_spellmorse = 0
+      set spelllang=es
+      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorse ES' | echohl None
+    elsei g:vimtools_spellmorse == 0
+      let g:vimtools_spellmorse = 2
+      set spelllang=de
+      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorse DE' | echohl None
+    elsei g:vimtools_spellmorse == 2
+      let g:vimtools_spellmorse = 1
+      se spelllang=en
+      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorse EN' | echohl None
     endif
   endif
 endf
 let s:vimtools_spell_maps = 1
 "}}}
 
-if g:vimtools_ruler "{{{
+if g:vimtools_stateruler "{{{
   function! GitBranch()
     return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
   endfunction
@@ -330,7 +335,7 @@ if g:vimtools_ruler "{{{
   set statusline+=\
 endif "}}}
 
-if g:vimtools_easy_comment "{{{
+if g:vimtools_easycomment "{{{
     augroup EasyCommentAutocmd
       autocmd FileType vim vnoremap <silent> c :'<, '>norm I"<Space><CR>
       autocmd FileType cpp,c,go,java,javascript,scala,php,rust,jsonc,json vnoremap <silent> c :'<, '>norm I//<Space><CR>

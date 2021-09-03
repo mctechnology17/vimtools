@@ -173,13 +173,13 @@ Maping recommended
     >
     let g:vimtools_assistant = 1
 <
-                                      *g:vimtools_viewdir_backupdir_undodir*
+                                      *g:vimtools_directories*
                                     With this global variable you
                                     can activate and deactivate
                                     Set Backup-Directories
 
     >
-    let g:vimtools_viewdir_backupdir_undodir = 1
+    let g:vimtools_directories = 1
 <
                                                     *g:vimtools_mapsfolding*
                                     With this global variable you
@@ -189,20 +189,20 @@ Maping recommended
     let g:vimtools_mapsfolding = 1
 <
 
-                                              *g:vimtools_selfclosingbracke*
+                                              *g:vimtools_closingbracke*
                                     With this global variable you
                                     can activate and deactivate
                                     self closing bracke or parenthesi.
     >
-    let g:vimtools_selfclosingbracke = 1
+    let g:vimtools_closingbracke = 1
 <
 
-                                                          *g:vimtools_ruler*
+                                                          *g:vimtools_stateruler*
                                     With this global variable you
                                     can activate and deactivate
-                                    the ruler for the information
+                                    the stateruler for the information
     >
-    let g:vimtools_ruler = 1
+    let g:vimtools_stateruler = 1
 <
 
                                                      *g:vimtools_mathemodus*
@@ -213,15 +213,15 @@ Maping recommended
     let g:vimtools_mathemodus = 1
 <
 
-                                                    *g:vimtools_spell_morse*
+                                                    *g:vimtools_spellmorse*
                                     With this global variable you
                                     can activate and deactivate
                                     the SpellMorse
     >
-    let g:vimtools_spell_morse = 1
+    let g:vimtools_spellmorse = 1
 <
 
-                                                   *g:vimtools_easy_comment*
+                                                   *g:vimtools_easycomment*
                                     With this global variable you
                                     can activate and deactivate
                                     the EasyComment
@@ -242,7 +242,7 @@ html, xml, tex, mail, dosbatch, autohotkey, lua
 ```
 
     >
-    let g:vimtools_easy_comment = 1
+    let g:vimtools_easycomment = 1
 <
 `Input -> Output` (VISUAL MODUS)
 Select the block or line you want to comment on in visual mode

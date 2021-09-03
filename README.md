@@ -104,13 +104,13 @@ let g:vimtools_loaded = 1
 " activated by default
 " 1 = activate 0 = deactivate
 let g:vimtools_assistant = 1
-let g:vimtools_viewdir_backupdir_undodir = 1
+let g:vimtools_directories = 1
 let g:vimtools_mapsfolding = 1
-let g:vimtools_selfclosingbracke = 1
-let g:vimtools_ruler = 1
+let g:vimtools_closingbracke = 1
+let g:vimtools_stateruler = 1
 let g:vimtools_mathemodus = 1
-let g:vimtools_spell_morse = 1
-let g:vimtools_easy_comment = 1
+let g:vimtools_spellmorse = 1
+let g:vimtools_easycomment = 1
 let g:vimtools_maxwindows = 1
 ```
 
