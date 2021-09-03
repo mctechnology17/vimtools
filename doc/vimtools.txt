@@ -38,7 +38,7 @@ vimtools is a set of functions and settings that will make it easy for you life.
 vimtools some features:
     >
     VimToolsMaxWindows the current window to have a more extended view of the information
-    VimToolsSpellMorse the best Spell administrator for VIM, using a dictionary in Vim was never so easy
+    VimToolsSpellMorseIdioms the best Spell administrator for VIM, using a dictionary in Vim was never so easy
     VimToolsAssistant the best Asistant for the documentation for Vimscript
     Rapid access to your VIMRC or to your init.vim
     VimToolsState a preview to the information of your script
@@ -50,23 +50,25 @@ vimtools some features:
 
 ============================================================================
 2. Commands                                               *VimToolsCommands*
+                                                    *VimToolsSpellMorse*
+                                                    *VimToolsSpellMorseIdioms*
                                                     *VimToolsSpellMorseMaps*
 When SpellMorse is activated,
 then you can make movements with the following keys.
-    >
-    Input -> Output
-    mm -> menu (z=)
-    e -> next word (]s)
-    n -> next word (]s)
-    N -> previus word ([S)
-    b -> previus word ([S)
-    a -> add word (zg)
-    A -> quit word (zug)
-    w -> quit bad word (zw)
-    W -> undo quit bad word (zuw)
-    , -> selection first option (1z=)
-    . -> selection second option (2z=)
-    - -> selection third option (3z=)
+                        >
+                        Input -> Output
+                        mm -> menu (z=)
+                        e -> next word (]s)
+                        n -> next word (]s)
+                        N -> previus word ([S)
+                        b -> previus word ([S)
+                        a -> add word (zg)
+                        A -> quit word (zug)
+                        w -> quit bad word (zw)
+                        W -> undo quit bad word (zuw)
+                        , -> selection first option (1z=)
+                        . -> selection second option (2z=)
+                        - -> selection third option (3z=)
 <
                                                         *VimToolsSpellMorse*
 Spell is a complement that is available to VIM, SpellMorse helps you from a
@@ -79,45 +81,45 @@ in specific here -> http://vimdoc.sourceforge.net/htmldoc/spell.html.
 Once you know which will be the default language, you can
 switch it by simply by modifying the word by the language of your
 preference. For example:
-    >
-    en -> all regions
-    en_au -> Australia
-    en_ca -> Canada
-    en_gb -> Great Britain
-    en_nz -> New Zealand
-    en_us -> USA
-    de -> all German words accepted
-    de_de -> old and new spelling
-    de_19 -> old spelling
-    de_20 -> new spelling
-    de_at -> Austria
-    de_ch -> Switzerland
+                        >
+                        en -> all regions
+                        en_au -> Australia
+                        en_ca -> Canada
+                        en_gb -> Great Britain
+                        en_nz -> New Zealand
+                        en_us -> USA
+                        de -> all German words accepted
+                        de_de -> old and new spelling
+                        de_19 -> old spelling
+                        de_20 -> new spelling
+                        de_at -> Austria
+                        de_ch -> Switzerland
 <
                                                         *VimToolsMatheModus*
 With this plugin you can acquire mathematical unicode symbols simply
 by typing the abbreviation according to your symbol.
 These are the keywords added so far.
-    >
-    Input -> Output (INSERT MODUS)
-    eps -> ε
-    theta -> θ
-    kappa -> κ
-    pi -> π
-    rho -> ρ
-    phi -> φ
-    sigma -> σ
-    beta -> β
-    alpha -> α
-    delta -> ∆
-    sum -> ∑
-    ang -> å
-    Ang -> Å
-    sqr -> √
-    int -> ∫
-    micra -> µ
-    omega -> Ω
-    fun -> ƒ
-    lam -> λ
+                        >
+                        Input -> Output (INSERT MODUS)
+                        eps -> ε
+                        theta -> θ
+                        kappa -> κ
+                        pi -> π
+                        rho -> ρ
+                        phi -> φ
+                        sigma -> σ
+                        beta -> β
+                        alpha -> α
+                        delta -> ∆
+                        sum -> ∑
+                        ang -> å
+                        Ang -> Å
+                        sqr -> √
+                        int -> ∫
+                        micra -> µ
+                        omega -> Ω
+                        fun -> ƒ
+                        lam -> λ
 <
 
                                                         *VimToolsMaxWindows*
@@ -139,9 +141,9 @@ if you want them to keep the archives simply do not invoke this command.
 Maping recommended
     >
     " on/off SpellMorse
-    nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseMaps<CR>
+    nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseIdiomsMaps<CR>
     " next language
-    nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
+    nnoremap <silent> <TAB>, :VimToolsSpellMorseIdioms<CR>
     " on/off MatheModus
     inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
     " on/off MaxWindows
@@ -252,9 +254,9 @@ and then press the c key
 4.2 g:vimtools_map                                      *VimToolsConfig_map*
     >
     " on/off SpellMorse
-    nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseMaps<CR>
+    nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseIdiomsMaps<CR>
     " next language
-    nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
+    nnoremap <silent> <TAB>, :VimToolsSpellMorseIdioms<CR>
     " on/off MatheModus
     inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
     " on/off MaxWindows

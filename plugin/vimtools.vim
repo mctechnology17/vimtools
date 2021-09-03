@@ -35,6 +35,10 @@ if g:vimtools_loaded
         let g:vimtools_spellmorse =
                     \ get(g:, 'vimtools_spellmorse', 1)
     endif
+    if !exists('g:vimtools_spellmorsesuggest')
+        let g:vimtools_spellmorsesuggest =
+                    \ get(g:, 'vimtools_spellmorsesuggest', 1)
+    endif
     if !exists('g:vimtools_stateruler')
         let g:vimtools_stateruler =
                     \ get(g:, 'vimtools_stateruler', 1)

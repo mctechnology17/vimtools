@@ -237,10 +237,10 @@ function! s:ToggleMatheModus()
 endfunction
 "}}}
 
-""" VimToolsSpellMorse {{{
+""" VimToolsSpellMorseIdioms {{{
 function! s:SpellMorseMapsOn()
-  echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has initialized' | echohl None
-  let s:vimtools_spell_maps = 0
+  echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdiomsMaps has initialized' | echohl None
+  let s:vimtools_spellmaps = 0
   map mm z=
   map e ]s
   map n ]s
@@ -255,8 +255,8 @@ function! s:SpellMorseMapsOn()
   map - 3z=
 endfunction
 function! s:SpellMorseMapsOff()
-  echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseMaps has finished' | echohl None
-  let s:vimtools_spell_maps = 1
+  echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdiomsMaps has finished' | echohl None
+  let s:vimtools_spellmaps = 1
   unmap mm
   unmap e
   unmap n
@@ -271,12 +271,12 @@ function! s:SpellMorseMapsOff()
   unmap -
 endfunction
 function! s:ToggleSpellMorseMaps()
-	if s:vimtools_spell_maps
+	if s:vimtools_spellmaps
     call s:SpellMorseMapsOn()
-    let s:vimtools_spell_maps_on = 1
+    let s:vimtools_spellmaps_on = 1
   else
     call s:SpellMorseMapsOff()
-    let s:vimtools_spell_maps_on = 0
+    let s:vimtools_spellmaps_on = 0
     if g:vimtools_directories
         if g:vimtools_mapsfolding
             call vimtools#MapsFolding()
@@ -284,24 +284,33 @@ function! s:ToggleSpellMorseMaps()
     endif
   endif
 endfunction
-function! s:ToggleSpell()
-  if s:vimtools_spell_maps_on
+function! s:ToggleSpellIdioms()
+  if s:vimtools_spellmaps_on
     if g:vimtools_spellmorse == 1
       let g:vimtools_spellmorse = 0
       set spelllang=es
-      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorse ES' | echohl None
-    elsei g:vimtools_spellmorse == 0
+      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdioms ES' | echohl None
+    elseif g:vimtools_spellmorse == 0
       let g:vimtools_spellmorse = 2
       set spelllang=de
-      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorse DE' | echohl None
-    elsei g:vimtools_spellmorse == 2
+      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdioms DE' | echohl None
+    elseif g:vimtools_spellmorse == 2
       let g:vimtools_spellmorse = 1
-      se spelllang=en
-      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorse EN' | echohl None
+      set spelllang=en
+      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdioms EN' | echohl None
     endif
   endif
-endf
-let s:vimtools_spell_maps = 1
+endfunction
+fun! s:ToggleSpell()
+    if g:vimtools_spellmorsesuggest == 1
+        set spellsuggest=best,10
+    elsei g:vimtools_spellmorsesuggest == 2
+        set spellsuggest=best,20
+    endif
+    setlocal spell! spelllang=en
+    exe "VimToolsSpellMorseMaps"
+endfun
+let s:vimtools_spellmaps = 1
 "}}}
 
 if g:vimtools_stateruler "{{{
@@ -350,8 +359,9 @@ if g:vimtools_easycomment "{{{
     augroup END
 endif "}}}
 
-command! -nargs=0 VimToolsSpellMorseMaps        call s:ToggleSpellMorseMaps()
 command! -nargs=0 VimToolsSpellMorse            call s:ToggleSpell()
+command! -nargs=0 VimToolsSpellMorseMaps        call s:ToggleSpellMorseMaps()
+command! -nargs=0 VimToolsSpellMorseIdioms      call s:ToggleSpellIdioms()
 command! -nargs=0 VimToolsMatheModus            call s:ToggleMatheModus()
 command! -nargs=0 VimToolsMaxWindows            call vimtools#ToggleMaxWindows(v:true)
 command! -nargs=0 VimToolsCleanUndoDir          call s:CleanUndoDir()

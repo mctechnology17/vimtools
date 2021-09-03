@@ -39,7 +39,7 @@ set the `vimtools` to your liking.
 `vimtools` some features:
 - `VimToolsMaxWindows` the current window to have a more extended view of the
   information
-- `VimToolsSpellMorse` the best Spell administrator for VIM, using a dictionary in Vim was never so easy
+- `VimToolsSpellMorseIdioms` the best Spell administrator for VIM, using a dictionary in Vim was never so easy
 - `VimToolsAssistant` the best Asistant for the documentation for Vimscript
 - Rapid access to your VIMRC or to your init.vim
 - `VimToolsState` a preview to the information of your script
@@ -117,9 +117,9 @@ let g:vimtools_maxwindows = 1
 ### Maping recommended
 ```vim
 " on/off SpellMorse
-nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseMaps<CR>
+nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseIdiomsMaps<CR>
 " next language
-nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
+nnoremap <silent> <TAB>, :VimToolsSpellMorseIdioms<CR>
 " on/off MatheModus
 inoremap <silent> <TAB>m <Esc>:VimToolsMatheModus<CR>i<RIGHT>
 " on/off MaxWindows
@@ -162,7 +162,7 @@ invoke this command.
 
 </details>
 
-### VimToolsSpellMorse
+### VimToolsSpellMorseIdioms
 Spell is a complement that is available to VIM, SpellMorse helps you from a very
 easy and intuitive to use it.
 In normal mode, simply press `<TAB> + .` Torque Aactivar the plugin and once
@@ -191,14 +191,14 @@ preference. For example:
 
 ```vim
 " on/off SpellMorse
-nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseMaps<CR>
+nnoremap <silent> <TAB>. :setlocal spell! spelllang=en \| VimToolsSpellMorseIdiomsMaps<CR>
 " next language
-nnoremap <silent> <TAB>, :VimToolsSpellMorse<CR>
+nnoremap <silent> <TAB>, :VimToolsSpellMorseIdioms<CR>
 ```
 
 </details>
 
-### VimToolsSpellMorseMaps
+### VimToolsSpellMorseIdiomsMaps
 When SpellMorse is activated, then you can make movements with the following keys.
 <details>
   <summary>:zap: Usage:</summary>
