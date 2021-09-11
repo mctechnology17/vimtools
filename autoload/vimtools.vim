@@ -352,16 +352,16 @@ endif "}}}
 
 if g:vimtools_easycomment "{{{
     augroup EasyCommentAutocmd
-      autocmd FileType vim vnoremap <silent> c :'<, '>norm I"<Space><CR>
-      autocmd FileType cpp,c,go,java,javascript,scala,php,rust,jsonc,json vnoremap <silent> c :'<, '>norm I//<Space><CR>
-      autocmd FileType python,r,ruby,sh,desktop,fstab,profile,text,tmux,make,dockerfile vnoremap <silent> c :'<, '>norm I#<Space><CR>
-      autocmd FileType bashrc,zsh,zshrc,bash_profile,gitignore,,yaml,gdb,gitconfig,vimwiki vnoremap <silent> c :'<, '>norm I#<Space><CR>
-      autocmd FileType html,xml vnoremap <silent> c :'<, '>norm I<!--<Space><CR> \| :'<, '>norm A<Space>--><CR>
-      autocmd FileType tex vnoremap <silent> c :'<, '>norm I%<Space><CR>
-      autocmd FileType mail vnoremap <silent> c :'<, '>norm I><Space><CR>
-      autocmd FileType dosbatch vnoremap <silent> c :'<, '>norm IREM<Space><CR>
-      autocmd FileType autohotkey vnoremap <silent> c :'<, '>norm I;<Space><CR>
-      autocmd FileType lua vnoremap <silent> c :'<, '>norm I--<Space><CR>
+      autocmd FileType vim vnoremap <silent> C :'<, '>norm I"<Space><CR>
+      autocmd FileType cpp,c,go,java,javascript,scala,php,rust,jsonc,json vnoremap <silent> C :'<, '>norm I//<Space><CR>
+      autocmd FileType python,r,ruby,sh,desktop,fstab,profile,text,tmux,make,dockerfile vnoremap <silent> C :'<, '>norm I#<Space><CR>
+      autocmd FileType bashrc,zsh,zshrc,bash_profile,gitignore,,yaml,gdb,gitconfig,vimwiki vnoremap <silent> C :'<, '>norm I#<Space><CR>
+      autocmd FileType html,xml vnoremap <silent> C :'<, '>norm I<!--<Space><CR> \| :'<, '>norm A<Space>--><CR>
+      autocmd FileType tex vnoremap <silent> C :'<, '>norm I%<Space><CR>
+      autocmd FileType mail vnoremap <silent> C :'<, '>norm I><Space><CR>
+      autocmd FileType dosbatch vnoremap <silent> C :'<, '>norm IREM<Space><CR>
+      autocmd FileType autohotkey vnoremap <silent> C :'<, '>norm I;<Space><CR>
+      autocmd FileType lua vnoremap <silent> C :'<, '>norm I--<Space><CR>
     augroup END
 endif "}}}
 

@@ -229,7 +229,7 @@ Maping recommended
                                     the EasyComment
                                     Simply select in visual mode the line
                                     of code you want to comment on
-                                    and then press the `c` key.
+                                    and then press the `R` key.
                                     This is adapted so that it works
                                     in an easy, fast and
                                     practical way in all scripts.

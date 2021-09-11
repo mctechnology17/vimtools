@@ -322,7 +322,7 @@ html, xml, tex, mail, dosbatch, autohotkey, lua
 #### Input -> Output (VISUAL MODUS)
 Select the block or line you want to comment on in visual mode
 and then press the c key
-- `c` -> comment in the format of ScriptType / FileType
+- `C` -> comment in the format of ScriptType / FileType
 
 </details>
 
