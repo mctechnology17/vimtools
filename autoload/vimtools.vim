@@ -10,7 +10,7 @@ scriptencoding utf-8
 fun! s:Assistant()
     let CONFIG_NVIM = $PATH
     let CONFIG_VIM = $PATH
-    if has('win32')&&!has('win64') "{{{
+    if has('win32')||has('win64') "{{{
         if filereadable(expand('$HOME/_vimrc'))
             let $CONFIG_VIM='$HOME/_vimrc'
             map <S-F2> :vsp<Space>$CONFIG_VIM<CR>
@@ -171,13 +171,13 @@ if g:vimtools_maxwindows
     if exists("t:restore_maxwindows") && (a:maxwindows == v:true || t:restore_maxwindows.win != winnr())
       exec t:restore_maxwindows.cmd
       unlet t:restore_maxwindows
-      " echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows restored' | echohl None
-      echohl MoreMsg | echon '░▒▓ vimtools  MaxWindows OFF ' | echohl None
+      echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows restored' | echohl None
+      " echohl MoreMsg | echon '░▒▓ vimtools  MaxWindows OFF ' | echohl None
     elseif a:maxwindows
       let t:restore_maxwindows = { 'win': winnr(), 'cmd': winrestcmd() }
       exec "normal \<C-W>\|\<C-W>_"
-      " echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows' | echohl None
-      echohl MoreMsg | echon '░▒▓ vimtools  MaxWindows ON ' | echohl None
+      echohl MoreMsg | echon 'vimtools: VimToolsMaxWindows' | echohl None
+      " echohl MoreMsg | echon '░▒▓ vimtools  MaxWindows ON ' | echohl None
     endif
   endfunction
   au WinEnter * silent! :call vimtools#ToggleMaxWindows(v:false)
@@ -185,8 +185,8 @@ endif "}}}
 
 """ VimToolsMatheModus {{{
 function! s:MatheModusOn() "{{{
-  " echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has initialized' | echohl None
-  echohl MoreMsg | echon '░▒▓ vimtools  MatheModus ON ' | echohl None
+  echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has initialized' | echohl None
+  " echohl MoreMsg | echon '░▒▓ vimtools  MatheModus ON ' | echohl None
   let g:vimtools_mathemodus = 0
   imap eps ε
   imap theta θ
@@ -210,8 +210,8 @@ function! s:MatheModusOn() "{{{
 endfunction "}}}
 
 function! s:MatheModusOff() "{{{
-  " echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has ended' | echohl None
-  echohl MoreMsg | echon '░▒▓ vimtools  MatheModus OFF ' | echohl None
+  echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has ended' | echohl None
+  " echohl MoreMsg | echon '░▒▓ vimtools  MatheModus OFF ' | echohl None
   let g:vimtools_mathemodus = 1
   iunmap eps
   iunmap theta
@@ -245,8 +245,8 @@ endfunction "}}}
 
 """ VimToolsSpellMorse {{{
 function! s:SpellMorseMapsOn() "{{{ ░▒░
-  " echohl MoreMsg | echon 'vimtools SpellMorse ON' | echohl None
-  echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse ON ' | echohl None
+  echohl MoreMsg | echon 'vimtools: SpellMorse ON' | echohl None
+  " echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse ON ' | echohl None
   " echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdiomsMaps has initialized' | echohl None
   let s:vimtools_spellmaps = 0
   map m <Nop>
@@ -284,8 +284,8 @@ function! s:SpellMorseMapsOn() "{{{ ░▒░
 endfunction "}}}
 function! s:SpellMorseMapsOff() "{{{
   " echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdiomsMaps has finished' | echohl None
-  " echohl MoreMsg | echon 'vimtools SpellMorse OFF' | echohl None
-  echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse OFF ' | echohl None
+  echohl MoreMsg | echon 'vimtools: SpellMorse OFF' | echohl None
+  " echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse OFF ' | echohl None
   let s:vimtools_spellmaps = 1
   unmap m
   unmap w
@@ -327,18 +327,18 @@ function! s:ToggleSpellIdioms() "{{{
     if g:vimtools_spellmorse == 1
       let g:vimtools_spellmorse = 0
       setlocal spelllang=es
-      " echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdioms ES' | echohl None
-      echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse ES ' | echohl None
+      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdioms ES' | echohl None
+      " echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse ES ' | echohl None
     elseif g:vimtools_spellmorse == 0
       let g:vimtools_spellmorse = 2
       setlocal spelllang=de
-      " echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdioms DE' | echohl None
-      echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse DE ' | echohl None
+      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdioms DE' | echohl None
+      " echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse DE ' | echohl None
     elseif g:vimtools_spellmorse == 2
       let g:vimtools_spellmorse = 1
       setlocal spelllang=en
-      " echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdioms EN' | echohl None
-      echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse EN ' | echohl None
+      echohl MoreMsg | echon 'vimtools: VimToolsSpellMorseIdioms EN' | echohl None
+      " echohl MoreMsg | echon '░▒▓ vimtools  SpellMorse EN ' | echohl None
     endif
   endif
 endfunction "}}}
@@ -415,4 +415,4 @@ command! -nargs=0 VimToolsCleanUndoDir          call s:CleanUndoDir()
 command! -nargs=0 VimToolsMakeDirectories       call s:MakeDirectories()
 "}}}
 
-" vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
+" vim: set sw=2 ts=2 sts=2 et ft=vim fdm=marker:

@@ -17,7 +17,7 @@ if g:vimtools_loaded
   endif "}}}
   if !exists('g:vimtools_mapsfolding') "{{{
     let g:vimtools_mapsfolding =
-              \ get(g:, 'vimtools_mapsfolding', 1)
+              \ get(g:, 'vimtools_mapsfolding', 0)
   endif "}}}
   if !exists('g:vimtools_folding') "{{{
     let g:vimtools_folding =
@@ -58,4 +58,4 @@ if g:vimtools_loaded
   call vimtools#execute()
 endif
 
-" vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
+" vim: set sw=2 ts=2 sts=2 et ft=vim fdm=marker:
