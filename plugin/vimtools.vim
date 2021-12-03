@@ -2,7 +2,7 @@
 " FileName: vimtools.vim
 " Author: MC Technology <mctechnology170318@gmail.com>
 " GitHub: https://github.com/mctechnology17
-" Date: 26.05.2021 15:00
+" Date: 03.12.2021 18:00
 " ====================================================
 scriptencoding utf-8
 
