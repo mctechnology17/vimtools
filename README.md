@@ -339,10 +339,10 @@ Released under the GNU General Public License v3.0.
 Copyright (c) 2021 MC Technology
 
 [twitter]: https://twitter.com/mctechnology17
-[youtube]: https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw?view_as=subscriber
+[youtube]: https://www.youtube.com/c/mctechnology17
 [instagram]: https://www.instagram.com/mctechnology17/
 [facebook]: https://m.facebook.com/mctechnology17/
-[reddit]:https://www.reddit.com/user/mctechnology17
+[reddit]: https://www.reddit.com/user/mctechnology17
 
 [vimtools]: https://github.com/mctechnology17/vimtools
 [jailbreakrepo]: https://mctechnology17.github.io/
