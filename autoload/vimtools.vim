@@ -389,12 +389,13 @@ if g:vimtools_stateruler "{{{
   set statusline+=\
 endif "}}}
 
+" TODO: add vimwiki and markdown
 if g:vimtools_easycomment "{{{
     augroup EasyCommentAutocmd
       autocmd FileType vim vnoremap <silent> C :'<, '>norm I"<Space><CR>
       autocmd FileType cpp,c,go,java,javascript,scala,php,rust,jsonc,json vnoremap <silent> C :'<, '>norm I//<Space><CR>
       autocmd FileType python,r,ruby,sh,desktop,fstab,profile,text,tmux,make,dockerfile vnoremap <silent> C :'<, '>norm I#<Space><CR>
-      autocmd FileType bashrc,zsh,zshrc,bash_profile,gitignore,yaml,gdb,gitconfig,conf,vimwiki vnoremap <silent> C :'<, '>norm I#<Space><CR>
+      autocmd FileType bashrc,zsh,zshrc,bash_profile,gitignore,yaml,gdb,gitconfig,conf vnoremap <silent> C :'<, '>norm I#<Space><CR>
       autocmd FileType fish,sshconfig vnoremap <silent> C :'<, '>norm I#<Space><CR>
       autocmd FileType html,xml vnoremap <silent> C :'<, '>norm I<!--<Space><CR> \| :'<, '>norm A<Space>--><CR>
       autocmd FileType tex vnoremap <silent> C :'<, '>norm I%<Space><CR>

@@ -16,7 +16,7 @@
 <br>
 
 
-[Intro](#Intro) | [Fotos](#Fotos) | [Installation](#Installation) | [Description](#Description) | [Integration](#Integration) | [LICENSE](#LICENSE)
+[Intro](#Intro) | [Fotos](#Fotos) | [Installation](#Installation) | [Description](#Description) | [Integration](#Integration) | [Donate](#Donate) | [LICENSE](#LICENSE)
 
 ----
 
@@ -329,8 +329,20 @@ Note: You have to have "AIRLINE" installed
 let g:airline_symbols.spell = 'SpellMorse'
 ```
 
-## Fotos
-- TODO :D
+# Donate
+If you're enjoy my work, feel free to donate or become a sponsor.
+- [paypal]
+- [sponsor]
+
+Ambassador and creator/maintainer of vim-better-header,
+vimtools, GitManager and more, that are easy to integrate,
+but very powerful work tools that allow you to
+improve your workflow, integrating with all operating
+systems and all possible shells
+
+Here you can see another recently published project:
+- [vim-better-header] is a better automated template
+- [gm] git manager with a friendly user interface
 
 ## [LICENSE](LICENSE)
 
@@ -344,6 +356,8 @@ Copyright (c) 2021 MC Technology
 [facebook]: https://m.facebook.com/mctechnology17/
 [reddit]: https://www.reddit.com/user/mctechnology17
 
+[vim-better-header]: https://github.com/mctechnology17/vim-better-header
+[gm]: https://github.com/mctechnology17/gm
 [vimtools]: https://github.com/mctechnology17/vimtools
 [jailbreakrepo]: https://mctechnology17.github.io/
 [uiglitch]: https://repo.packix.com/package/com.mctechnology.uiglitch/
