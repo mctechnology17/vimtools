@@ -186,52 +186,14 @@ endif "}}}
 """ VimToolsMatheModus {{{
 function! s:MatheModusOn() "{{{
   echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has initialized' | echohl None
-  " echohl MoreMsg | echon '░▒▓ vimtools  MatheModus ON ' | echohl None
   let g:vimtools_mathemodus = 0
-  imap eps ε
-  imap theta θ
-  imap kappa κ
-  imap pi π
-  imap rho ρ
-  imap phi φ
-  imap sigma σ
-  imap beta β
-  imap alpha α
-  imap delta ∆
-  imap sum ∑
-  imap ang å
-  imap Ang Å
-  imap sqr √
-  imap int ∫
-  imap micra µ
-  imap omega Ω
-  imap fun ƒ
-  imap lam λ
+  call mathemodus#MatheModusOn()
 endfunction "}}}
 
 function! s:MatheModusOff() "{{{
   echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has ended' | echohl None
-  " echohl MoreMsg | echon '░▒▓ vimtools  MatheModus OFF ' | echohl None
   let g:vimtools_mathemodus = 1
-  iunmap eps
-  iunmap theta
-  iunmap kappa
-  iunmap pi
-  iunmap rho
-  iunmap phi
-  iunmap sigma
-  iunmap beta
-  iunmap alpha
-  iunmap delta
-  iunmap sum
-  iunmap ang
-  iunmap Ang
-  iunmap sqr
-  iunmap int
-  iunmap micra
-  iunmap omega
-  iunmap fun
-  iunmap lam
+  call mathemodus#MatheModusOff()
 endfunction "}}}
 
 function! s:ToggleMatheModus() "{{{
@@ -389,10 +351,10 @@ if g:vimtools_stateruler "{{{
   set statusline+=\
 endif "}}}
 
-" TODO: add vimwiki and markdown
 if g:vimtools_easycomment "{{{
     augroup EasyCommentAutocmd
       autocmd FileType vim vnoremap <silent> C :'<, '>norm I"<Space><CR>
+      autocmd FileType vimwiki,markdown vnoremap <silent> C :'<, '>norm I[//]: # ( <CR> \| :'<, '>norm A<Space>)<CR>
       autocmd FileType cpp,c,go,java,javascript,scala,php,rust,jsonc,json vnoremap <silent> C :'<, '>norm I//<Space><CR>
       autocmd FileType python,r,ruby,sh,desktop,fstab,profile,text,tmux,make,dockerfile vnoremap <silent> C :'<, '>norm I#<Space><CR>
       autocmd FileType bashrc,zsh,zshrc,bash_profile,gitignore,yaml,gdb,gitconfig,conf vnoremap <silent> C :'<, '>norm I#<Space><CR>
