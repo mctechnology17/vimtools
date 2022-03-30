@@ -364,3 +364,6 @@ Copyright (c) 2021 MC Technology
 [uiswitches]: https://repo.packix.com/package/com.mctechnology.uiswitches/
 [uibadge]: https://repo.packix.com/package/com.mctechnology.uibadge/
 [youtuberepo]: https://github.com/mctechnology17/youtube_repo_mc_technology
+
+[sponsor]: https://github.com/sponsors/mctechnology17
+[paypal]: https://www.paypal.me/mctechnology17
