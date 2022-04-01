@@ -1,0 +1,15 @@
+Changelog file for Structures extra.
+https://github.com/mctechnology17/vimtools/blob/master/CHANGELOG.txt
+
+# Structures 0.0.1-beta5 April 1, 2022
+=======================================
+
+# List of exciting new features
+
++ NEW FEATURES
+ - the math modus was extended with new maps, now there is a much wider support
+ - started a more detailed documentation of the characteristics
+
++ OTHER
+ - general code cleanup
+ - Removed several unnecessary compatibility check tests
