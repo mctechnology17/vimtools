@@ -1,6 +1,15 @@
 Changelog file for Structures extra.
 https://github.com/mctechnology17/vimtools/blob/master/CHANGELOG.txt
 
+# Structures 0.0.1-beta6 April 6, 2022
+=======================================
+
+# List of exciting new features
+
++ NEW FEATURES
+ - plaintex added for EasyCommentAutocmd
+
+
 # Structures 0.0.1-beta5 April 1, 2022
 =======================================
 

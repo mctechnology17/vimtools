@@ -6,7 +6,6 @@
 " GitHub: https://github.com/mctechnology17
 " Brief: Unicode chars for Vim (LaTeX)
 "==========================================
-
 function! mathemodus#MatheModusOn() "{{{
   imap Alpha Α
   imap Beta Β
@@ -356,7 +355,6 @@ function! mathemodus#MatheModusOn() "{{{
   imap frac{1}{4} ¼
   imap frac{3}{4} ¾
 endfunction "}}}
-
 function! mathemodus#MatheModusOff() "{{{
   iunmap Alpha
   iunmap Beta

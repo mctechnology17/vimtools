@@ -1,11 +1,12 @@
-" ====================================================
+"=========================================
 " FileName: vimtools.vim
-" Author: MC Technology <mctechnology170318@gmail.com>
+" Date: 15:57 09.April.2022
+" Author: Marcos Chow Castro
+" Email: mctechnology170318@gmail.com
 " GitHub: https://github.com/mctechnology17
-" Date: 03.12.2021 18:00
-" ====================================================
+" Brief: <brief>
+"==========================================
 scriptencoding utf-8
-
 """ g:vimtools_assistant "{{{
 fun! s:Assistant()
     let CONFIG_NVIM = $PATH
@@ -34,7 +35,6 @@ fun! s:Assistant()
     map <S-F1> <Nop>
     map <S-F1> :vert help<Space>
 endfun "}}}
-
 """ VimToolsMakeDirectories {{{
 fun! s:MakeDirectories() "{{{
     if !isdirectory($HOME."/vimtools_tmp") "{{{
@@ -76,7 +76,6 @@ fun! s:MakeDirectories() "{{{
     endif "}}}
     echomsg 'vimtools: Directories created with success'
 endfun "}}}
-
 fun! s:SetBackUpDir() "{{{
     if has('nvim')
         set viewdir=~/vimtools_tmp/nvim_tmp/nvim_viewdir   " folding
@@ -100,7 +99,6 @@ fun! s:SetBackUpDir() "{{{
     set undofile
     set noswapfile
 endfun "}}}
-
 fun! s:CleanUndoDir() "{{{
     if isdirectory($HOME."/vimtools_tmp/nvim_tmp/undo_dir")||
                 \ isdirectory($HOME."/vimtools_tmp/vim_tmp/undo_dir")
@@ -113,7 +111,6 @@ fun! s:CleanUndoDir() "{{{
     endif
 endfun "}}}
 "}}}
-
 """ g:vimtools_mapsfolding {{{
 function! vimtools#MapsFolding()
     nnoremap a za
@@ -123,7 +120,6 @@ function! vimtools#MapsFolding()
     vnoremap s zf
     vnoremap D zd
 endfunction "}}}
-
 """ g:vimtools_closingbracke {{{
 function! vimtools#closingbracke()
     inoremap ( ()<Esc>i
@@ -136,8 +132,7 @@ function! vimtools#closingbracke()
     inoremap " ""<Esc>i
     inoremap ` ``<Esc>i
 endfunction "}}}
-
-""" g:vimtools_loaded {{{
+""" g:vimtools_loaded vimtools#execute {{{
 function! vimtools#execute()
   if g:vimtools_assistant "{{{
     call s:Assistant()
@@ -164,7 +159,6 @@ function! vimtools#execute()
     call vimtools#closingbracke()
   endif "}}}
 endfunction "}}}
-
 """ VimToolsMaxWindows {{{
 if g:vimtools_maxwindows
   function! vimtools#ToggleMaxWindows(maxwindows)
@@ -182,20 +176,17 @@ if g:vimtools_maxwindows
   endfunction
   au WinEnter * silent! :call vimtools#ToggleMaxWindows(v:false)
 endif "}}}
-
 """ VimToolsMatheModus {{{
 function! s:MatheModusOn() "{{{
   echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has initialized' | echohl None
   let g:vimtools_mathemodus = 0
   call mathemodus#MatheModusOn()
 endfunction "}}}
-
 function! s:MatheModusOff() "{{{
   echohl MoreMsg | echon 'vimtools: VimToolsMatheModus has ended' | echohl None
   let g:vimtools_mathemodus = 1
   call mathemodus#MatheModusOff()
 endfunction "}}}
-
 function! s:ToggleMatheModus() "{{{
 	if g:vimtools_mathemodus
     call s:MatheModusOn()
@@ -204,7 +195,6 @@ function! s:ToggleMatheModus() "{{{
 	endif
 endfunction "}}}
 "}}}
-
 """ VimToolsSpellMorse {{{
 function! s:SpellMorseMapsOn() "{{{ ░▒░
   echohl MoreMsg | echon 'vimtools: SpellMorse ON' | echohl None
@@ -315,7 +305,6 @@ fun! s:ToggleSpell() "{{{
 endfun "}}}
 let s:vimtools_spellmaps = 1
 "}}}
-
 if g:vimtools_stateruler "{{{
   function! GitBranch()
     return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -350,7 +339,6 @@ if g:vimtools_stateruler "{{{
   set statusline+=\ %l:%c
   set statusline+=\
 endif "}}}
-
 if g:vimtools_easycomment "{{{
     augroup EasyCommentAutocmd
       autocmd FileType vim vnoremap <silent> C :'<, '>norm I"<Space><CR>
@@ -360,20 +348,19 @@ if g:vimtools_easycomment "{{{
       autocmd FileType bashrc,zsh,zshrc,bash_profile,gitignore,yaml,gdb,gitconfig,conf vnoremap <silent> C :'<, '>norm I#<Space><CR>
       autocmd FileType fish,sshconfig vnoremap <silent> C :'<, '>norm I#<Space><CR>
       autocmd FileType html,xml vnoremap <silent> C :'<, '>norm I<!--<Space><CR> \| :'<, '>norm A<Space>--><CR>
-      autocmd FileType tex vnoremap <silent> C :'<, '>norm I%<Space><CR>
+      autocmd FileType tex,plaintex vnoremap <silent> C :'<, '>norm I%<Space><CR>
       autocmd FileType mail vnoremap <silent> C :'<, '>norm I><Space><CR>
       autocmd FileType dosbatch vnoremap <silent> C :'<, '>norm IREM<Space><CR>
       autocmd FileType autohotkey vnoremap <silent> C :'<, '>norm I;<Space><CR>
       autocmd FileType lua vnoremap <silent> C :'<, '>norm I--<Space><CR>
     augroup END
 endif "}}}
-
 """ CMDS {{{
 command! -nargs=0 VimToolsSpellMorse            call s:ToggleSpell()
 command! -nargs=0 VimToolsSpellMorseMaps        call s:ToggleSpellMorseMaps()
 command! -nargs=0 VimToolsSpellMorseIdioms      call s:ToggleSpellIdioms()
 command! -nargs=0 VimToolsMatheModus            call s:ToggleMatheModus()
-command! -nargs=0 VimToolsMaxWindows            call vimtools#ToggleMaxWindows(v:true)
+command! -nargs=0 VimToolsMaxWindows          call vimtools#ToggleMaxWindows(v:true)
 command! -nargs=0 VimToolsCleanUndoDir          call s:CleanUndoDir()
 command! -nargs=0 VimToolsMakeDirectories       call s:MakeDirectories()
 "}}}

@@ -217,9 +217,9 @@ when the switch is turned off, the mapping of each key returns to its original s
 - `Y` ->  quit word (`zug`)
 - `x` ->  quit bad word (`zw`)
 - `X` ->  undo quit bad word (`zuw`)
-- `,` ->  selection first option (`1z=`)
-- `.` ->  selection second option (`2z=`)
-- `-` ->  selection third option (`3z=`)
+- `.` ->  selection first option (`1z=`)
+- `..` ->  selection second option (`2z=`)
+- `...` ->  selection third option (`3z=`)
 
 </details>
 
@@ -252,25 +252,353 @@ the abbreviation according to your symbol. These are the keywords added so far.
   <summary>:zap: Usage:</summary>
 
 #### Input -> Output (INSERT MODUS)
-- `eps` -> ε
-- `theta` -> θ
-- `kappa` -> κ
-- `pi` -> π
-- `rho` -> ρ
-- `phi` -> φ
-- `sigma` -> σ
-- `beta` -> β
-- `alpha` -> α
-- `delta` -> ∆
-- `sum` -> ∑
-- `ang` -> å
-- `Ang` -> Å
-- `sqr` -> √
-- `int` -> ∫
-- `micra` -> µ
-- `omega` -> Ω
-- `fun` -> ƒ
-- `lam` -> λ
+- `Alpha Α`
+- `Beta Β`
+- `Gamma Γ`
+- `Delta Δ`
+- `Epsilon Ε`
+- `Zeta Ζ`
+- `Eta Η`
+- `Theta Θ`
+- `Iota Ι`
+- `Kappa Κ`
+- `Lambda Λ`
+- `upMu Μ`
+- `upNu Ν`
+- `Xi Ξ`
+- `upOmicron Ο`
+- `Pi Π`
+- `Rho Ρ`
+- `Sigma Σ`
+- `Tau Τ`
+- `Upsilon Υ`
+- `Phi Φ`
+- `Chi Χ`
+- `Psi Ψ`
+- `Omega Ω`
+- `alpha α`
+- `beta β`
+- `gamma γ`
+- `delta δ`
+- `upepsilon ε`
+- `zeta ζ`
+- `eta η`
+- `theta θ`
+- `iota ι`
+- `kappa κ`
+- `lambda λ`
+- `mu μ`
+- `nu ν`
+- `xi ξ`
+- `upomicron ο`
+- `pi π`
+- `rho ρ`
+- `varsigma ς`
+- `sigma σ`
+- `tau τ`
+- `upsilon υ`
+- `varphi φ`
+- `chi χ`
+- `psi ψ`
+- `omega ω`
+- `upvarbeta ϐ`
+- `vartheta ϑ`
+- `phi ϕ`
+- `varpi ϖ`
+- `upoldKoppa Ϙ`
+- `upoldkoppa ϙ`
+- `Stigma Ϛ`
+- `upstigma ϛ`
+- `Digamma Ϝ`
+- `digamma ϝ`
+- `Koppa Ϟ`
+- `upkoppa ϟ`
+- `Sampi Ϡ`
+- `upsampi ϡ`
+- `varkappa ϰ`
+- `varrho ϱ`
+- `textTheta ϴ`
+- `epsilon ϵ`
+- `varepsilon ε`
+- `backepsilon ϶`
+- `sptilde ~`
+- `cent ¢`
+- `pounds £`
+- `yen ¥`
+- `neg ¬`
+- `lnot ¬`
+- `circledR ®`
+- `pm ±`
+- `Micro µ`
+- `euro €`
+- `mathbb{C} ℂ`
+- `Euler ℇ`
+- `mathcal{g} ℊ`
+- `mathcal{H} ℋ`
+- `mathfrak{H} ℌ`
+- `mathbb{H} ℍ`
+- `Planckconst ℎ`
+- `hslash ℏ`
+- `mathcal{I} ℐ`
+- `Im ℑ`
+- `mathcal{L} ℒ`
+- `ell ℓ`
+- `mathbb{N} ℕ`
+- `wp ℘`
+- `mathbb{P} ℙ`
+- `mathbb{Q} ℚ`
+- `mathcal{R} ℛ`
+- `Re ℜ`
+- `mathbb{R} ℝ`
+- `mathbb{Z} ℤ`
+- `tcohm Ω`
+- `mho ℧`
+- `mathfrak{Z} ℨ`
+- `turnediota ℩`
+- `Angstroem Å`
+- `mathcal{B} ℬ`
+- `mathfrak{C} ℭ`
+- `mathcal{e} ℯ`
+- `mathcal{E} ℰ`
+- `mathcal{F} ℱ`
+- `Finv Ⅎ`
+- `mathcal{M} ℳ`
+- `mathcal{o} ℴ`
+- `mathbb{\\pi} ℼ`
+- `mathbb{\\gamma} ℽ`
+- `mathbb{\\Gamma} ℾ`
+- `mathbb{\\Pi} ℿ`
+- `mathbb{\\Sigma} ⅀`
+- `Game ⅁`
+- `sansLturned ⅂`
+- `sansLmirrored ⅃`
+- `Yup ⅄`
+- `CapitalDifferenti ⅅ`
+- `DifferentialD ⅆ`
+- `ExponetialE ⅇ`
+- `ComplexI ⅈ`
+- `ComplexJ ⅉ`
+- `PropertyLine ⅊`
+- `invamp ⅋`
+- `leftarrow ←`
+- `uparrow ↑`
+- `rightarrow →`
+- `to →`
+- `downarrow ↓`
+- `leftrightarrow ↔`
+- `updownarrow ↕`
+- `nwarrow ↖`
+- `nearrow ↗`
+- `searrow ↘`
+- `swarrow ↙`
+- `Leftarrow ⇐`
+- `Uparrow ⇑`
+- `Rightarrow ⇒`
+- `Downarrow ⇓`
+- `Leftrightarrow ⇔`
+- `Updownarrow ⇕`
+- `Nwarrow ⇖`
+- `Nearrow ⇗`
+- `Searrow ⇘`
+- `Swarrow ⇙`
+- `mathord ⍹`
+- `forall ∀`
+- `complement ∁`
+- `partial 𝜕`
+- `exists ∃`
+- `nexists ∄`
+- `varnothing ∅`
+- `emptyset ∅`
+- `increment ∆`
+- `nabla ∇`
+- `in ∈`
+- `notin ∉`
+- `smallin ∊`
+- `ni ∋`
+- `nni ∌`
+- `smallni ∍`
+- `prod ∏`
+- `coprod ∐`
+- `sum ∑`
+- `sqrt √`
+- `sqrt[3] ∛`
+- `sqrt[4] ∜`
+- `propto ∝`
+- `infty ∞`
+- `wedge ∧`
+- `vee ∨`
+- `land ∧`
+- `lor ∨`
+- `cap ∩`
+- `cup ∪`
+- `int ∫`
+- `iint ∬`
+- `iiint ∭`
+- `approx ≈`
+- `napprox ≉`
+- `not\\eq ≠`
+- `equiv ≡`
+- `nequiv ≢`
+- `Equiv ≣`
+- `leq ≤`
+- `geq ≥`
+- `leqq ≦`
+- `geqq ≧`
+- `lneqq ≨`
+- `gneqq ≩`
+- `ll ≪`
+- `gg ≫`
+- `subset ⊂`
+- `supset ⊃`
+- `nsubset ⊄`
+- `nsupset ⊅`
+- `subseteq ⊆`
+- `supseteq ⊇`
+- `nsubseteq ⊈`
+- `nsupseteq ⊉`
+- `subsetneq ⊊`
+- `supsetneq ⊋`
+- `diameter ⌀`
+- `house ⌂`
+- `lceil ⌈`
+- `rceil ⌉`
+- `lfloor ⌊`
+- `rfloor ⌋`
+- `invneg ⌐`
+- `turnednot ⌙`
+- `lparenuend ⎛`
+- `lparenextender ⎜`
+- `lparenlend ⎝`
+- `rparenuend ⎞`
+- `rparenextender ⎟`
+- `rparenlend ⎠`
+- `lbrackuend ⎡`
+- `lbrackextender ⎢`
+- `lbracklend ⎣`
+- `rbrackuend ⎤`
+- `rbrackextender ⎥`
+- `rbracklend ⎦`
+- `lbraceuend ⎧`
+- `lbracemid ⎨`
+- `lbracelend ⎩`
+- `vbraceextender ⎪`
+- `rbraceuend ⎫`
+- `rbracemid ⎬`
+- `rbracelend ⎭`
+- `intextender ⎮`
+- `mathbb{A} 𝔸`
+- `mathbb{B} 𝔹`
+- `mathbb{D} 𝔻`
+- `mathbb{E} 𝔼`
+- `mathbb{F} 𝔽`
+- `mathbb{G} 𝔾`
+- `mathbb{I} 𝕀`
+- `mathbb{J} 𝕁`
+- `mathbb{K} 𝕂`
+- `mathbb{L} 𝕃`
+- `mathbb{M} 𝕄`
+- `mathbb{O} 𝕆`
+- `mathbb{S} 𝕊`
+- `mathbb{T} 𝕋`
+- `mathbb{U} 𝕌`
+- `mathbb{V} 𝕍`
+- `mathbb{W} 𝕎`
+- `mathbb{X} 𝕏`
+- `mathbb{Y} 𝕐`
+- `^0 ⁰`
+- `^1 ¹`
+- `^2 ²`
+- `^3 ³`
+- `^4 ⁴`
+- `^5 ⁵`
+- `^6 ⁶`
+- `^7 ⁷`
+- `^8 ⁸`
+- `^9 ⁹`
+- `^+ ⁺`
+- `^- ⁻`
+- `^= ⁼`
+- `^( ⁽`
+- `^) ⁾`
+- `^a ᵃ`
+- `^b ᵇ`
+- `^c ᶜ`
+- `^d ᵈ`
+- `^e ᵉ`
+- `^f ᶠ`
+- `^g ᵍ`
+- `^h ʰ`
+- `^i ⁱ`
+- `^j ʲ`
+- `^k ᵏ`
+- `^l ˡ`
+- `^m ᵐ`
+- `^n ⁿ`
+- `^o ᵒ`
+- `^p ᵖ`
+- `^r ʳ`
+- `^s ˢ`
+- `^t ᵗ`
+- `^u ᵘ`
+- `^v ᵛ`
+- `^w ʷ`
+- `^x ˣ`
+- `^y ʸ`
+- `^z ᶻ`
+- `^A ᴬ`
+- `^B ᴮ`
+- `^D ᴰ`
+- `^E ᴱ`
+- `^G ᴳ`
+- `^H ᴴ`
+- `^I ᴵ`
+- `^J ᴶ`
+- `^K ᴷ`
+- `^L ᴸ`
+- `^M ᴹ`
+- `^N ᴺ`
+- `^O ᴼ`
+- `^P ᴾ`
+- `^R ᴿ`
+- `^T ᵀ`
+- `^U ᵁ`
+- `^V ⱽ`
+- `^W ᵂ`
+- `_0 ₀`
+- `_1 ₁`
+- `_2 ₂`
+- `_3 ₃`
+- `_4 ₄`
+- `_5 ₅`
+- `_6 ₆`
+- `_7 ₇`
+- `_8 ₈`
+- `_9 ₉`
+- `_+ ₊`
+- `_- ₋`
+- `_= ₌`
+- `_( ₍`
+- `_) ₎`
+- `_a ₐ`
+- `_e ₑ`
+- `_h ₕ`
+- `_i ᵢ`
+- `_j ⱼ`
+- `_k ₖ`
+- `_l ₗ`
+- `_m ₘ`
+- `_n ₙ`
+- `_o ₒ`
+- `_p ₚ`
+- `_r ᵣ`
+- `_s ₛ`
+- `_t ₜ`
+- `_u ᵤ`
+- `_v ᵥ`
+- `_x ₓ`
+- `frac{1}{2} ½`
+- `frac{1}{4} ¼`
+- `frac{3}{4} ¾`
 
 ```vim
 " activated by default
@@ -334,28 +662,31 @@ If you're enjoy my work, feel free to donate or become a sponsor.
 - [paypal]
 - [sponsor]
 
-Ambassador and creator/maintainer of vim-better-header,
-vimtools, GitManager and more, that are easy to integrate,
-but very powerful work tools that allow you to
-improve your workflow, integrating with all operating
-systems and all possible shells
+Ambassador and creator/maintainer of vimtools, GitManager and more,
+that are easy to integrate, but very powerful work tools that allow you to
+improve your workflow, integrating with all operating systems and all
+possible shells.
 
 Here you can see another recently published project:
-- [vim-better-header] is a better automated template
-- [gm] git manager with a friendly user interface
+- [vimtools] swiss army knife for vim (functions and settings that will make it easy for you life)
+- [gm] manager for GIT multi platform with a friendly user interface
+- [vim-better-header] better automated template
+- [vim-executor] multilanguage code executor.
+
 
 ## [LICENSE](LICENSE)
 
 Released under the GNU General Public License v3.0.
 
-Copyright (c) 2021 MC Technology
+Copyright (c) 2022 Marcos Chow Castro
 
 [twitter]: https://twitter.com/mctechnology17
 [youtube]: https://www.youtube.com/c/mctechnology17
 [instagram]: https://www.instagram.com/mctechnology17/
 [facebook]: https://m.facebook.com/mctechnology17/
-[reddit]: https://www.reddit.com/user/mctechnology17
+[reddit]:https://www.reddit.com/user/mctechnology17
 
+[vim-executor]: https://github.com/mctechnology17/vim-executor
 [vim-better-header]: https://github.com/mctechnology17/vim-better-header
 [gm]: https://github.com/mctechnology17/gm
 [vimtools]: https://github.com/mctechnology17/vimtools
@@ -364,6 +695,6 @@ Copyright (c) 2021 MC Technology
 [uiswitches]: https://repo.packix.com/package/com.mctechnology.uiswitches/
 [uibadge]: https://repo.packix.com/package/com.mctechnology.uibadge/
 [youtuberepo]: https://github.com/mctechnology17/youtube_repo_mc_technology
-
 [sponsor]: https://github.com/sponsors/mctechnology17
 [paypal]: https://www.paypal.me/mctechnology17
+[readline]: https://github.com/PowerShell/PSReadLine/blob/master/README.md

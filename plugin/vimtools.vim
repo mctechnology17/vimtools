@@ -5,7 +5,6 @@
 " Date: 03.12.2021 18:00
 " ====================================================
 scriptencoding utf-8
-
 if !exists('g:vimtools_loaded') "{{{
   let g:vimtools_loaded =
         \ get(g:, 'vimtools_loaded', 1)
