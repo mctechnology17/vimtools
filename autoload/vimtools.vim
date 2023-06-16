@@ -7,6 +7,10 @@
 " Brief: <brief>
 "==========================================
 scriptencoding utf-8
+
+let s:cpo_orig = &cpo
+set cpo&vim
+
 """ g:vimtools_assistant "{{{
 fun! s:Assistant()
     let CONFIG_NVIM = $PATH
@@ -113,11 +117,15 @@ endfun "}}}
 "}}}
 """ g:vimtools_mapsfolding {{{
 function! vimtools#MapsFolding()
+    " open/close folding
     nnoremap a za
     vnoremap a za
-    nnoremap s zN
-    nnoremap S zn
+    " open/close all folding
+    nnoremap s zM
+    nnoremap S zR
+    " visual: Operator to create a fold.
     vnoremap s zf
+    " visual: Delete folds recursively at the cursor.
     vnoremap D zd
 endfunction "}}}
 """ g:vimtools_closingbracke {{{
@@ -364,5 +372,8 @@ command! -nargs=0 VimToolsMaxWindows          call vimtools#ToggleMaxWindows(v:t
 command! -nargs=0 VimToolsCleanUndoDir          call s:CleanUndoDir()
 command! -nargs=0 VimToolsMakeDirectories       call s:MakeDirectories()
 "}}}
+
+let &cpo = s:cpo_orig
+unlet s:cpo_orig
 
 " vim: set sw=2 ts=2 sts=2 et ft=vim fdm=marker:

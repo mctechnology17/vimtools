@@ -235,12 +235,16 @@ by writing 0 instead of 1 in the following global variable.
 " Mappings are enabled by default
 " 1 = activate 0 = deactivate
 let g:vimtools_mapsfolding = 1
-nnoremap a za
-vnoremap a za
-nnoremap s zn
-nnoremap S zN
-vnoremap s zf
-vnoremap D zd
+    " open/close folding
+    nnoremap a za
+    vnoremap a za
+    " open/close all folding
+    nnoremap s zM
+    nnoremap S zR
+    " visual: Operator to create a fold.
+    vnoremap s zf
+    " visual: Delete folds recursively at the cursor.
+    vnoremap D zd
 ```
 
 </details>

@@ -33,7 +33,10 @@ vimtools is a tool to complement your editor favorite text / code vim, vi, nvim,
 vimtools is fast and lightweight written in 100% vimscript with no outside dependencies.
 
 
-vimtools is a set of functions and settings that will make it easy for you life. You are the one who decides what function or command is executed either automatically or by calling through the cmd of vim / nvim. That is why all the variables are available for you set the vimtools to your liking.
+vimtools is a set of functions and settings that will make it easy for you
+life. You are the one who decides what function or command is executed either
+automatically or by calling through the cmd of vim / nvim. That is why all the
+variables are available for you set the vimtools to your liking.
 
 vimtools some features:
     >
